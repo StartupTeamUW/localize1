@@ -1,11 +1,35 @@
 <style>
-    nav .brand-logo {
+  body {}
+
+  .trip-summary-container {
+    background: rgb(99, 194, 231);
+    color: aliceblue;
+    padding: 20px;
+    height: 100%;
+  }
+
+  .profile-pic {
+    float: left;
+  }
+
+  img {
+    border-radius: 50%;
+    margin: auto;
+    margin-right: 20px;
+  }
+
+  .trip-interests {
+    list-style: none;
+    display: inline;
+  }
+  nav .brand-logo {
         color: black;
         font-family: 'Montserrat Alternates', sans-serif;
         font-weight: 800;
         margin-left: 20px;
     }
 </style>
+
 
 <div class="navbar-fixed">
     <nav>
@@ -19,4 +43,24 @@
             </ul>
         </div>
     </nav>
+</div>
+
+<br>
+<br>
+<div class="container">
+  <div class="trip-summary-container s12 l10">
+    <div class="profile-pic">
+      <img src="{{imageURL}}" style="float: left;" />
+    </div>
+    <h2 class="display-4">{{name}}</h2>
+    <h5>{{city}}, {{state}}</h5>
+    <p class="lead">{{aboutMe}}</p>
+    <div class="interest-tokens">
+      <ul>
+        {{#each user_interests}}
+        <li class="interests" id="{{this.text}}"> <span class="badge badge-pill badge-primary">{{this.text}}</span></li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
 </div>
