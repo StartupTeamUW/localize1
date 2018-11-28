@@ -2,24 +2,33 @@ var db = require("../models");
 
 module.exports = function (app) {
   // Load index page
-  
-app.get("/", function (req, res) {
-  db.Example.findAll({}).then(function (dbExamples) {
-    res.render("index", {
-      msg: "Welcome!",
-      examples: dbExamples
-    });
-  });
-});
 
-app.get("/trip", function (req, res) {
-  db.Example.findAll({}).then(function (dbExamples) {
-    res.render("trip", {
-      // msg: "Welcome!",
-      // examples: dbExamples
+  app.get("/", function (req, res) {
+    db.Example.findAll({}).then(function (dbExamples) {
+      res.render("index", {
+        msg: "Welcome!",
+        examples: dbExamples
+      });
     });
   });
-});
+
+  app.get("/trip", function (req, res) {
+    db.Example.findAll({}).then(function (dbExamples) {
+      res.render("trip", {
+        // msg: "Welcome!",
+        // examples: dbExamples
+      });
+    });
+  });
+
+  app.get("/pastTrip", function (req, res) {
+    db.Example.findAll({}).then(function (dbExamples) {
+      res.render("pastTrip", {
+        // msg: "Welcome!",
+        // examples: dbExamples
+      });
+    });
+  });
 
   app.get("/users/", function (req, res) {
     db.Example.findAll({}).then(function (dbExamples) {
