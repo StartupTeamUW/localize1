@@ -1,4 +1,4 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
   var User = sequelize.define("User", {
     //Signup Required
     user_name: {
@@ -42,6 +42,7 @@ module.exports = function(sequelize, DataTypes) {
     last_name: DataTypes.STRING,
     gender: DataTypes.STRING,
     hometown: DataTypes.STRING,
+    DOB: DataTypes.DATE,
     bio: {
       type: DataTypes.TEXT,
       validate: {
@@ -57,7 +58,7 @@ module.exports = function(sequelize, DataTypes) {
     // ?? put interest matching questionarie into a survey table?
   });
 
-  User.associate = function(models) {
+  User.associate = function (models) {
     // Associating User with Trips
     // When an User is deleted, also delete any associated Trips
     User.hasMany(models.Trip, {

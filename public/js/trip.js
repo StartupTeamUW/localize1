@@ -1,8 +1,10 @@
 // Get references to page elements
-var $cityText = $("#city-text");
-var $tripDescription = $("#trip-description");
-var $submitBtn = $("#submit");
-var $tripList = $("#trip-list");
+var $destination = $("#destination");
+var $tripRemark = $("#trip-remark");
+var $startDate= $("#startDate");
+var $endDate = $("#endDate");
+var $tripInterests = $("tripInterests")
+var $submitBtnT = $("#submitT");
 
 // The API object contains methods for each kind of request we'll make
 var API = {
