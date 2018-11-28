@@ -2,14 +2,14 @@
   <hr>
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <img src="{{user.imageURL}}" style="float: left;" />
-      <h2 class="display-4">{{user.name}}</h1>
-        <h3>{{user.city}}, {{user.state}}</h3>
-        <p class="lead">{{user.aboutMe}}</p>
+      <img src="{{user.profilePicUrl}}" style="float: left;" />
+      <h2 class="display-4">{{user.userName}}</h1>
+        <h3>{{user.hometown}}, {{user.DOB}}</h3>
+        <p class="lead">{{user.bio}}</p>
         <div class="interest-tokens">
           <ul>
-            {{#each user_interests}}
-            <li class="interests" id="{{this.text}}"> <span class="badge badge-pill badge-primary">{{this.text}}</span></li>
+            {{#each user.interests}}
+            <li class="interests" id="{{this.user.interests}}"> <span class="badge badge-pill badge-primary">{{this.}}</span></li>
             {{/each}}
           </ul>
         </div>

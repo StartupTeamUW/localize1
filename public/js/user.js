@@ -10,6 +10,7 @@ var $DOB = $("#DOB");
 var $hometown = $("#hometown");
 var $bio = $("#bio");
 var $guideStatus = $("#guideStatus");
+var $userInterests = $("#userInterests");
 
 
 var $submitBtnU = $("#submitU");
@@ -46,7 +47,7 @@ var refreshUsers = function() {
   API.getUsers().then(function(data) {
     var $users = data.map(function(user) {
       var $a = $("<a>")
-        .text(user.text)
+        .text(user.user_name)
         .attr("href", "/user/" + user.id);
 
       var $li = $("<li>")
@@ -86,11 +87,12 @@ var handleFormSubmit = function(event) {
     DOB: $DOB.val(),
     hometown: $hometown.val().trim(),
     bio: $bio.val().trim(),
-    guide_status : $guideStatus.val()
+    guide_status : $guideStatus.val(),
+    userInterests : $userInterests.val()
     
   };
 
-  if (!(user.userName && user.email)) {
+  if (!(user.userName && user.userEmail)) {
     alert("You must enter a valid username and email address!");
     return;
   }
@@ -110,6 +112,7 @@ var handleFormSubmit = function(event) {
   $hometown.val("");
   $bio.val("");
   $guideStatus.val("");
+  $userInterests.val("");
 };
 
 // handleDeleteBtnClick is called when an example's delete button is clicked

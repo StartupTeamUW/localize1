@@ -20,14 +20,12 @@ app.get("/", function (req, res) {
   });
 });
 
-
-
   // added trip pages
   app.get("/trip", function (req, res) {
     db.Trip.findAll({}).then(function (dbTrips) {
       res.render("trip", {
         msg: "Here are our trips",
-        trips: dbTrips
+        trip: dbTrips
       });
     });
   });
@@ -41,22 +39,18 @@ app.get("/", function (req, res) {
   //end of trip
 
 
-
-  
-  app.get("/pastTrip", function (req, res) {
-    db.Example.findAll({}).then(function (dbExamples) {
-      res.render("pastTrip", {
-        // msg: "Welcome!",
-        // examples: dbExamples
+  app.get("/user", function (req, res) {
+    db.Trip.findAll({}).then(function (dbUsers) {
+      res.render("user_profile", {
+        msg: "Edit your profile",
+        user: dbUsers
       });
     });
   });
-
-  app.get("/users/", function (req, res) {
-    db.Example.findAll({}).then(function (dbExamples) {
-      res.render("user_survey", {
-        msg: "Detailed Profile Page",
-        examples: dbExamples
+  app.get("/user/:id", function (req, res) {
+    db.Trip.findOne({ where: { id: req.params.id } }).then(function (dbUsers) {
+      res.render("trip", {
+        user: dbUsers
       });
     });
   });

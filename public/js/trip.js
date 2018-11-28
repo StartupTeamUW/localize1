@@ -3,7 +3,7 @@ var $destination = $("#destination");
 var $tripRemark = $("#trip-remark");
 var $startDate= $("#startDate");
 var $endDate = $("#endDate");
-var $tripInterests = $("tripInterests")
+var $tripInterests = $("trip_interests")
 var $submitBtnT = $("#submitT");
 
 // The API object contains methods for each kind of request we'll make
@@ -37,7 +37,7 @@ var refreshTrips = function() {
   API.getTrips().then(function(data) {
     var $trips = data.map(function(trip) {
       var $a = $("<a>")
-        .text(trip.text)
+        .text(trip.destination)
         .attr("href", "/trip/" + trip.id);
 
       var $li = $("<li>")
@@ -67,12 +67,15 @@ var handleFormSubmit = function(event) {
   event.preventDefault();
 
   var trip = {
-    text: $tripText.val().trim(),
-    description: $tripDescription.val().trim()
+    destination: $destination.val().trim(),
+    remark: $tripRemark.val().trim(),
+    start_date: $startDate.val(),
+    end_date: $endDate.val(),
+    trip_interests: $trip_interests.val().trim(),
   };
 
-  if (!(trip.text && trip.description)) {
-    alert("You must enter an example text and description!");
+  if (!(trip.destination && trip.trip_interests)) {
+    alert("You must enter an trip destination and trip interests!");
     return;
   }
 
@@ -80,8 +83,12 @@ var handleFormSubmit = function(event) {
     refreshTrips();
   });
 
-  $tripText.val("");
-  $tripDescription.val("");
+  $destination.val("");
+  $tripRemark.val("");
+  $startDate.val("");
+  $endDate.val("");
+  $trip_interests.val("");
+  
 };
 
 // handleDeleteBtnClick is called when an example's delete button is clicked
@@ -97,7 +104,7 @@ var handleDeleteBtnClick = function() {
 };
 
 // Add event listeners to the submit and delete buttons
-$submitBtn.on("click", handleFormSubmit);
+$submitBtnT.on("click", handleFormSubmit);
 $tripList.on("click", ".delete", handleDeleteBtnClick);
 
 
