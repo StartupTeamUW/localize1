@@ -1,5 +1,11 @@
+/* body {
+  background: red;
+} */
+
 .list-group-item {
   line-height: 2.5;
 }
 
-
+.centered-headline {
+  text-align: center;
+}
