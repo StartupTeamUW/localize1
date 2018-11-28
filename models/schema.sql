@@ -3,7 +3,6 @@ DROP DATABASE IF EXISTS localize_db;
 -- Creates the "todolist" database --
 CREATE DATABASE localize_db;
 
-==================================================================
 -- Excecute after tables are created
 USE localize_db;
 
