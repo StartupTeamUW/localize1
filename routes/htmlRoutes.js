@@ -1,26 +1,48 @@
 var db = require("../models");
 
 module.exports = function (app) {
-  // Load index page
+  // Load index pages
   
 app.get("/", function (req, res) {
   db.Example.findAll({}).then(function (dbExamples) {
-    res.render("index", {
+    res.render("dashboard", {
       msg: "Welcome!",
       examples: dbExamples
     });
   });
 });
+ // Load example page and pass in an example by id
+ app.get("/example/:id", function (req, res) {
+  db.Example.findOne({ where: { id: req.params.id } }).then(function (dbExample) {
+    res.render("example", {
+      example: dbExample
+    });
+  });
+});
 
+
+
+  // added trip pages
   app.get("/trip", function (req, res) {
-    db.Example.findAll({}).then(function (dbExamples) {
+    db.Trip.findAll({}).then(function (dbTrips) {
       res.render("trip", {
-        // msg: "Welcome!",
-        // examples: dbExamples
+        msg: "Here are our trips",
+        trips: dbTrips
       });
     });
   });
+  app.get("/trip/:id", function (req, res) {
+    db.Trip.findOne({ where: { id: req.params.id } }).then(function (dbTrip) {
+      res.render("trip", {
+        trip: dbTrip
+      });
+    });
+  });
+  //end of trip
 
+
+
+  
   app.get("/pastTrip", function (req, res) {
     db.Example.findAll({}).then(function (dbExamples) {
       res.render("pastTrip", {
@@ -33,37 +55,14 @@ app.get("/", function (req, res) {
   app.get("/users/", function (req, res) {
     db.Example.findAll({}).then(function (dbExamples) {
       res.render("user_survey", {
-        msg: "Create a new User Profile",
+        msg: "Detailed Profile Page",
         examples: dbExamples
       });
     });
   });
 
-  // Load example page and pass in an example by id
-  app.get("/example/:id", function (req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function (dbExample) {
-      res.render("example", {
-        example: dbExample
-      });
-    });
-  });
-  // added trip
-  app.get("/trip", function (req, res) {
-    db.Trip.findAll({}).then(function (dbTrips) {
-      res.render("trip", {
-        msg: "Here are our trips",
-        trips: dbTrips
-      });
-    });
-  });
-  // app.get("/trip/:id", function (req, res) {
-  //   db.Trip.findOne({ where: { id: req.params.id } }).then(function (dbTrip) {
-  //     res.render("trip", {
-  //       trip: dbTrip
-  //     });
-  //   });
-  // });
-  //end of trip
+ 
+
 
   // Render 404 page for any unmatched routes
   app.get("*", function (req, res) {

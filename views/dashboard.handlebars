@@ -13,7 +13,7 @@
             <label for="example-description">Example Description</label>
             <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
           </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
+          <button id="submitE" class="btn btn-primary float-right">Submit</button>
         </form>
 {{!-- trip form --}}
   <form class="clearfix mb-4" action="POST">
@@ -45,7 +45,7 @@
          <ul id="trip-list" class="list-group">
           {{#each trips}}
           <li data-id="{{this.id}}" class="list-group-item">
-            <a href="trips/{{this.id}}">{{this.remark}}</a>
+            <a href="trip/{{this.id}}">{{this.remark}}</a>
             <button class="btn btn-danger float-right delete">ｘ</button>
           </li>
           {{/each}}

@@ -21,8 +21,8 @@ module.exports = function (app) {
     // 1. Add a join here to include all of the Users to these trips
     db.Trip.findAll({
       where: query,
-      include: [ db.User ]
-    // where: query
+      include: [db.User]
+      // where: query
     }).then(function (dbTrip) {
       res.json(dbTrip)
     })
@@ -35,7 +35,7 @@ module.exports = function (app) {
 
     // 2. Add a join here to include the User who wrote the Trip
     db.Trip.findOne({
-      include: [ db.User ],
+      include: [db.User],
       // where: query
       where: {
         id: req.params.id
@@ -73,7 +73,7 @@ module.exports = function (app) {
           id: req.body.id
         }
       }).then(function (dbTrip) {
-      res.json(dbTrip)
-    })
+        res.json(dbTrip)
+      })
   })
 }
