@@ -13,23 +13,8 @@
             <label for="example-description">Example Description</label>
             <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
           </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
+          <button id="submitE" class="btn btn-primary float-right">Submit</button>
         </form>
-{{!-- trip form --}}
-  <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">City Name</label>
-            <input type="text" id="city-text" class="form-control" aria-describedby="city-text" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="trip-description">Trip Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-
-
-{{!-- trip form ends --}}
 
         <h3>Examples:</h3>
         {{!-- List of entered information will become list of previous trips--}}
@@ -41,16 +26,7 @@
           </li>
           {{/each}}
         </ul>
-        {{!-- test --}}
-         <ul id="trip-list" class="list-group">
-          {{#each trips}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="trips/{{this.id}}">{{this.remark}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
-        {{!-- end test --}}
+
       </div>
     </div>
   </div>

@@ -1,4 +1,4 @@
-<style>
+{{!-- <style>
   body {}
 
   .trip-summary-container {
@@ -32,15 +32,47 @@
     <div class="profile-pic">
       <img src="https://www.fillmurray.com/200/200" style="float: left;" />
     </div>
-    <h5>{{trip.beginDate}}, {{trip.endDate}}</h5>
-    <h2 class="city-name display-4">{{trip.city}}</h1>
-    <p class="trip-summary lead">{{trip.summary}}</p>
+    <h5>{{trip.startDate}}, {{trip.endDate}}</h5>
+    <h2 class="city-name display-4">{{trip.destination}}</h1>
+    <p class="trip-summary lead">{{trip.remark}}</p>
       <ul>
-        {{#each trip_interests}}
+        {{#each tripInterests}}
         <li class="interests" id="{{this.text}}"> <span class="new badge blue">{{this.text}}</span></li>
         {{/each}}
       </ul>
     </div>
   </div>
 </div>
+</div> --}}
+
+{{!-- kimmy's testing --}}
+<div class="container">
+    <div class="row">
+        <div class="col-8 offset-2">
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h5 class="card-title">{{msg}}</h5>
+
+                    <p>
+                        <strong>ID</strong>: {{trip.id}}</p>
+                    <p>
+                        <p>
+                            <strong>City</strong>: {{trip.destination}}</p>
+                        <p>
+                            <strong>Description:</strong> {{trip.remark}}</p>
+                        <p>
+                            <strong>Start Date:</strong> {{trip.start_date}}</p>
+                        <p>
+                            <strong>End Date:</strong> {{trip.end_date}}</p>
+                        {{!-- <p>
+                            <strong>Requested by:</strong> {{trip.requested_by}}</p>
+                        <p>
+                            <strong>Matched Host:</strong> {{trip.matched_host}}</p> --}}
+                        {{!-- <p>
+                            <strong>Interests:</strong> {{trip.trip_interests}}</p> --}}
+                        <a href="/">← Back To Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
