@@ -38,6 +38,7 @@ app.get("/", function (req, res) {
   });
   //end of trip
 
+  // user pages
 
   app.get("/user", function (req, res) {
     db.Trip.findAll({}).then(function (dbUsers) {
@@ -55,7 +56,9 @@ app.get("/", function (req, res) {
     });
   });
 
- 
+  // end of user pages
+
+  
 
 
   // Render 404 page for any unmatched routes
