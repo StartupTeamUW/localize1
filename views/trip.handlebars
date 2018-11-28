@@ -1,25 +1,62 @@
+{{!-- FOR TESTING --}}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-8 offset-2">
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h5 class="card-title">{{msg}}</h5>
+
+                    <p>
+                        <strong>ID</strong>: {{trip.id}}</p>
+                    <p>
+                        <p>
+                            <strong>City</strong>: {{trip.destination}}</p>
+                        <p>
+                            <strong>Description:</strong> {{trip.remark}}</p>
+                        <p>
+                            <strong>Start Date:</strong> {{trip.start_date}}</p>
+                        <p>
+                            <strong>End Date:</strong> {{trip.end_date}}</p>
+                        <p>
+                            <strong>Requested by:</strong> {{trip.requested_by}}</p>
+                        <p>
+                            <strong>Matched Host:</strong> {{trip.matched_host}}</p>
+                        <p>
+                            <strong>Interests:</strong> {{trip.intrests}}</p>
+                        <a href="/">← Back To Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{{!-- TRIP HANDLEBARS WITHOUT MODELS --}}
 <div class="content container">
-  <div class="row">
-    <div id="wrapper1" class="col s5 offset-s1 input-field">
-      <input type="date" id="start1" class="datepicker-start" />
-      <label for="start1"></label>
+    <div class="row">
+        <div id="wrapper1" class="col s5 offset-s1 input-field">
+            <input type="date" id="start1" class="datepicker-start" />
+            <label for="start1"></label>
+        </div>
+        <div id="wrapper2" class="col s5 input-field">
+            <input type="date" id="end1" class="datepicker-end" />
+            <label for="end1"></label>
+        </div>
     </div>
-    <div id="wrapper2" class="col s5 input-field">
-      <input type="date" id="end1" class="datepicker-end" />
-      <label for="end1"></label>
-    </div>
-  </div>
-  
-  {{!-- <div class="row">
-    <div id="wrapper3" class="col s5 offset-s1 input-field">
-      <input type="date" id="start2" class="datepicker-start" />
-      <label for="start2">Start Date</label>
-    </div>
-    <div id="wrapper4" class="col s5 input-field">
-      <input type="date" id="end2" class="datepicker-end" />
-      <label for="end2">End Date</label>
-    </div>
-  </div> --}}
+    <form class="clearfix mb-4" action="POST">
+        <div class="form-group">
+            <label for="city-name">City</label>
+            <input type="text" id="city-text" class="form-control" aria-describedby="trip-text" placeholder="Enter City Name">
+        </div>
+        <div class="form-group">
+            <label for="trip-description">Trip description</label>
+            <textarea class="form-control" id="trip-description" aria-describedby="trip-description" placeholder="Enter Trip Description"></textarea>
+        </div>
+        <button id="submit" class="btn btn-primary float-right">Submit</button>
+    </form>
 </div>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+<script src="/js/trip.js"></script>
