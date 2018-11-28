@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CMS - Express</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" media="screen" title="no title">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <style>
+    .interests {
+      list-style: none;
+      display: inline-block; 
+    }
+    ul {
+      list-style: none;
+    }
+  
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Image and text -->
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top"
+          alt="">
+        Localize
+      </a>
+      <div></div>
+    </nav>
+    <hr />
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <img src="https://via.placeholder.com/150" / style="float: left;">
+        <h2 class="display-4">User Name</h1>
+          <h3>City, State</h3>
+          <p class="lead">A short 'about me' paragraph the user adds to their profile.</p>
+          <div class="interest-tokens">
+            <ul>
+              <li class="interests"><span class="badge badge-pill badge-primary">Sports</span>
+              </li>
+              <li class="interests"> <span class="badge badge-pill badge-primary">Food</span></li>
+              <li class="interests"><span class="badge badge-pill badge-primary">Bars</span></li>
+              <li class="interests"><span class="badge badge-pill badge-primary">Music</span></li>
+            </ul>
+          </div>
+      </div>
+    </div>
+    <hr>
+    <!-- DETAILED USER INFO COLLAPSE ELEMENT -->
+    <div class="accordion" id="accordionExample">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+              aria-controls="collapseOne">
+              Detailed Profile
+            </button>
+          </h5>
+        </div>
+
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div class="card-body">
+            <ul>
+              <li>
+                <div class="jumbotron jumbotron-fluid">
+                  <div class="container">
+                    <h1 class="display-4">City Name, State</h1>
+                    <p class="lead">11/18/18 - 11/23/18</p>
+                    <hr class="my-2">
+                    <p>A short summary statement of the trip</p>
+                    <p class="lead">
+                      <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</a>
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+                wolf moon
+                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
+                3
+              </li>
+              <li>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+                wolf moon
+                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
+                3
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+    <!-- TRIP HISTORY ACCORDIAN ELEMENT -->
+    <div class="accordion" id="accordionExample">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+              aria-controls="collapseTwo">
+              Trip History
+            </button>
+          </h5>
+        </div>
+        <div id="collapseTwo" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div class="card-body">
+            <ul>
+              <li>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+                wolf moon
+                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
+                3
+              </li>
+              <li>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+                wolf moon
+                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
+                3
+              </li>
+              <li>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+                wolf moon
+                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
+                3
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <!-- CALL TO ACTION TO CREATE A NEW TRIP -->
+  <div class="mx-auto" style="width: 200px;"">
+      <button type=" button" class="btn btn-primary btn-lg">Plan A New
+    Trip!</button>
+  </div>
+
+
+  </div>
+  <!-- Custom Script -->
+  <script src="js/cms.js" type="text/javascript"></script>
+
+</body>
+
+</html>

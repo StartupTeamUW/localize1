@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Material Icon CDN -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Materialize CSS CDN and Bootstrap-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <!-- Your custom styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!--ICON-->
+  <link rel="icon" href="assets/img/localize.png">
+  <title>Localize-meeting the locals makes easy</title>
+
+</head>
+<body>
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper white">
+                    <i src="assets/img/localize.png" class="brand-logo blue-text text-darken-2">Localize</i>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <!-- <button type='button' class="btn btn-success" data-toggle="modal" data-target="#popUpWindow">Open Log In Window</button> -->
+                      <li><a button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#signUpForm">Join</button></a></li>                    
+                      <li><a button type="button" class="btn btn-secondary" id ="loginBtn">Log in</button></a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="modal fade" id="signUpForm">
+              <div class="container">
+                <div class="row">
+                    <form class="col s12" id="reg-form">
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <input id="first_name" type="text" class="validate" required>
+                          <label for="first_name">First Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                          <input id="last_name" type="text" class="validate" required>
+                          <label for="last_name">Last Name</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <input id="email" type="email" class="validate" required>
+                          <label for="email">Email</label>
+                        </div>
+                      </div>
+                      <div class="input-field col s12">
+                        <input id="first_name" type="text" class="validate" required>
+                        <label for="first_name">Photo URL</label>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <input id="password" type="password" class="validate" minlength="6" required>
+                          <label for="password">Password</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <div class="gender-male">
+                            <input class="with-gap" name="gender" type="radio" id="male" required />
+                            <label for="male">Male</label>
+                          </div>
+                          <div class="gender-female">
+                            <input class="with-gap" name="gender" type="radio" id="female" required />
+                            <label for="female">Female</label>
+                          </div>
+                        </div>
+                
+                        <div class="input-field col s6">
+                          <button class="btn btn-large btn-register waves-effect waves-light" type="submit" name="action">Register
+                            <i class="material-icons right">done</i>
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- <a title="Login" class="ngl btn-floating btn-large waves-effect waves-light red"><i class="material-icons">input</i></a> -->
+                </div>
+              </div>
+        </div> 
+  <!-- Main Content -->
+  
+  <main>
+    <section style="background-image: url('https://www.wheretraveler.com/sites/default/files/styles/promoted_image_social_large/public/Mon_0524_0.jpg?itok=QzFI6TmJ');background-repeat: no-repeat;
+    background-position: center; background-size:cover;"
+      id="intro index-banner" class="parallax-container section scrollspy full-height">
+    </section>
+    <section id = "about" style="background-image: url('https://media1.fdncms.com/stranger/imager/u/original/28360159/28165214_1868199416546842_607019053175056954_o.jpg'); position: relative;background-repeat: no-repeat;
+    background-position: center; background-size:cover;"
+     class="parallax-container section scrollspy full-height">
+      <div class="container flow-text">
+          <h3 id="motto">Some sample text in the middle</h3>
+        <p>This is some silly text description</p>
+      </div>
+    </section>
+    <section id="experience" style="background-image: url('https://tulipfestival.org/images/cms/_1800x700/about-the-festival.jpg'); position: relative;background-repeat: no-repeat;
+    background-position: center; background-size:cover;"
+     class="parallax-container section scrollspy full-height">
+     
+      <div class="container flow-text">
+          <h3 id="motto">Some sample text in the middle</h3>
+        <p>This is some silly text description</p>
+      </div>
+    </section>
+    <section id="projects" style="background-image: url('https://cdn.audubon.org/cdn/farfuture/cmCwN1GiqkRrLjYq8tq3ssHjWjVWhz2EBLTiViuBqeo/mtime:1528493280/sites/default/files/styles/hero_image/public/olympic.jpg?itok=QgAVo9os'); position: relative;background-repeat: no-repeat;
+    background-position: center; background-size:cover;"
+     class="parallax-container section scrollspy full-height">
+      <div class="container flow-text">
+          <h3 id="motto">Some sample text in the middle</h3>
+        <p>This is some silly text description</p>
+      </div>
+    </section>
+    <section id="skills" style="background-image: url('https://media2.trover.com/T/569759587eb4f43e3619309c/fixedw_large_4x.jpg'); position: relative;background-repeat: no-repeat;
+    background-position: center; background-size:cover;"
+     class="parallax-container section scrollspy full-height">
+     
+      <div class="container flow-text">
+          <h3 id="motto">Some sample text in the middle</h3>
+        <p>This is some silly text description</p>
+      </div>
+    </section>
+    <section id="awards" style="background-image: url('https://grouptour.com/wp-content/uploads/2017/07/Rainier-Wildflowers-Courtesy-Don-Gyer-72DPI-e1501531094848.jpg'); position: relative;background-repeat: no-repeat;
+    background-position: center; background-size:cover;"
+     class="parallax-container section scrollspy full-height">
+      <div class="container flow-text">
+          <h3 id="motto">Some sample text in the middle</h3>
+        <p>This is some silly text description</p>
+      </div>
+    </section>
+    <section id="education" style="background-image: url('https://gradeslam.org/blog_images/247/cover.jpg'); position: relative;background-repeat: no-repeat;
+    background-position: center; background-size:cover;"
+     class="parallax-container section scrollspy full-height">
+     
+      <div class="container flow-text">
+          <h3 class = "text-lighten-4">Some sample text in the middle</h3>
+        <p>This is some silly text description</p>
+      </div>
+    </section>
+    <section id="contact" class="section scrollspy full-height footer flexbox">
+      <div class="footer-wrap">
+          <ul class = "footer-links-list mod-footer-links-list-main">
+        <li class = "footer-links-list-item">
+            <a class="footer-link" href="https://google.com/">About</a>
+        </li>
+        <li class = "footer-links-list-item">
+            <a class="footer-link" href="https://google.com/">About</a>
+        </li>
+        <li class = "footer-links-list-item">
+            <a class="footer-link" href="https://google.com/">About</a>
+        </li>
+        <li class = "footer-links-list-item">
+            <a class="footer-link" href="https://google.com/">About</a>
+        </li>
+        <li class = "footer-links-list-item">
+            <a class="footer-link" href="https://google.com/">About</a>
+        </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <!-- TOBIAS -->
+    <link rel="script/javascript" href="assets/javascript/app.js">
+
+  <!-- Materialize JS CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src ="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+  <!-- <script>
+    $("#loginBtn").on("click", function(){
+
+    })
+    
+  </script>
+  -->
+
+</body>
+
+</html>

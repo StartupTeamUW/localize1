@@ -1,11 +1,35 @@
 var db = require("../models");
 
-module.exports = function(app) {
+module.exports = function (app) {
   // Load index page
   app.get("/", function (req, res) {
     db.Example.findAll({}).then(function (dbExamples) {
       res.render("index", {
         msg: "Welcome!",
+
+  
+app.get("/", function (req, res) {
+  db.Example.findAll({}).then(function (dbExamples) {
+    res.render("index", {
+      msg: "Welcome!",
+      examples: dbExamples
+    });
+  });
+});
+
+app.get("/trip", function (req, res) {
+  db.Example.findAll({}).then(function (dbExamples) {
+    res.render("trip", {
+      // msg: "Welcome!",
+      // examples: dbExamples
+    });
+  });
+});
+
+  app.get("/users/", function (req, res) {
+    db.Example.findAll({}).then(function (dbExamples) {
+      res.render("user_survey", {
+        msg: "Create a new User Profile",
         examples: dbExamples
       });
     });
