@@ -9,3 +9,12 @@
 .centered-headline {
   text-align: center;
 }
+
+
+
+/* added below - chi 11/28/18 w/ search bar filering */
+
+/* search bar  */
+.ap-input-icon{
+  right:5px;
+}
