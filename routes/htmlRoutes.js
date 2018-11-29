@@ -25,7 +25,7 @@ module.exports = function (app) {
     db.Example.findAll({}).then(function (dbExamples) {
       res.render("profile", {
         imageURL: "https://www.fillmurray.com/200/200",
-        name: "Kevin",
+        name: "Kevin H.",
         city: "Chicago",
         state: "Illinois",
         aboutMe: "Just a guy lorem ip[sum blahbiddy boo And I came here to party in every city in the United States!"
