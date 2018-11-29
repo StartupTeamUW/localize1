@@ -45,7 +45,7 @@ var API = {
 // refreshExamples gets new examples from the db and repopulates the list
 var refreshUsers = function () {
   API.getUsers().then(function (data) {
-    var $user = data.map(function (user) {
+    var $users = data.map(function (user) {
       var $a = $("<a>")
         .text(user.user_name)
         .attr("href", "/user/" + user.id);
@@ -67,7 +67,7 @@ var refreshUsers = function () {
     });
 
     $userList.empty();
-    $userList.append($user);
+    $userList.append($users);
   });
   location.reload();
 };

@@ -44,7 +44,7 @@ app.get("/", function (req, res) {
     db.Trip.findAll({}).then(function (dbUsers) {
       res.render("user_profile", {
         msg: "Users List here",
-        user: dbUsers
+        users: dbUsers
       });
     });
   });

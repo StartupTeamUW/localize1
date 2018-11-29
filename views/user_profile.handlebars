@@ -59,7 +59,7 @@
   <h3>{{msg}}</h3>
   {{!-- List of entered information will become list of previous trips--}}
   <ul id="user-list">
-    {{#each user}}
+    {{#each users}}
     <li data-id="{{this.id}}" class="list-group-item">
       <a href="user/{{this.id}}">{{this.user_name}}</a>
       <button class="btn btn-danger float-right delete">ｘ</button>
