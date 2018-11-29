@@ -12,6 +12,15 @@ module.exports = function (app) {
     });
   });
 
+  app.get("/homepage", function (req, res) {
+    db.Example.findAll({}).then(function (dbExamples) {
+      res.render("homepage", {
+        msg: "Welcome!",
+        examples: dbExamples
+      });
+    });
+  });
+
   app.get("/trip", function (req, res) {
     db.Example.findAll({}).then(function (dbExamples) {
       res.render("trip", {

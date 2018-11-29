@@ -1,0 +1,188 @@
+<style>
+  body {}
+
+  .trip-summary-container {
+    background: rgb(99, 194, 231);
+    color: aliceblue;
+    padding: 20px;
+    height: 100%;
+  }
+
+  .profile-pic {
+    float: left;
+  }
+
+  .profile-name {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 800;
+  }
+
+  img {
+    border-radius: 50%;
+    margin: auto;
+    margin-right: 20px;
+  }
+
+  .trip-interests {
+    list-style: none;
+    display: inline;
+  }
+
+  .pill {
+    background: rgb(116, 218, 252);
+    border-radius: 10px;
+    margin: 0 16px 0 0;
+    padding: 4px 16px;
+    display: inline;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+  }
+
+  .gender {
+    background: rgb(139, 252, 116);
+  }
+
+  .language {
+    background: rgb(252, 116, 161);
+  }
+
+  nav .brand-logo, h1 {
+        color: black;
+        font-family: 'Montserrat Alternates', sans-serif;
+        font-weight: 800;
+        margin-left: 20px;
+    }
+  
+  .homepage-h1 {
+    text-align: center;
+    font-size: 13vw;
+    margin: 50px auto;
+    color: rgb(255, 58, 58);
+  }
+
+  h4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+  }
+  p{
+    font-family: 'Roboto', sans-serif;
+  }
+</style>
+
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Localize</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <!-- changed from here -->
+        <li style="margin-top: -2px; margin-left: 15px; margin-right:15px">
+          <div class="input-group-btn search-panel">
+            <!-- Dropdown Trigger -->
+
+
+            <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
+
+            <!-- Dropdown Structure -->
+            <ul id='dropdown1' class='dropdown-content' role="menu">
+              <li><a href="#city">City</a></li>
+              <li><a href="#host">Host</a></li>
+              <li><a href="#interest">Interest</a></li>
+              <li><a href="#dates"><i class="material-icons">view_module</i>Dates</a></li>
+              <li class="divider" tabindex="-1"></li>
+              <li><a href="#all"><i class="material-icons">cloud</i>All</a></li>
+            </ul>
+
+            {{!-- <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+              <span id="search_concept" class="buttonsize">Select</span>
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li>
+                <a href="#city" style="color:black">City</a>
+              </li>
+              <li>
+                <a href="#host" style="color:black">Host</a>
+              </li>
+              <li>
+                <a href="#interest" style="color:black">Interest</a>
+              </li>
+              <li>
+                <a href="#dates" style="color:black">Dates</a>
+              </li>
+              <li class="divider" style="color:black"></li>
+              <li>
+                <a href="#all" style="color:black">All</a>
+              </li>
+            </ul> --}}
+          </div>
+        </li>
+        <li>
+          <div class="input-group">
+            <input type="hidden" name="search_param" value="all" id="search_param">
+            <input type="search" id="address" class="form-control" placeholder="Where are we going?" style="padding-left: 8px; margin: 0; right: 2px" />
+          </div>
+        </li>
+
+        <li style="margin-top: -2px; margin-left: 15px; margin-right:15px">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">
+              <span class="glyphicon glyphicon-search buttonsize">Search</span>
+            </button>
+          </span>
+        </li>
+
+        <!-- to here  chi 11/28/18 w/ search bar filering -->
+        <li>
+          <a button type="button" class="btn btn-secondary">
+            <i class="material-icons">
+              account_circle
+            </i>
+            </button>
+          </a>
+        </li>
+        <li>
+          <a button type="button" class="btn btn-secondary">
+            <i class="material-icons">
+              email
+            </i>
+            </button>
+          </a>
+        </li>
+        <li>
+          <a button type="button" class="btn btn-secondary" id="loginBtn">Signout</button>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="parallax-container">
+  <div class="container">
+    <div class="row">
+      <h1 class="homepage-h1">LOCALIZE</h1>
+    </div>
+  </div>
+  <div class="parallax"><img src="imgs/nikola-jovanovic-198375-unsplash.jpg"></div>
+</div>
+
+
+<div>
+  <div class="container">
+    <div class="row">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, obcaecati. Incidunt, minus quod ea, cumque
+        tempora quis laudantium nostrum natus saepe hic, blanditiis perspiciatis. Placeat labore vel omnis libero at.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, impedit! Illum labore ipsum sit quis earum, a
+        numquam explicabo molestiae neque rem rerum aliquam, repellendus atque beatae ipsam possimus alias.</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="parallax-container">
+  <div class="parallax"><img src="https://picsum.photos/1200/1200"></div>
+</div>
+
+<br>
+<br>
