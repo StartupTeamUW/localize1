@@ -78,6 +78,7 @@ module.exports = function (app) {
 
   // end of jia's commented outto test
 
+  // Get all trips
   app.get("/api/trips", function (req, res) {
     db.Trip.findAll({}).then(function (dbTrips) {
       res.json(dbTrips);

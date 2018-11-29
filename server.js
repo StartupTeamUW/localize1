@@ -24,7 +24,7 @@ app.set("view engine", "handlebars");
 // Routes
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
-require("./routes/trip-api-routes")(app);
+require("./routes/tripApiRoutes")(app);
 require("./routes/user-api-routes")(app);
 
 var syncOptions = { force: true };
