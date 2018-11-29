@@ -27,7 +27,7 @@ require("./routes/htmlRoutes")(app);
 require("./routes/trip-api-routes")(app);
 require("./routes/user-api-routes")(app);
 
-var syncOptions = { force: false };
+var syncOptions = { force: true };
 
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`

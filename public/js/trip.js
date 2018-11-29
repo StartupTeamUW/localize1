@@ -3,7 +3,7 @@ var $destination = $("#destination");
 var $tripRemark = $("#trip-remark");
 var $startDate= $("#startDate");
 var $endDate = $("#endDate");
-var $tripInterests = $("trip_interests")
+var $tripInterests = $("tripInterests")
 var $submitBtnT = $("#submitT");
 
 // The API object contains methods for each kind of request we'll make
@@ -71,7 +71,7 @@ var handleFormSubmit = function(event) {
     remark: $tripRemark.val().trim(),
     start_date: $startDate.val(),
     end_date: $endDate.val(),
-    trip_interests: $trip_interests.val().trim(),
+    trip_interests: $tripInterests.val()
   };
 
   if (!(trip.destination && trip.trip_interests)) {
