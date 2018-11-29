@@ -49,7 +49,7 @@ var refreshUsers = function () {
       var $a = $("<a>")
         .text(user.user_name)
         .attr("href", "/user/" + user.id);
-        
+
       var $li = $("<li>")
         .attr({
           class: "list-group-item",
