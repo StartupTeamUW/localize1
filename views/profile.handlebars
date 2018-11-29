@@ -32,21 +32,21 @@
 
 
 <div class="navbar-fixed">
-    <nav>
-        <div class="nav-wrapper">
-            <a href="#" class="brand-logo">Localize</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><input type="search" id="address" class="form-control" placeholder="Where are we going?" /></li>
-                <li><a button type="button" class="btn btn-secondary"><i class="material-icons">account_circle</i></button></a></li>
-                <li><a button type="button" class="btn btn-secondary"><i class="material-icons">email</i></button></a></li>
-                <li><a button type="button" class="btn btn-secondary" id="loginBtn">Signout</button></a></li>
-            </ul>
-        </div>
-    </nav>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Localize</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><input type="search" id="address" class="form-control" placeholder="Where to next?" /></li>
+        <li><a button type="button" class="btn"><i class="material-icons">account_circle</i></button></a></li>
+        <li><a button type="button" class="btn" id="loginBtn">Signout</button></a></li>
+      </ul>
+    </div>
+  </nav>
 </div>
 
 <br>
 <br>
+{{!-- BEGIN USER SUMMARY VIEW --}}
 <div class="container">
   <div class="trip-summary-container s12 l10">
     <div class="profile-pic">
@@ -64,3 +64,70 @@
     </div>
   </div>
 </div>
+{{!-- END USER SUMMARY VIEW --}}
+
+{{!-- BEGIN USER DETAIL VIEW --}}
+<div class="container">
+  <ul class="collapsible">
+    <li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Detailed User Profile</div>
+      <div class="collapsible-body">
+        <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit, amet consectetur
+          adipisicing elit. Dicta, cumque! Modi dolores ea quia rerum accusantium illum! Corporis, ea itaque
+          voluptatibus laborum quasi aliquam dolorum eligendi hic odit placeat temporibus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni rem hic assumenda quaerat ipsa facere
+          aspernatur, earum enim, soluta, maxime id libero itaque exercitationem velit necessitatibus iusto.
+          Distinctio, consectetur facilis?</p>
+
+        <div class="container">
+          <div class="row">
+            <div class="card col s4">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="https://www.fillmurray.com/100/100">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+                <p><a href="#">This is a link</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              </div>
+            </div>
+
+            <div class="card col s4">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="https://www.fillmurray.com/100/100">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+                <p><a href="#">This is a link</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              </div>
+            </div>
+
+            <div class="card col s4">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="https://www.fillmurray.com/100/100">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+                <p><a href="#">This is a link</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+{{!-- END USER DETAIL VIEW --}}
