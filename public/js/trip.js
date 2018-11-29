@@ -4,6 +4,8 @@ var $tripRemark = $("#trip-remark");
 var $startDate= $("#startDate");
 var $endDate = $("#endDate");
 var $tripInterests = $("tripInterests")
+
+var $tripList = $("#trip-list");
 var $submitBtnT = $("#submitT");
 
 // The API object contains methods for each kind of request we'll make
@@ -74,10 +76,10 @@ var handleFormSubmit = function(event) {
     trip_interests: $tripInterests.val()
   };
 
-  if (!(trip.destination && trip.trip_interests)) {
-    alert("You must enter an trip destination and trip interests!");
-    return;
-  }
+  // if (!(trip.destination && trip.trip_interests)) {
+  //   alert("You must enter an trip destination and trip interests!");
+  //   return;
+  // }
 
   API.saveTrip(trip).then(function() {
     refreshTrips();
@@ -87,7 +89,7 @@ var handleFormSubmit = function(event) {
   $tripRemark.val("");
   $startDate.val("");
   $endDate.val("");
-  $trip_interests.val("");
+  $tripInterests.val("");
   
 };
 

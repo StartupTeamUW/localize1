@@ -1,21 +1,14 @@
 module.exports = function(sequelize, DataTypes) {
     var Trip = sequelize.define("Trip", {
       destination: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          len: [1]
-        }
+        type: DataTypes.STRING
       },
       // notes from the user (requester)
       remark: {
-        type: DataTypes.TEXT,
-        allowNull: false,
-        len: [1]
+        type: DataTypes.TEXT
       },
       start_date: {
-        type: DataTypes.DATE,
-        allowNull: false
+        type: DataTypes.DATE
       }, 
       // end date can be null
       end_date: {
@@ -35,15 +28,15 @@ module.exports = function(sequelize, DataTypes) {
       }
       });
   
-    Trip.associate = function(models) {
-      // We're saying that a Trip should belong to an User
-      // A Trip can't be created without an User due to the foreign key constraint
-      Trip.belongsTo(models.User, {
-        foreignKey: {
-          allowNull: false
-        }
-      });
-    };
+    // Trip.associate = function(models) {
+    //   // We're saying that a Trip should belong to an User
+    //   // A Trip can't be created without an User due to the foreign key constraint
+    //   Trip.belongsTo(models.User, {
+    //     foreignKey: {
+    //       allowNull: false
+    //     }
+    //   });
+    // };
   
     return Trip;
   };

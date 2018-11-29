@@ -29,7 +29,8 @@
 </div>
 
 {{!-- test of trip data --}}
-<ul id="example-list" class="list-group">
+ <h3>Previous Trips:</h3>
+<ul id="tripList" class="list-group">
     {{#each trips}}
     <li data-id="{{this.id}}" class="list-group-item">
         <a href="trip/{{this.id}}">{{this.destination}}</a>
@@ -37,6 +38,7 @@
     </li>
     {{/each}}
 </ul>
+
 
 {{!-- test of trip data --}}
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
