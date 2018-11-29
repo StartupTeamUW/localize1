@@ -31,7 +31,7 @@ app.get("/", function (req, res) {
   });
   app.get("/trip/:id", function (req, res) {
     db.Trip.findOne({ where: { id: req.params.id } }).then(function (dbTrip) {
-      res.render("trip", {
+      res.render("pastTrip", {
         trip: dbTrip
       });
     });
