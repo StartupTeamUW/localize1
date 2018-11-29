@@ -60,6 +60,7 @@ var refreshTrips = function() {
     $tripList.empty();
     $tripList.append($trip);
   });
+  location.reload();
 };
 
 // handleFormSubmit is called whenever we submit a new example
@@ -75,7 +76,7 @@ var handleFormSubmit = function(event) {
     // tripInterests: $trip_interests.val().trim()
   };
 
-  // if (!(trip.destination && trip.trip_interests)) {
+  // if (!(trip.destination && trip.remark)) {
   //   alert("You must enter an trip destination and trip interests!");
   //   return;
   // }
@@ -102,6 +103,7 @@ var handleDeleteBtnClick = function() {
   API.deleteTrip(idToDelete).then(function() {
     refreshTrips();
   });
+ 
 };
 
 // Add event listeners to the submit and delete buttons
