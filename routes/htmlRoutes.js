@@ -41,17 +41,18 @@ app.get("/", function (req, res) {
   // user pages
 
   app.get("/user", function (req, res) {
-    db.Trip.findAll({}).then(function (dbUsers) {
+    db.User.findAll({}).then(function (dbUsers) {
       res.render("user_profile", {
-        msg: "Edit your profile",
-        user: dbUsers
+        msg: "Users List here",
+        users: dbUsers
       });
     });
   });
   app.get("/user/:id", function (req, res) {
-    db.Trip.findOne({ where: { id: req.params.id } }).then(function (dbUsers) {
-      res.render("trip", {
-        user: dbUsers
+    db.User.findOne({ where: { id: req.params.id } }).then(function (dbUser) {
+      res.render("userCard", {
+        msg: "Users Card",
+        user: dbUser
       });
     });
   });
