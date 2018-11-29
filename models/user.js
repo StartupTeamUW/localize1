@@ -45,9 +45,9 @@ module.exports = function (sequelize, DataTypes) {
     DOB: DataTypes.STRING,
     bio: {
       type: DataTypes.TEXT,
-      validate: {
-        len: [1, 300]
-      }
+      // validate: {
+      //   len: [1, 300]
+      // }
     },
     guide_status: {
       type: DataTypes.BOOLEAN,
@@ -58,13 +58,13 @@ module.exports = function (sequelize, DataTypes) {
     // ?? put interest matching questionarie into a survey table?
   });
 
-  // User.associate = function (models) {
-  //   // Associating User with Trips
-  //   // When an User is deleted, also delete any associated Trips
-  //   User.hasMany(models.Trip, {
-  //     onDelete: "cascade" //TBD - don't want to delete trip records when users deleted their accts
-  //   });
-  // };
+  User.associate = function (models) {
+    // Associating User with Trips
+    // When an User is deleted, also delete any associated Trips
+    User.hasMany(models.Trip, {
+      onDelete: "cascade" //TBD - don't want to delete trip records when users deleted their accts
+    });
+  };
 
   return User;
 };

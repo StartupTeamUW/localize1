@@ -41,7 +41,7 @@ app.get("/", function (req, res) {
   // user pages
 
   app.get("/user", function (req, res) {
-    db.Trip.findAll({}).then(function (dbUsers) {
+    db.User.findAll({}).then(function (dbUsers) {
       res.render("user_profile", {
         msg: "Users List here",
         users: dbUsers
@@ -49,7 +49,7 @@ app.get("/", function (req, res) {
     });
   });
   app.get("/user/:id", function (req, res) {
-    db.Trip.findOne({ where: { id: req.params.id } }).then(function (dbUser) {
+    db.User.findOne({ where: { id: req.params.id } }).then(function (dbUser) {
       res.render("userCard", {
         msg: "Users Card",
         user: dbUser
