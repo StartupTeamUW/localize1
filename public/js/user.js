@@ -1,16 +1,16 @@
 // Get references to page elements
-var $userName = $("#user_name");
-var $userEmail = $("#userEmail");
+var $userName = $("#user-name");
+var $userEmail = $("#user-email");
 var $userPassword = $("#password");
-var $profilePicUrl = $("#profilePicUrl");
-var $firstName = $("#firstName");
-var $lastName = $("#lastName");
+var $profilePicUrl = $("#profile-photo");
+var $firstName = $("#first-name");
+var $lastName = $("#last-name");
 var $gender = $("#gender");
 var $DOB = $("#DOB");
 var $hometown = $("#hometown");
 var $bio = $("#bio");
-var $guideStatus = $("#guideStatus");
-var $userInterests = $("#userInterests");
+// var $guideStatus = $("#guideStatus");
+var $userInterests = $("#user-interests");
 
 
 var $submitBtnU = $("#submitU");
@@ -18,7 +18,7 @@ var $userList = $("#user-list");
 
 // The API object contains methods for each kind of request we'll make
 var API = {
-  saveUser: function(user) {
+  saveUser: function (user) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
@@ -28,13 +28,13 @@ var API = {
       data: JSON.stringify(user)
     });
   },
-  getUsers: function() {
+  getUsers: function () {
     return $.ajax({
       url: "api/users",
       type: "GET"
     });
   },
-  deleteUser: function(id) {
+  deleteUser: function (id) {
     return $.ajax({
       url: "api/users/" + id,
       type: "DELETE"
@@ -43,13 +43,13 @@ var API = {
 };
 
 // refreshExamples gets new examples from the db and repopulates the list
-var refreshUsers = function() {
-  API.getUsers().then(function(data) {
-    var $users = data.map(function(user) {
+var refreshUsers = function () {
+  API.getUsers().then(function (data) {
+    var $user = data.map(function (user) {
       var $a = $("<a>")
         .text(user.user_name)
         .attr("href", "/user/" + user.id);
-
+        
       var $li = $("<li>")
         .attr({
           class: "list-group-item",
@@ -67,13 +67,14 @@ var refreshUsers = function() {
     });
 
     $userList.empty();
-    $userList.append($users);
+    $userList.append($user);
   });
+  location.reload();
 };
 
 // handleFormSubmit is called whenever we submit a new example
 // Save the new example to the db and refresh the list
-var handleFormSubmit = function(event) {
+var handleFormSubmit = function (event) {
   event.preventDefault();
 
   var user = {
@@ -81,23 +82,23 @@ var handleFormSubmit = function(event) {
     email: $userEmail.val().trim(),
     password: $userPassword.val(),
     profile_pic_url: $profilePicUrl.val(),
-    first_name: $firstName.val().trim(),
-    last_name: $lastName.val().trim(),
-    gender: $gender.val().trim(),
+    first_name: $firstName.val(),
+    last_name: $lastName.val(),
+    gender: $gender.val(),
     DOB: $DOB.val(),
-    hometown: $hometown.val().trim(),
-    bio: $bio.val().trim(),
-    guide_status : $guideStatus.val(),
-    userInterests : $userInterests.val()
-    
+    hometown: $hometown.val(),
+    bio: $bio.val(),
+    // guide_status : $guideStatus.val(),
+    userInterests: $userInterests.val()
+
   };
 
-  if (!(user.userName && user.userEmail)) {
-    alert("You must enter a valid username and email address!");
-    return;
-  }
+  // if (!(user.userName && user.userEmail)) {
+  //   alert("You must enter a valid username and email address!");
+  //   return;
+  // }
 
-  API.saveUser(user).then(function() {
+  API.saveUser(user).then(function () {
     refreshUsers();
   });
 
@@ -111,18 +112,18 @@ var handleFormSubmit = function(event) {
   $DOB.val("");
   $hometown.val("");
   $bio.val("");
-  $guideStatus.val("");
+  // $guideStatus.val("");
   $userInterests.val("");
 };
 
 // handleDeleteBtnClick is called when an example's delete button is clicked
 // Remove the example from the db and refresh the list
-var handleDeleteBtnClick = function() {
+var handleDeleteBtnClick = function () {
   var idToDelete = $(this)
     .parent()
     .attr("data-id");
 
-  API.deleteUser(idToDelete).then(function() {
+  API.deleteUser(idToDelete).then(function () {
     refreshUsers();
   });
 };

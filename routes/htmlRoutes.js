@@ -43,15 +43,16 @@ app.get("/", function (req, res) {
   app.get("/user", function (req, res) {
     db.Trip.findAll({}).then(function (dbUsers) {
       res.render("user_profile", {
-        msg: "Edit your profile",
+        msg: "Users List here",
         user: dbUsers
       });
     });
   });
   app.get("/user/:id", function (req, res) {
-    db.Trip.findOne({ where: { id: req.params.id } }).then(function (dbUsers) {
-      res.render("trip", {
-        user: dbUsers
+    db.Trip.findOne({ where: { id: req.params.id } }).then(function (dbUser) {
+      res.render("userCard", {
+        msg: "Users Card",
+        user: dbUser
       });
     });
   });

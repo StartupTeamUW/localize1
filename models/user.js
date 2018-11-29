@@ -3,37 +3,37 @@ module.exports = function (sequelize, DataTypes) {
     //Signup Required
     user_name: {
       type: DataTypes.STRING,
-      allowNull: false,
-      unique: true, // user name can't be dupclicated!
-      validate: {
-        len: {
-          args: 3,
-          msg: "User name must be at least 3 characters in length"
-        }
-      }
+      // allowNull: false,
+      // unique: true, // user name can't be dupclicated!
+      // validate: {
+      //   len: {
+      //     args: 3,
+      //     msg: "User name must be at least 3 characters in length"
+      //   }
+      // }
     },
     email: {
       type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-      validate: {
-        len: {
-          args: [6, 128],
-          msg: "Email address must be between 6 and 128 characters in length"
-        },
-        isEmail: {
-          msg: "Email address must be valid"
-        }
-      }
+      // allowNull: false,
+      // unique: true,
+      // validate: {
+      //   len: {
+      //     args: [6, 128],
+      //     msg: "Email address must be between 6 and 128 characters in length"
+      //   },
+      //   isEmail: {
+      //     msg: "Email address must be valid"
+      //   }
+      // }
     },
     password: {
       type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: {
-          args: 3
-        }
-      }
+      // allowNull: false,
+      // validate: {
+      //   len: {
+      //     args: 3
+      //   }
+      // }
     },
 
     // User Profile
@@ -42,7 +42,7 @@ module.exports = function (sequelize, DataTypes) {
     last_name: DataTypes.STRING,
     gender: DataTypes.STRING,
     hometown: DataTypes.STRING,
-    DOB: DataTypes.DATE,
+    DOB: DataTypes.STRING,
     bio: {
       type: DataTypes.TEXT,
       validate: {
@@ -58,13 +58,13 @@ module.exports = function (sequelize, DataTypes) {
     // ?? put interest matching questionarie into a survey table?
   });
 
-  User.associate = function (models) {
-    // Associating User with Trips
-    // When an User is deleted, also delete any associated Trips
-    User.hasMany(models.Trip, {
-      onDelete: "cascade" //TBD - don't want to delete trip records when users deleted their accts
-    });
-  };
+  // User.associate = function (models) {
+  //   // Associating User with Trips
+  //   // When an User is deleted, also delete any associated Trips
+  //   User.hasMany(models.Trip, {
+  //     onDelete: "cascade" //TBD - don't want to delete trip records when users deleted their accts
+  //   });
+  // };
 
   return User;
 };

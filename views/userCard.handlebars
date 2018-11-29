@@ -4,12 +4,14 @@
             <div class="card mt-4">
                 <div class="card-body">
                     <h5 class="card-title">{{msg}}</h5>
+                    <img src="{{user.profile_pic_url}}" style="float: left;" />
+
 
                     <p>
                         <strong>ID</strong>: {{user.id}}</p>
                     <p>
                         <p>
-                            <strong>City</strong>: {{user.user_name}}</p>
+                            <strong>User Name</strong>: {{user.user_name}}</p>
                         <p>
                             <strong>Description:</strong> {{user.email}}</p>
                         <p>
@@ -29,3 +31,22 @@
         </div>
     </div>
 </div>
+
+{{!-- <div class="container">
+  <hr>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <img src="{{user.profilePicUrl}}" style="float: left;" />
+      <h2 class="display-4">{{user.userName}}</h1>
+        <h3>{{user.hometown}}, {{user.DOB}}</h3>
+        <p class="lead">{{user.bio}}</p> --}}
+        {{!-- <div class="interest-tokens">
+          <ul>
+            {{#each user.interests}}
+            <li class="interests" id="{{this.user.interests}}"> <span class="badge badge-pill badge-primary">{{this.}}</span></li>
+            {{/each}}
+          </ul>
+        </div> --}}
+    {{!-- </div>
+  </div>
+</div> --}}
