@@ -14,8 +14,11 @@ var $oneAThing =$("#one-A-thing");
 var $hobby =$("#hobby");
 var $countries =$("#countries-lived");
 var $whatIShare =$("#what-I-share");
-var $interests =$("#interests");
+// var $interests = [$('input[name ="q1"]:checked').val(), 
 
+// ]
+
+var $interests = $("#interests");
 // var $guideStatus = $("#guideStatus");
 
 
