@@ -49,4 +49,12 @@ db.sequelize.sync(syncOptions).then(function() {
   });
 });
 
+var connection = mysql.createConnection({
+  host: "localhost",
+  port: 3306,
+  user: "root",
+  pasword: "",
+  database: "localize"
+})
+
 module.exports = app;
