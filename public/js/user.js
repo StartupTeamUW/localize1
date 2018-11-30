@@ -9,9 +9,18 @@ var $gender = $("#gender");
 var $DOB = $("#DOB");
 var $hometown = $("#hometown");
 var $bio = $("#bio");
-// var $guideStatus = $("#guideStatus");
-var $userInterests = $("#user-interests");
+var $languages = $("#languages");
+var $whyOn =$("#why-on");
+var $oneAThing =$("#one-A-thing");
+var $hobby =$("#hobby");
+var $countries =$("#countries-lived");
+var $whatIShare =$("#what-I-share");
+// var $interests = [$('input[name ="q1"]:checked').val(), 
 
+// ]
+
+var $interests = $("#interests");
+// var $guideStatus = $("#guideStatus");
 
 var $submitBtnU = $("#submitU");
 var $userList = $("#user-list");
@@ -68,6 +77,7 @@ var refreshUsers = function () {
 
     $userList.empty();
     $userList.append($users);
+    //maybe add spliting here?
   });
   location.reload();
 };
@@ -88,8 +98,14 @@ var handleFormSubmit = function (event) {
     DOB: $DOB.val(),
     hometown: $hometown.val(),
     bio: $bio.val(),
+    languages: $languages.val(),
+    whyOn: $whyOn.val(),
+    one_Athing: $oneAThing.val(),
+    hobby: $hobby.val(),
+    countries: $countries.val(),
+    what_I_share: $whatIShare.val(),
     // guide_status : $guideStatus.val(),
-    userInterests: $userInterests.val()
+    interests: $interests.val()
 
   };
 
@@ -112,8 +128,14 @@ var handleFormSubmit = function (event) {
   $DOB.val("");
   $hometown.val("");
   $bio.val("");
-  // $guideStatus.val("");
-  $userInterests.val("");
+  $languages.val("");
+  $whyOn.val("");
+  $oneAThing.val("");
+  $hobby.val("");
+  $countries.val("");
+  $whatIShare.val("");
+  $interests.val("");
+
 };
 
 // handleDeleteBtnClick is called when an example's delete button is clicked
