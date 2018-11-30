@@ -28,22 +28,10 @@ body {}
     font-family: 'Montserrat Alternates', sans-serif;
     font-weight: 800;
   }
-  /* img {
-    height: auto;
-    width: 100%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    border-radius: 50%;
-} */
-  /* img {
-    display: inline;
-    margin: 0 auto;
+  img {
     height: 100%;
-    align-self: center;
-    width: 100%;
-  } */
+    width: auto;
+  }
   .trip-interests {
     list-style: none;
     display: inline;
@@ -83,4 +71,16 @@ body {}
   }
   p{
     font-family: 'Roboto', sans-serif;
+  }
+
+  input.big-search {
+    background: rgba(255,255,255,.9);
+    border: 1px red;
+    text-align: center;
+  }
+  input.big-search::placeholder {
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1.5em;
   }
