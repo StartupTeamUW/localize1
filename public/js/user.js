@@ -9,8 +9,15 @@ var $gender = $("#gender");
 var $DOB = $("#DOB");
 var $hometown = $("#hometown");
 var $bio = $("#bio");
+var $whyOn =$("#why-on");
+var $oneAThing =$("#one-A-thing");
+var $hobby =$("#hobby");
+var $countries =$("#countries-lived");
+var $whatIShare =$("#what-I-share");
+var $interests =$("#interests");
+
 // var $guideStatus = $("#guideStatus");
-var $userInterests = $("#user-interests");
+
 
 
 var $submitBtnU = $("#submitU");
@@ -88,8 +95,13 @@ var handleFormSubmit = function (event) {
     DOB: $DOB.val(),
     hometown: $hometown.val(),
     bio: $bio.val(),
+    whyOn: $whyOn.val(),
+    one_Athing: $oneAThing.val(),
+    hobby: $hobby.val(),
+    countries: $countries.val(),
+    what_I_share: $whatIShare.val(),
     // guide_status : $guideStatus.val(),
-    userInterests: $userInterests.val()
+    interests: $interests.val()
 
   };
 
@@ -112,8 +124,13 @@ var handleFormSubmit = function (event) {
   $DOB.val("");
   $hometown.val("");
   $bio.val("");
-  // $guideStatus.val("");
-  $userInterests.val("");
+  $whyOn.val("");
+  $oneAThing.val("");
+  $hobby.val("");
+  $countries.val("");
+  $whatIShare.val("");
+  $interests.val("");
+
 };
 
 // handleDeleteBtnClick is called when an example's delete button is clicked

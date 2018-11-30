@@ -1,0 +1,179 @@
+<style>
+  body {}
+
+  .trip-summary-container {
+    background: rgb(99, 194, 231);
+    color: aliceblue;
+    padding: 20px;
+    height: 100%;
+  }
+
+  .profile-pic {
+    float: left;
+  }
+
+  .profile-name {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 800;
+  }
+
+  img {
+    border-radius: 50%;
+    margin: auto;
+    margin-right: 20px;
+  }
+
+  .trip-interests {
+    list-style: none;
+    display: inline;
+  }
+
+  .pill {
+    background: rgb(116, 218, 252);
+    border-radius: 10px;
+    margin: 0 16px 0 0;
+    padding: 4px 16px;
+    display: inline;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+  }
+
+  .gender {
+    background: rgb(139, 252, 116);
+  }
+
+  .language {
+    background: rgb(252, 116, 161);
+  }
+
+  nav .brand-logo {
+        color: black;
+        font-family: 'Montserrat Alternates', sans-serif;
+        font-weight: 800;
+        margin-left: 20px;
+    }
+
+  h4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+  }
+  p{
+    font-family: 'Roboto', sans-serif;
+  }
+</style>
+
+{{!-- BEGIN USER SUMMARY VIEW --}}
+<div class="container">
+  <div class="trip-summary-container s12 l10">
+    <div class="profile-pic">
+      <img src="{{user.profile_pic_url}}" style="float: left;" />
+    </div>
+    <h2 class="display-4 profile-name">{{name}}</h2>
+    <h5>{{user.hometown}}</h5>
+    <p class="lead">{{user.bio}}</p>
+    {{!-- awaiting userInterest data --}}
+    {{!-- <div class="interest-tokens">
+      <ul>
+        {{#each user_interests}}
+        <li class="interests" id="{{this.text}}"> <span class="badge badge-pill badge-primary">{{this.text}}</span></li>
+        {{/each}}
+      </ul>
+    </div> --}}
+  </div>
+</div>
+{{!-- END USER SUMMARY VIEW --}}
+
+{{!-- BEGIN USER DETAIL VIEW --}}
+<div class="container">
+  <ul class="collapsible">
+    <li class="active">
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Detailed User Profile</div>
+      <div class="collapsible-body">
+        <h5>About me:</h5>         <div class="pill gender">{{user.gender}}</div>
+        <div class="pill language">{{user.language[0]}}</div>
+        <div class="pill language">{{user.language[2]}}</div>
+        {{!-- <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit, amet consectetur
+          adipisicing elit. Dicta, cumque! Modi dolores ea quia rerum accusantium illum! Corporis, ea itaque
+          voluptatibus laborum quasi aliquam dolorum eligendi hic odit placeat temporibus.</p> --}}
+        <h5>Why I’m on Localize</h5>
+        <p>{{user.whyOn}}</p>
+        <h5>One Amazing Thing I’ve Done</h5>
+        <p> {{user.one_AThing}}</p>
+        <h5>Favourite Music, Movies, and Books</h5>
+        <p>{{user.hobby}}</p>
+        <br>
+        <hr>
+        <br>
+        <h5>Countries I’ve Lived In</h5>
+        <div id="countries-list">
+              {{#each user.interests}}
+              
+            {{/each}}
+        </div>
+        {{!-- <div class="pill">{{user.countries_lived[0]}}</div>
+        <div class="pill">{{user.countries_lived[1]}}</div> --}}
+        <h5>What I Can Share with other Localizers</h5>
+        <div class="pill">Room</div>
+        <div class="pill">Guide</div>
+        <div class="pill">Advice</div>
+        <h5>Interests</h5>
+        <div class="pill">{{user.interests[0]}}</div>
+        <div class="pill">{{user.interests[1]}}</div>
+        <div class="pill">{{user.interests[2]}}</div>
+
+
+        {{!-- <div class="container"> --}}
+          <br><br>
+          <h4 class="center-align">Most Recent Trips:</h4>
+          <div class="row">
+            <div class="card col s4">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="https://picsum.photos/100/100">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">San Francisco<i class="material-icons right">more_vert</i></span>
+                <p><a href="#">Saw the sights!</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">San Francisco<i class="material-icons right">close</i></span>
+                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              </div>
+            </div>
+
+            <div class="card col s4">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="https://picsum.photos/100/100">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Chicago<i class="material-icons right">more_vert</i></span>
+                <p><a href="#">Ate myself silly!</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Chicago<i class="material-icons right">close</i></span>
+                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              </div>
+            </div>
+
+            <div class="card col s4">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="https://picsum.photos/100/100">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Nashville<i class="material-icons right">more_vert</i></span>
+                <p><a href="#">All about that twang</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Nashville<i class="material-icons right">close</i></span>
+                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              </div>
+            </div>
+          </div>
+          {{!--
+        </div> --}}
+
+      </div>
+    </li>
+  </ul>
+</div>
+{{!-- END USER DETAIL VIEW --}}

@@ -44,10 +44,28 @@ module.exports = function (sequelize, DataTypes) {
     hometown: DataTypes.STRING,
     DOB: DataTypes.STRING,
     bio: {
-      type: DataTypes.TEXT,
+      type: DataTypes.TEXT
       // validate: {
       //   len: [1, 300]
       // }
+    },
+    whyOn:{
+      type: DataTypes.TEXT
+    },
+    one_Athing:{
+      type: DataTypes.TEXT
+    },
+    hobby:{
+      type: DataTypes.STRING
+    },
+    coutries:{
+      type: DataTypes.STRING
+    },
+    what_I_share:{
+      type: DataTypes.STRING
+    },
+    interests:{
+      type: DataTypes.STRING
     },
     guide_status: {
       type: DataTypes.BOOLEAN,
