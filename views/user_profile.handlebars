@@ -60,12 +60,34 @@
   <ul id="user-list">
     {{#each users}}
     <li data-id="{{this.id}}" class="list-group-item">
-      <a href="user/{{this.id}}">{{this.user_name}}</a>
-      <button class="btn btn-danger float-right delete">ｘ</button>
+      {{!-- BEGIN USER SUMMARY VIEW --}}
+      <a href="user/{{this.id}}">
+        <div class="container">
+          <div class="trip-summary-container s12 l10">
+            <div class="profile-pic">
+              <img src="{{this.profile_pic_url}}" />
+            </div>
+            <h2 class="display-4 profile-name">{{this.user_name}}</h2>
+            <h5>{{this.hometown}}</h5>
+            <p class="lead">{{this.bio}}</p>
+            <div class="interest-tokens">
+              <ul>
+                {{#each this_interests}}
+                <li class="interests" id="{{this.text}}"> <span class="badge badge-pill badge-primary">{{this.text}}</span></li>
+                {{/each}}
+              </ul>
+            </div>
+            <button class="btn btn-danger float-right delete">ｘ</button>
+          </div>
+        </div>
+      </a>
+      <br>
+      {{!-- END USER SUMMARY VIEW --}}
     </li>
     {{/each}}
   </ul>
 </div>
+
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/user.js"></script>
