@@ -52,13 +52,16 @@ module.exports = function (sequelize, DataTypes) {
     whyOn:{
       type: DataTypes.TEXT
     },
+    languages:{
+      type: DataTypes.TEXT
+    },
     one_Athing:{
       type: DataTypes.TEXT
     },
     hobby:{
       type: DataTypes.STRING
     },
-    coutries:{
+    countries:{
       type: DataTypes.STRING
     },
     what_I_share:{
@@ -76,13 +79,13 @@ module.exports = function (sequelize, DataTypes) {
     // ?? put interest matching questionarie into a survey table?
   });
 
-  User.associate = function (models) {
-    // Associating User with Trips
-    // When an User is deleted, also delete any associated Trips
-    User.hasMany(models.Trip, {
-      onDelete: "cascade" //TBD - don't want to delete trip records when users deleted their accts
-    });
-  };
+  // User.associate = function (models) {
+  //   // Associating User with Trips
+  //   // When an User is deleted, also delete any associated Trips
+  //   User.hasMany(models.Trip, {
+  //     onDelete: "cascade" //TBD - don't want to delete trip records when users deleted their accts
+  //   });
+  // };
 
   return User;
 };

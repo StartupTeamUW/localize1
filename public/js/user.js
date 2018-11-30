@@ -9,6 +9,7 @@ var $gender = $("#gender");
 var $DOB = $("#DOB");
 var $hometown = $("#hometown");
 var $bio = $("#bio");
+var $languages = $("#languages");
 var $whyOn =$("#why-on");
 var $oneAThing =$("#one-A-thing");
 var $hobby =$("#hobby");
@@ -20,8 +21,6 @@ var $whatIShare =$("#what-I-share");
 
 var $interests = $("#interests");
 // var $guideStatus = $("#guideStatus");
-
-
 
 var $submitBtnU = $("#submitU");
 var $userList = $("#user-list");
@@ -78,6 +77,7 @@ var refreshUsers = function () {
 
     $userList.empty();
     $userList.append($users);
+    //maybe add spliting here?
   });
   location.reload();
 };
@@ -98,6 +98,7 @@ var handleFormSubmit = function (event) {
     DOB: $DOB.val(),
     hometown: $hometown.val(),
     bio: $bio.val(),
+    languages: $languages.val(),
     whyOn: $whyOn.val(),
     one_Athing: $oneAThing.val(),
     hobby: $hobby.val(),
@@ -127,6 +128,7 @@ var handleFormSubmit = function (event) {
   $DOB.val("");
   $hometown.val("");
   $bio.val("");
+  $languages.val("");
   $whyOn.val("");
   $oneAThing.val("");
   $hobby.val("");

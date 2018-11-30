@@ -1,4 +1,5 @@
 var db = require("../models");
+var i;
 
 module.exports = function (app) {
   // Load index pages
@@ -50,9 +51,13 @@ app.get("/", function (req, res) {
   });
   app.get("/user/:id", function (req, res) {
     db.User.findOne({ where: { id: req.params.id } }).then(function (dbUser) {
-      res.render("userCard", {
+      res.render("kevinUserDetailedPage", {
         msg: "Users Card",
-        user: dbUser
+        user: dbUser,
+        languages: dbUser.languages[i],
+        countries: dbUser.countries[i],
+        shares: dbUser.what_I_share[i],
+        interests: dbUser.interests[i]
       });
     });
   });

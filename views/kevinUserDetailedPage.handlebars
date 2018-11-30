@@ -1,3 +1,5 @@
+{{!-- this will replace userCard.handlebars --}}
+
 <style>
   body {}
 
@@ -8,8 +10,31 @@
     height: 100%;
   }
 
+    {
+      {
+       !-- .profile-pic {
+        float: left;
+      }
+
+      --
+    }
+  }
+
   .profile-pic {
     float: left;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    object-fit: contain;
+    display: flex;
+    justify-content: center;
+  }
+
+  img {
+    height: 100%;
+    width: auto;
   }
 
   .profile-name {
@@ -47,18 +72,27 @@
     background: rgb(252, 116, 161);
   }
 
+  .countries {
+    background: cyan;
+  }
+
+  .share {
+    background: rgb(169, 179, 31);
+  }
+
   nav .brand-logo {
-        color: black;
-        font-family: 'Montserrat Alternates', sans-serif;
-        font-weight: 800;
-        margin-left: 20px;
-    }
+    color: black;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 800;
+    margin-left: 20px;
+  }
 
   h4 {
     font-family: 'Roboto', sans-serif;
     font-weight: lighter;
   }
-  p{
+
+  p {
     font-family: 'Roboto', sans-serif;
   }
 </style>
@@ -72,14 +106,15 @@
     <h2 class="display-4 profile-name">{{name}}</h2>
     <h5>{{user.hometown}}</h5>
     <p class="lead">{{user.bio}}</p>
-    {{!-- awaiting userInterest data // pass user_interest key into the object --}}
-    <div class="interest-tokens">
+    {{!-- awaiting userInterest data // pass user_interest key into the object but comment out for now to test detailed
+    page first --}}
+    {{!-- <div class="interest-tokens">
       <ul>
         {{#each user_interests}}
-        <li data-id="{{this.id}}" class ="list-group-item"> <span class="badge badge-pill badge-primary">{{this.text}}</span></li>
+        <li data-id="{{this.id}}" class="list-group-item"> <span class="badge badge-pill badge-primary">{{this.text}}</span></li>
         {{/each}}
       </ul>
-    </div>
+    </div> --}}
   </div>
 </div>
 {{!-- END USER SUMMARY VIEW --}}
@@ -90,9 +125,18 @@
     <li class="active">
       <div class="collapsible-header"><i class="material-icons">filter_drama</i>Detailed User Profile</div>
       <div class="collapsible-body">
-        <h5>About me:</h5>         <div class="pill gender">{{user.gender}}</div>
-        <div class="pill language">{{user.language[0]}}</div>
-        <div class="pill language">{{user.language[2]}}</div>
+        <h5>About me:</h5>
+        <div class="pill gender">{{user.gender}}</div>
+        <div class="pill language">{{user.languages}}</div>
+
+        {{!-- <div class="pill language">{{user.language[0]}}</div>
+        <div class="pill language">{{user.language[2]}}</div> --}}
+        {{!-- <div id="language-list">
+          {{#each languages}}
+          <div data-id="{{this.id}}" class="pill language">
+          </div>
+          {{/each}}
+        </div> --}}
         {{!-- <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit, amet consectetur
           adipisicing elit. Dicta, cumque! Modi dolores ea quia rerum accusantium illum! Corporis, ea itaque
           voluptatibus laborum quasi aliquam dolorum eligendi hic odit placeat temporibus.</p> --}}
@@ -105,24 +149,42 @@
         <br>
         <hr>
         <br>
+        {{!-- <div class="pill">USA</div>
+        <div class="pill">France</div>
+        <h5>Countries I’ve Lived In</h5> --}}
         <h5>Countries I’ve Lived In</h5>
-        <div id="countries-list">
-              {{#each user.interests}}
-              
-            {{/each}}
-        </div>
-        {{!-- <div class="pill">{{user.countries_lived[0]}}</div>
-        <div class="pill">{{user.countries_lived[1]}}</div> --}}
-        <h5>What I Can Share with other Localizers</h5>
+        <div class="pill countries">{{user.countries}}</div>
+
+        {{!-- <div id="countries-list">
+          {{#each countries}}
+          <div data-id="{{this.id}}" class="pill countries">
+          </div>
+          {{/each}}
+        </div> --}}
+        {{!-- pass on interest key word into object data --}}
+        {{!-- <h5>What I Can Share with other Localizers</h5>
         <div class="pill">Room</div>
         <div class="pill">Guide</div>
-        <div class="pill">Advice</div>
+        <div class="pill">Advice</div> --}}
+        <h5>What I Can Share with other Localizers</h5>
+        <div class="pill share">{{user.what_I_share}}</div>
+        {{!-- <div id="share-list">
+          {{#each shares}}
+          <div data-id="{{this.id}}" class="pill shares">
+          </div>
+          {{/each}}
+        </div> --}}
         <h5>Interests</h5>
-        <div class="pill">{{user.interests[0]}}</div>
+        {{!-- <div class="pill">{{user.interests[0]}}</div>
         <div class="pill">{{user.interests[1]}}</div>
-        <div class="pill">{{user.interests[2]}}</div>
-
-
+        <div class="pill">{{user.interests[2]}}</div> --}}
+        <div class="pill interests">{{user.interests}}</div>
+        {{!-- <div id="interests-list">
+          {{#each interests}}
+          <div data-id="{{this.id}}" class="pill interests">
+          </div>
+          {{/each}}
+        </div> --}}
         {{!-- <div class="container"> --}}
           <br><br>
           <h4 class="center-align">Most Recent Trips:</h4>
