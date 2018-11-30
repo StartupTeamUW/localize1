@@ -68,6 +68,18 @@
   p{
     font-family: 'Roboto', sans-serif;
   }
+
+  input.big-search {
+    background: rgba(255,255,255,.9);
+    border: 1px red;
+    text-align: center;
+  }
+  input.big-search::placeholder {
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1.5em;
+  }
 </style>
 
 <div class="navbar-fixed">
@@ -162,6 +174,7 @@
   <div class="container">
     <div class="row">
       <h1 class="homepage-h1">LOCALIZE</h1>
+      <input id="parallax-search" class="big-search" placeholder="Where Are You Headed?" />
     </div>
   </div>
   <div class="parallax"><img src="imgs/nikola-jovanovic-198375-unsplash.jpg"></div>
