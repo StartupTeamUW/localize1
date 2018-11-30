@@ -70,6 +70,13 @@ body {}
         font-weight: 800;
         margin-left: 20px;
     }
+    .homepage-h1 {
+      text-align: center;
+      font-size: 13vw;
+      margin: 50px auto;
+      color: rgb(255, 58, 58);
+    }
+    
   h4 {
     font-family: 'Roboto', sans-serif;
     font-weight: lighter;
