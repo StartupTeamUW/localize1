@@ -63,11 +63,8 @@ module.exports = function (app) {
     db.User.findOne({ where: { id: req.params.id } }).then(function (dbUser) {
       res.render("kevinUserDetailedPage", {
         msg: "Users Card",
-        user: dbUser,
-        languages: dbUser.languages[i],
-        countries: dbUser.countries[i],
-        shares: dbUser.what_I_share[i],
-        interests: dbUser.interests[i]
+        user: dbUser.dataValues,
+        interests: dbUser.interests
       });
     });
   });

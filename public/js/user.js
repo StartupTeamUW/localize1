@@ -1,7 +1,7 @@
 // Get references to page elements
-var $userName = $("#user-name");
-var $userEmail = $("#user-email");
-var $userPassword = $("#password");
+var $userName = $("#username");
+var $userEmail = $("#user-email-address");
+var $userPassword = $("#user-password");
 var $profilePicUrl = $("#profile-photo");
 var $firstName = $("#first-name");
 var $lastName = $("#last-name");
