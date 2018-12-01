@@ -28,7 +28,10 @@ require("./routes/tripApiRoutes")(app);
 require("./routes/user-api-routes")(app);
 
 // If running a test, set syncOptions.force to true
-var syncOptions = { force: true };
+var syncOptions = { force: false };
+
+//false means do not delete !!! CAHGNE THIS BEFORE PUSHING TO MASTER
+
 
 
 if (process.env.NODE_ENV === "test") {

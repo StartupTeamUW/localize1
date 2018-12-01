@@ -40,7 +40,8 @@ module.exports = function (app) {
   // Create a new trip
   app.post("/api/users", function (req, res) {
     db.User.create(req.body).then(function (dbUser) {
-      res.json(dbUser);
+      res.redirect("/user/" + dbUser.dataValues.id)
+      // res.json(dbUser);
     });
   });
 

@@ -68,10 +68,10 @@ module.exports = function (app) {
       res.render("kevinUserDetailedPage", {
         msg: "Users Card",
         user: dbUser,
-        languages: dbUser.languages[i],
-        countries: dbUser.countries[i],
-        shares: dbUser.what_I_share[i],
-        interests: dbUser.interests[i]
+        // languages: dbUser.languages[i],
+        // countries: dbUser.countries[i],
+        // shares: dbUser.what_I_share[i],
+        // interests: dbUser.interests[i]
       });
     });
   });
