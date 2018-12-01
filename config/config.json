@@ -2,7 +2,11 @@
   "development": {
     "username": "root",
     "password": null,
+<<<<<<< HEAD
     "database": "localize",
+=======
+    "database": "localize_db",
+>>>>>>> 0cdd18f737e77cfe2496dc78eea6bff6ce16fba5
     "host": "localhost",
     "dialect": "mysql"
   },

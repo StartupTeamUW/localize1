@@ -1,25 +1,37 @@
+{{!-- FOR TESTING --}}
+
+{{!-- TRIP HANDLEBARS WITHOUT MODELS --}}
 <div class="content container">
-  <div class="row">
+    <div>
+        <label for="destination">Trip Destination</label>
+        <input type="text" id="destination" class="form-control" aria-describedby="trip-text" placeholder="Enter City Name">
+    </div>
     <div id="wrapper1" class="col s5 offset-s1 input-field">
-      <input type="date" id="start1" class="datepicker-start" />
-      <label for="start1"></label>
+        <input type="date" id="startDate" class="datepicker-start" />
+        <label for="startDate"></label>
     </div>
     <div id="wrapper2" class="col s5 input-field">
-      <input type="date" id="end1" class="datepicker-end" />
-      <label for="end1"></label>
+        <input type="date" id="endDate" class="datepicker-end" />
+        <label for="endDate"></label>
     </div>
-  </div>
-  
-  {{!-- <div class="row">
-    <div id="wrapper3" class="col s5 offset-s1 input-field">
-      <input type="date" id="start2" class="datepicker-start" />
-      <label for="start2">Start Date</label>
+    <div>
+        <label for="trip-remark">Trip Remarks</label>
+        <textarea class="form-control" id="trip-remark" aria-describedby="trip-description" placeholder="Enter Trip Description"></textarea>
     </div>
-    <div id="wrapper4" class="col s5 input-field">
-      <input type="date" id="end2" class="datepicker-end" />
-      <label for="end2">End Date</label>
-    </div>
-  </div> --}}
+    <button id="submitT" class="btn btn-primary float-right">Submit</button>
 </div>
+
+{{!-- test of trip data --}}
+<h1>{{msg}}</h1>
+<ul id="tripList">
+    {{#each trip}}
+    <li data-id="{{this.id}}" class="list-group-item">
+        <a href="trip/{{this.id}}">{{this.destination}}</a>
+        <button class="btn btn-danger float-right delete">ｘ</button>
+    </li>
+    {{/each}}
+</ul>
+
+{{!-- test of trip data --}}
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+<script src="/js/trip.js"></script>

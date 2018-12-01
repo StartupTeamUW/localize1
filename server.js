@@ -24,13 +24,18 @@ app.set("view engine", "handlebars");
 // Routes
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
+<<<<<<< HEAD
 // CRUD user data
 require("./routes/user-api-routes.js")(app);
 
 // CRUD trip data
 require("./routes/trip-api-routes.js")(app);
+=======
+require("./routes/tripApiRoutes")(app);
+require("./routes/user-api-routes")(app);
+>>>>>>> 0cdd18f737e77cfe2496dc78eea6bff6ce16fba5
 
-var syncOptions = { force: false };
+var syncOptions = { force: true };
 
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`

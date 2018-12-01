@@ -1,0 +1,83 @@
+<div class="container">
+  <div class="row">
+    <div class="col s12">
+      <h2 class="centered-headline">{{msg}}</h2><i class="material-icons prefix">mode_edit</i>
+      <div class="container s12 l12">
+        <form action="">
+          <div class="input-field col s12">
+            <input type="text" id="user-name" class="validate">
+            <label for="user-name">User Name</label>
+          </div>
+          <div class="input-field col s12">
+            <input type="email" id="user-email" class="validate">
+            <label for="user-email" data-error="wrong" data-success="right">Email Address</label>
+          </div>
+          <div class="input-field col s6">
+            <input type="password" id="password" class="validate">
+            <label for="password">Password</label>
+          </div>
+          <div class="input-field col s12">
+            <input type="text" id="profile-photo" class="validate">
+            <label for="profile-photo" data-error="wrong" data-success="right">Profile Photo URL</label>
+          </div>
+          <div class="input-field col s12 l6">
+            <input type="text" id="first-name" class="validate">
+            <label for="first-name">First Name</label>
+          </div>
+          <div class="input-field col s12 l6">
+            <input type="text" id="last-name" class="validate">
+            <label for="last-name">Last Name</label>
+          </div>
+          <div class="input-field col s6">
+            <input type="text" id="gender" class="validate">
+            <label for="gender">Gender</label>
+          </div>
+          <div class="input-field col s12 l6">
+            <input type="date" id="DOB" class="datepicker">
+            <label for="DOB"></label>
+          </div>
+          <div class="input-field col s12">
+            <input type="text" id="hometown" class="validate">
+            <label for="hometown">Hometown</label>
+          </div>
+          <div class="input-field col s12">
+            <textarea id="bio" class="materialize-textarea"></textarea>
+            <label for="bio">About Me</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="guideStatus" type="checkbox" />
+            <label for="guideStatus">Open to be a guide?</label>
+          </div>
+        </form>
+      </div>
+    </div>
+    <button id="submitU" class="btn btn-primary float-right">Save</button>
+  </div>
+  {{!-- test of user data --}}
+
+  <h3>{{msg}}</h3>
+  {{!-- List of entered information will become list of previous users--}}
+  <ul id="user-list">
+    {{#each users}}
+    <li data-id="{{this.id}}" class="list-group-item">
+      <a href="user/{{this.id}}">{{this.user_name}}</a>
+      <button class="btn btn-danger float-right delete">ｘ</button>
+    </li>
+    {{/each}}
+  </ul>
+  {{!-- test of user data --}}
+  <h3>{{msg}}</h3>
+  <h3>{{msg}}</h3>
+  <h3>{{msg}}</h3>
+  <h3>{{msg}}</h3>
+  <h3>{{msg}}</h3>
+  <h3>{{msg}}</h3>
+  <h3>{{msg}}</h3>
+  <h3>{{msg}}</h3>
+</div>
+
+
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/user.js"></script>
