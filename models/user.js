@@ -74,37 +74,16 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.BOOLEAN,
       defaultValue: false
     }
-
-    // User Interests - TBD
-    // ?? put interest matching questionarie into a survey table?
   });
 
-  // User.associate = function (models) {
-  //   // Associating User with Trips
-  //   // When an User is deleted, also delete any associated Trips
-  //   User.hasMany(models.Trip, {
-  //     onDelete: "cascade" //TBD - don't want to delete trip records when users deleted their accts
-  //   });
-  // };
+  User.associate = function (models) {
+    // Associating User with Trips
+    // When an User is deleted, also delete any associated Trips
+    User.hasMany(models.Trip, {
+      onDelete: "cascade" //TBD - don't want to delete trip records when users deleted their accts
+    });
+  };
 
   return User;
 };
 
-/*
-field	data type	validation	UI Name	UI validation
-id	auto increment			
-user_id	foreign			
-host	boolean, Y/N	accepting		
-traveler	boolean, Y/N	creating		
-Trip start	date			
-trip end	date			
-Host rating	integer			
-trip Rating	integer			
-Summary/comments	Text			
-Color Code	hex value			
-Tags	string array			
-date_created	date	DB Date		
-date_updated	date	DB Date		
-location				option list
-
-  */
