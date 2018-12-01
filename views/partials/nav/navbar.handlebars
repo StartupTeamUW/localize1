@@ -38,16 +38,20 @@
         </li>
 
         <!-- to here  chi 11/28/18 w/ search bar filering -->
+
+
+        {{!-- !!!! KH - STYLING ISSUE - the <a> link is a white color for some reason --}}
         <li>
-          <a button type="button" class="btn btn-secondary">
-            <i class="material-icons">
-              account_circle
-            </i>
-            </button>
-          </a>
+          <!-- Modal Trigger -->
+          <span class="input-group-btn">
+            <a type="button" data-target="modal1" class="btn modal-trigger">
+              <i class="material-icons">account_circle</i>
+            </a>
+          </span>
+
         </li>
         <li>
-          <a button type="button" class="btn btn-secondary">
+          <a type="button" class="btn btn-secondary">
             <i class="material-icons">
               email
             </i>
@@ -55,7 +59,7 @@
           </a>
         </li>
         <li>
-          <a button type="button" class="btn btn-secondary" id="loginBtn">Signout</button>
+          <a type="button" class="btn btn-secondary" id="loginBtn">Signout</button>
           </a>
         </li>
       </ul>
@@ -63,3 +67,13 @@
   </nav>
 </div>
 
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <h4>Modal Header</h4>
+    <p>A bunch of text</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+  </div>
+</div>
