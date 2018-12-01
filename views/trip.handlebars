@@ -5,18 +5,18 @@
     }
 </style>
 {{!-- TRIP HANDLEBARS WITHOUT MODELS --}}
-
+{{> nav/navbar-no-search}}
 <br>
 <br>
 <div class="content container">
     <div>
         <!-- to here  chi 11/28/18 w/ search bar filering -->
-        
-            <div class="input-group">
-                <input type="hidden" name="search_param" value="all" id="search_param">
-                <input type="search" id="address" autocomplete="on" class="form-control address" placeholder="Where are we going?"
-                    style="padding-left: 8px; margin: 0; right: 2px" />
-            </div>
+
+        <div class="input-group">
+            <input type="hidden" name="search_param" value="all" id="search_param">
+            <input type="search" id="address" autocomplete="on" class="form-control address" placeholder="Where are we going?"
+                style="padding-left: 8px; margin: 0; right: 2px" />
+        </div>
 
         <!-- to here  chi 11/28/18 w/ search bar filering -->
     </div>

@@ -33,6 +33,8 @@ module.exports = function (app) {
 
   // added trip pages
   app.get("/trip", function (req, res) {
+    var city = req.body;
+    // KH - NEED TO GET THE CONTENT OF THE NAV SEARCH FIELD AND PASS TO THE PLACEHOLDER TEXT ON THE TRIP PAGE CITY FIELD
     db.Trip.findAll({}).then(function (dbTrips) {
       res.render("trip", {
         msg: "Here are our trips",
