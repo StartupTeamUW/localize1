@@ -16,8 +16,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Materialize CSS CDN and Bootstrap-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
 
 
@@ -28,14 +28,34 @@
     <title>Localize-meeting the locals makes easy</title>
     <style>
         .interests {
- list-style: none;
- display: inline-block; 
-}
-ul {
- list-style: none;
-}
+            list-style: none;
+            display: inline-block;
+        }
 
-</style>
+        ul {
+            list-style: none;
+        }
+    </style>
+
+<!-- for autocompleting city names chi 11/29/18 from here -->
+
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places" type="text/javascript"></script>
+    <script type="text/javascript">
+        function initialize() {
+
+            var options = {
+                types: ['(cities)'],
+                componentRestrictions: { country: "us" }
+            };
+
+            var input = document.getElementById('address');
+            var autocomplete = new google.maps.places.Autocomplete(input, options);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+<!-- to here chi 11/29/18 -->
+
 </head>
 
 <body>
@@ -44,17 +64,46 @@ ul {
             <div class="nav-wrapper white">
                 <i src="assets/img/localize.png" class="brand-logo blue-text text-darken-2">Localize</i>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><input type="search" id="address" class="form-control" placeholder="Where are we going?" />
-                    </li>
-                    
 
-                    <li><a button type="button" class="btn btn-secondary"><i class="material-icons">
+<!-- to here  chi 11/28/18 w/ search bar filering -->
+                    <li>
+                        <div class="input-group">
+                            <input type="hidden" name="search_param" value="all" id="search_param">
+                            <input type="search" id="address" autocomplete="on" class="form-control" placeholder="Where are we going?" style="padding-left: 8px; margin: 0; right: 2px"
+                            />
+                        </div>
+                    </li>
+
+                    <li style="margin-top: -2px; margin-left: 15px; margin-right:15px">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                                <span class="glyphicon glyphicon-search buttonsize">Search</span>
+                            </button>
+                        </span>
+                    </li>
+
+<!-- to here  chi 11/28/18 w/ search bar filering -->
+
+                    <li>
+                        <a button type="button" class="btn btn-secondary">
+                            <i class="material-icons">
                                 account_circle
-                            </i></button></a></li>
-                    <li><a button type="button" class="btn btn-secondary"><i class="material-icons">
+                            </i>
+                            </button>
+                        </a>
+                    </li>
+                    <li>
+                        <a button type="button" class="btn btn-secondary">
+                            <i class="material-icons">
                                 email
-                            </i></button></a></li>
-                    <li><a button type="button" class="btn btn-secondary" id="loginBtn">Signout</button></a></li>
+                            </i>
+                            </button>
+                        </a>
+                    </li>
+                    <li>
+                        <a button type="button" class="btn btn-secondary" id="loginBtn">Signout</button>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -70,11 +119,18 @@ ul {
                     <p class="lead">A short 'about me' paragraph the user adds to their profile.</p>
                     <div class="interest-tokens">
                         <ul>
-                            <li class="interests"><span class="badge badge-pill badge-primary">Sports</span>
+                            <li class="interests">
+                                <span class="badge badge-pill badge-primary">Sports</span>
                             </li>
-                            <li class="interests"> <span class="badge badge-pill badge-primary">Food</span></li>
-                            <li class="interests"><span class="badge badge-pill badge-primary">Bars</span></li>
-                            <li class="interests"><span class="badge badge-pill badge-primary">Music</span></li>
+                            <li class="interests">
+                                <span class="badge badge-pill badge-primary">Food</span>
+                            </li>
+                            <li class="interests">
+                                <span class="badge badge-pill badge-primary">Bars</span>
+                            </li>
+                            <li class="interests">
+                                <span class="badge badge-pill badge-primary">Music</span>
+                            </li>
                         </ul>
                     </div>
             </div>
@@ -85,8 +141,7 @@ ul {
             <div class="card">
                 <div class="card-header" id="headingOne">
                     <h5 class="mb-0">
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
-                            aria-expanded="true" aria-controls="collapseOne">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             Detailed Profile
                         </button>
                     </h5>
@@ -102,25 +157,18 @@ ul {
                                         <hr class="my-2">
                                         <p>A short summary statement of the trip</p>
                                         <p class="lead">
-                                            <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo
-                                                action name</a>
+                                            <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</a>
                                         </p>
                                     </div>
                                 </div>
                             </li>
-                            <li>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson
-                                ad squid. 3
-                                wolf moon
-                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
-                                eiusmod. Brunch
-                                3
+                            <li>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                                3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                                laborum eiusmod. Brunch 3
                             </li>
-                            <li>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson
-                                ad squid. 3
-                                wolf moon
-                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
-                                eiusmod. Brunch
-                                3
+                            <li>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                                3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                                laborum eiusmod. Brunch 3
                             </li>
                         </ul>
                     </div>
@@ -133,8 +181,7 @@ ul {
             <div class="card">
                 <div class="card-header" id="headingOne">
                     <h5 class="mb-0">
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo"
-                            aria-expanded="true" aria-controls="collapseTwo">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                             Trip History
                         </button>
                     </h5>
@@ -142,26 +189,17 @@ ul {
                 <div id="collapseTwo" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                     <div class="card-body">
                         <ul>
-                            <li>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson
-                                ad squid. 3
-                                wolf moon
-                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
-                                eiusmod. Brunch
-                                3
+                            <li>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                                3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                                laborum eiusmod. Brunch 3
                             </li>
-                            <li>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson
-                                ad squid. 3
-                                wolf moon
-                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
-                                eiusmod. Brunch
-                                3
+                            <li>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                                3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                                laborum eiusmod. Brunch 3
                             </li>
-                            <li>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson
-                                ad squid. 3
-                                wolf moon
-                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
-                                eiusmod. Brunch
-                                3
+                            <li>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                                3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                                laborum eiusmod. Brunch 3
                             </li>
                         </ul>
                     </div>
@@ -171,43 +209,43 @@ ul {
     </div>
     <hr>
     <!-- CALL TO ACTION TO CREATE A NEW TRIP -->
-    <div class="mx-auto" style="width: 200px;"">
-<button type=" button" class="btn btn-primary btn-lg" href="/tripInfo">Plan A New
+    <div class="mx-auto" style="width: 200px;" ">
+<button type=" button " class="btn btn-primary btn-lg " href="/tripInfo ">Plan A New
         Trip!</button>
 
     </div>
     </div>
 
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/places.js@1.14.0"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo "
+        crossorigin="anonymous "></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 "
+        crossorigin="anonymous "></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/places.js@1.14.0 "></script>
 
    
-    <script src=" https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+    <script src=" https://requirejs.org/docs/release/2.3.5/minified/require.js "></script>
     <script>
-            (function() {
-              var placesAutocomplete = places({
+        (function () {
+            var placesAutocomplete = places({
                 appId: 'JSLJBPTRC9',
                 apiKey: 'fe3a389cac2375e56c7401ce1a6c8ffa',
                 container: document.querySelector('#address')
-              });
-            
-              var $address = document.querySelector('#address-value')
-              placesAutocomplete.on('change', function(e) {
+            });
+
+            var $address = document.querySelector('#address-value')
+            placesAutocomplete.on('change', function (e) {
                 $address.textContent = e.suggestion.value
-              });
-            
-              placesAutocomplete.on('clear', function() {
+            });
+
+            placesAutocomplete.on('clear', function () {
                 $address.textContent = 'none';
-              });
-            
-            })();
-            </script>
-    <!-- <script src="js/trip.js" type="text/javascript"></script> -->
+            });
+
+        })();
+    </script>
+    <!-- <script src="js/trip.js " type="text/javascript "></script> -->
 </body>
 
 </html>
