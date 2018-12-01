@@ -8,9 +8,8 @@
           <div class="input-group-btn search-panel">
             <!-- Dropdown Trigger -->
 
-
-            <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
-
+            {{!-- KH - DROP DOWN NAVE MENU - CURRENTLY NOT IN USE --}}
+            {{!-- <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
             <!-- Dropdown Structure -->
             <ul id='dropdown1' class='dropdown-content' role="menu">
               <li><a href="#city">City</a></li>
@@ -19,7 +18,7 @@
               <li><a href="#dates"><i class="material-icons">view_module</i>Dates</a></li>
               <li class="divider" tabindex="-1"></li>
               <li><a href="#all"><i class="material-icons">cloud</i>All</a></li>
-            </ul>
+            </ul> --}}
           </div>
         </li>
         <li>
@@ -30,38 +29,44 @@
         </li>
 
         <li style="margin-top: -2px; margin-left: 15px; margin-right:15px">
-          <span class="input-group-btn">
+          {{!-- <span class="input-group-btn"> --}}
             <button class="btn btn-default" type="button">
-              <span class="glyphicon glyphicon-search buttonsize">Search</span>
+              <span class="glyphicon glyphicon-search buttonsize">
+                <i class="material-icons">flight_takeoff</i>
+              </span>
             </button>
-          </span>
+          {{!-- </span> --}}
         </li>
 
         <!-- to here  chi 11/28/18 w/ search bar filering -->
 
 
         {{!-- !!!! KH - STYLING ISSUE - the <a> link is a white color for some reason --}}
-        <li>
-          <!-- Modal Trigger -->
-          <span class="input-group-btn">
-            <a type="button" data-target="modal1" class="btn modal-trigger">
-              <i class="material-icons">account_circle</i>
-            </a>
-          </span>
+          <li>
+            <!-- Modal Trigger -->
+            <span class="input-group-btn">
+              <a type="button" data-target="modal1" class="btn modal-trigger">
+                <i class="material-icons">account_circle</i>
+              </a>
+            </span>
 
-        </li>
-        <li>
-          <a type="button" class="btn btn-secondary">
-            <i class="material-icons">
-              email
-            </i>
-            </button>
-          </a>
-        </li>
-        <li>
-          <a type="button" class="btn btn-secondary" id="loginBtn">Signout</button>
-          </a>
-        </li>
+          </li>
+
+          {{!-- KH - EMAIL BUTTON - PURPOSE NOT CLEAR --}}
+          {{!-- <li>
+            <a type="button" class="btn btn-secondary">
+              <i class="material-icons">
+                email
+              </i>
+              </button>
+            </a>
+          </li> --}}
+
+          {{!-- KH - SIGN OUT BUTTON - NEED TO MAKE CONTEXTUAL TO EITHER LOGGED IN OR NOT --}}
+          {{!-- <li>
+            <a type="button" class="btn btn-secondary" id="loginBtn">Signout</button>
+            </a>
+          </li> --}}
       </ul>
     </div>
   </nav>
@@ -70,10 +75,25 @@
 <!-- Modal Structure -->
 <div id="modal1" class="modal">
   <div class="modal-content">
-    <h4>Modal Header</h4>
-    <p>A bunch of text</p>
+    <h4>Sign In</h4>
+    <form action="">
+      <div class="input-field col s12">
+        <input type="text" id="user-name" class="validate">
+        <label for="user-name">User Name</label>
+      </div>
+      <div class="input-field col s12">
+        <input type="email" id="user-email" class="validate">
+        <label for="user-email" data-error="wrong" data-success="right">Email Address</label>
+      </div>
+      <div class="input-field col s6">
+        <input type="password" id="password" class="validate">
+        <label for="password">Password</label>
+      </div>
+    </form>
+
+    <button id="submitU" class="waves-effect waves-light btn-large">Sign In
+      <i class="material-icons right">send</i>
+    </button>
   </div>
-  <div class="modal-footer">
-    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-  </div>
+  <div class="modal-footer"></div>
 </div>
