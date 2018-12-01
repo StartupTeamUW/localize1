@@ -1,90 +1,166 @@
-
 <div class="container">
   <div class="row">
     <div class="col s12">
-      <h2 class="centered-headline">{{msg}}</h2><i class="material-icons prefix">mode_edit</i>
+      <h4 class="centered-headline">{{msg}}</h4>
       <div class="container s12 l12">
         <form action="">
-          <div class="input-field col s12">
-            <input type="text" id="user-name" class="validate">
-            <label for="user-name">User Name</label>
+
+          <div class="row">
+            <div class="input-field col s12">
+              <input type="text" id="user-name" class="validate">
+              <label for="user-name">User Name</label>
+            </div>
+            <div class="input-field col s12">
+              <input type="email" id="user-email" class="validate">
+              <label for="user-email" data-error="wrong" data-success="right">Email Address</label>
+            </div>
+            <div class="input-field col s6">
+              <input type="password" id="password" class="validate">
+              <label for="password">Password</label>
+            </div>
+            <div class="input-field col s12">
+              <input type="text" id="profile-photo" class="validate">
+              <label for="profile-photo" data-error="wrong" data-success="right">Profile Photo URL</label>
+            </div>
+            <div class="input-field col s12 l6">
+              <input type="text" id="first-name" class="validate">
+              <label for="first-name">First Name</label>
+            </div>
+            <div class="input-field col s12 l6">
+              <input type="text" id="last-name" class="validate">
+              <label for="last-name">Last Name</label>
+            </div>
+            <div class="input-field col s6">
+              <input type="text" id="gender" class="validate">
+              <label for="gender">Gender</label>
+            </div>
+            <div class="input-field col s12 l6">
+              <input type="date" id="DOB" class="datepicker">
+              <label for="DOB"></label>
+            </div>
+            <div class="input-field col s12">
+              <input type="text" id="hometown" class="validate">
+              <label for="hometown">Hometown</label>
+            </div>
+            <div class="input-field col s12">
+              <textarea id="bio" class="materialize-textarea"></textarea>
+              <label for="bio">About Me</label>
+            </div>
+            <div class="input-field col s12">
+              <textarea id="languages" class="materialize-textarea"></textarea>
+              <label for="languages">What languages do you speak?</label>
+            </div>
+            <div class="input-field col s12">
+              <textarea id="why-on" class="materialize-textarea"></textarea>
+              <label for="why-on">Why I am on Localize</label>
+            </div>
+            <div class="input-field col s12">
+              <textarea id="one-A-thing" class="materialize-textarea"></textarea>
+              <label for="one-A-thing">One Amazing Thing I've Done</label>
+            </div>
+            <div class="input-field col s12">
+              <textarea id="hobby" class="materialize-textarea"></textarea>
+              <label for="hobby">Favourite Music, Movies, and Books</label>
+            </div>
+            <div class="input-field col s12">
+              <textarea id="countries-lived" class="materialize-textarea"></textarea>
+              <label for="countries-lived">Countries I’ve Lived In</label>
+            </div>
+            <div class="input-field col s12">
+              <textarea id="what-I-share" class="materialize-textarea"></textarea>
+              <label for="what-I-share">What can you share with other Localizers</label>
+            </div>
           </div>
-          <div class="input-field col s12">
-            <input type="email" id="user-email" class="validate">
-            <label for="user-email" data-error="wrong" data-success="right">Email Address</label>
+
+          {{!-- KEVIN'S CHECK BOX INTERESTS --}}
+          <div class="row">
+            <h5 class="centered-headline">What are your interests?</h5>
           </div>
-          <div class="input-field col s6">
-            <input type="password" id="password" class="validate">
-            <label for="password">Password</label>
+
+          <div class="row">
+            <div class="interests">
+              <div class="switch">
+                <label>
+                  Food
+                  <input type="checkbox" name="Food">
+                  <span class="lever"></span>
+                </label>
+              </div>
+              <div class="switch">
+                <label>
+                  Music
+                  <input type="checkbox" name="Music">
+                  <span class="lever"></span>
+                </label>
+              </div>
+              <div class="switch">
+                <label>
+                  Shows
+                  <input type="checkbox" name="Boat">
+                  <span class="lever"></span>
+                </label>
+              </div>
+              <div class="switch">
+                <label>
+                  Sports
+                  <input type="checkbox" name="Sports">
+                  <span class="lever"></span>
+                </label>
+              </div>
+              <div class="switch">
+                <label>
+                  Landmarks
+                  <input type="checkbox" name="Landmark">
+                  <span class="lever"></span>
+                </label>
+              </div>
+              <div class="switch">
+                <label>
+                  Monuments
+                  <input type="checkbox" name="Monument">
+                  <span class="lever"></span>
+                </label>
+              </div>
+              <div class="switch">
+                <label>
+                  Local Activities
+                  <input type="checkbox" name="Local Activity">
+                  <span class="lever"></span>
+                </label>
+              </div>
+              <div class="switch">
+                <label>
+                  Museums
+                  <input type="checkbox" name="Museum">
+                  <span class="lever"></span>
+                </label>
+              </div>
+            </div>
           </div>
-          <div class="input-field col s12">
-            <input type="text" id="profile-photo" class="validate">
-            <label for="profile-photo" data-error="wrong" data-success="right">Profile Photo URL</label>
-          </div>
-          <div class="input-field col s12 l6">
-            <input type="text" id="first-name" class="validate">
-            <label for="first-name">First Name</label>
-          </div>
-          <div class="input-field col s12 l6">
-            <input type="text" id="last-name" class="validate">
-            <label for="last-name">Last Name</label>
-          </div>
-          <div class="input-field col s6">
-            <input type="text" id="gender" class="validate">
-            <label for="gender">Gender</label>
-          </div>
-          <div class="input-field col s12 l6">
-            <input type="date" id="DOB" class="datepicker">
-            <label for="DOB"></label>
-          </div>
-          <div class="input-field col s12">
-            <input type="text" id="hometown" class="validate">
-            <label for="hometown">Hometown</label>
-          </div>
-          <div class="input-field col s12">
-            <textarea id="bio" class="materialize-textarea"></textarea>
-            <label for="bio">About Me</label>
-          </div>
-             <div class="input-field col s12">
-            <textarea id="languages" class="materialize-textarea"></textarea>
-            <label for="languages">What languages do you speak?</label>
-          </div>
-           <div class="input-field col s12">
-            <textarea id="why-on" class="materialize-textarea"></textarea>
-            <label for="why-on">Why I am on Localize</label>
-          </div>
-           <div class="input-field col s12">
-            <textarea id="one-A-thing" class="materialize-textarea"></textarea>
-            <label for="one-A-thing">One Amazing Thing I've Done</label>
-          </div>
-          <div class="input-field col s12">
-            <textarea id="hobby" class="materialize-textarea"></textarea>
-            <label for="hobby">Favourite Music, Movies, and Books</label>
-          </div>
-          <div class="input-field col s12">
-            <textarea id="countries-lived" class="materialize-textarea"></textarea>
-            <label for="countries-lived">Countries I’ve Lived In</label>
-          </div>
-          <div class="input-field col s12">
-            <textarea id="what-I-share" class="materialize-textarea"></textarea>
-            <label for="what-I-share">What can you share with other Localizers</label>
-          </div>
-          <div class="input-field col s12">
-            <textarea id="interests" class="materialize-textarea"></textarea>
-            <label for="interests">What are some of your interests? example: Foods, Outdoors, Indoors.ect.</label>
-          </div>
-          <div class="input-field col s6">
-            <input id="guideStatus" type="checkbox" />
-            <label for="guideStatus">Open to be a guide?</label>
+          {{!-- KEVIN'S CHECK BOX INTERESTS --}}
+          <br>
+          <div class="row">
+            <div class="input-field col s6 center-align">
+              <label for="guideStatus">
+                <input id="guideStatus" type="checkbox" />
+                <span>Are you open to be a guide?</span>
+              </label>
+            </div>
+            <div class="col s6">
+              <button id="submitU" class="waves-effect waves-light btn-large">Save
+                <i class="material-icons right">send</i>
+              </button>
+            </div>
+
           </div>
         </form>
       </div>
     </div>
-    <button id="submitU" class="btn btn-primary float-right">Save</button>
   </div>
+
+
   {{!-- test of user data --}}
 
-  <h3>{{msg}}</h3>
   {{!-- List of entered information will become list of previous users--}}
   <ul id="user-list">
     {{#each users}}
