@@ -1,10 +1,20 @@
-{{> nav/navbar}}
+{{> nav/navbar-no-search}}
 
 <div class="parallax-container">
   <div class="container">
     <div class="row">
       <h1 class="homepage-h1">LOCALIZE</h1>
-      <input id="parallax-search" class="big-search" placeholder="Where Are You Headed?" />
+      <input id="address" class="big-search" placeholder="Where Are You Headed?" />
+    </div>
+    <div class="row contain-center-align">
+      <a href="/trip">
+        <button class="btn btn-default">
+          <span class="glyphicon glyphicon-search buttonsize">
+            Let's Go!
+          </span>
+        </button>
+      </a>
+
     </div>
   </div>
   <div class="parallax"><img src="imgs/nikola-jovanovic-198375-unsplash.jpg"></div>

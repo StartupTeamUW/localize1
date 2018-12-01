@@ -2,21 +2,21 @@
 
 <head>
 
-  
-    <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places" type="text/javascript"></script>
-    <script type="text/javascript">
-        function initialize() {
 
-            var options = {
-                types: ['(cities)'],
-                componentRestrictions: { country: "us" }
-            };
+  <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places" type="text/javascript"></script>
+  <script type="text/javascript">
+    function initialize() {
 
-            var input = document.getElementById('address');
-            var autocomplete = new google.maps.places.Autocomplete(input, options);
-        }
-        google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
+      var options = {
+        types: ['(cities)'],
+        componentRestrictions: { country: "us" }
+      };
+
+      var input = document.getElementById('address');
+      var autocomplete = new google.maps.places.Autocomplete(input, options);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
 
 </head>
 
@@ -25,15 +25,15 @@
 <div class="navbar-fixed">
   <nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Localize</a>
+      <a href="/" class="brand-logo">Localize</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <!-- changed from here -->
-  
-  {{!-- Below two lines, are they doing anything?  --}}
+
+        {{!-- Below two lines, are they doing anything? --}}
         <li style="margin-top: -2px; margin-left: 15px; margin-right:15px">
           <div class="input-group-btn search-panel">
 
-  {{!-- Above two lines, are they doing anything?  --}}
+            {{!-- Above two lines, are they doing anything? --}}
 
 
 
@@ -66,37 +66,40 @@
 
 
 
-{{!-- Below two lines, are they doing anything?  --}}
+            {{!-- Below two lines, are they doing anything? --}}
           </div>
         </li>
-{{!-- Above two lines, are they doing anything?  --}}
+        {{!-- Above two lines, are they doing anything? --}}
 
 
 
 
-{{!-- FROM HERE CHI. seraching by city 12/01/19  --}}
+        {{!-- FROM HERE CHI. seraching by city 12/01/19 --}}
         <li>
           <div class="input-group">
 
             <input type="hidden" name="search_param" value="all" id="search_param">
-            <input type="search" id="address" autocomplete="on" class="form-control" placeholder="Where are we going?" style="padding-left: 8px; margin: 0; right: 2px"
-            />
+            <input type="search" id="address" autocomplete="on" class="form-control" placeholder="Where are we going?"
+              style="padding-left: 8px; margin: 0; right: 2px" />
 
           </div>
         </li>
 
 
-{{!-- TO HERE CHI 12/01/19 --}}
+        {{!-- TO HERE CHI 12/01/19 --}}
 
-        <li style="margin-top: -2px; margin-left: 15px; margin-right:15px">
+        <li>
 
           {{!-- <span class="input-group-btn"> --}}
-            <a type="button" class="btn btn-default" href="/trip">
-              <span class="glyphicon glyphicon-search buttonsize">
-                <i class="material-icons">flight_takeoff</i>
-              </span>
-            </a>
-          {{!-- </span> --}}
+
+            <span class="glyphicon glyphicon-search buttonsize">
+              <a type="button" class="btn btn-default" href="/trip">
+              {{!-- <i class="material-icons">flight_takeoff</i> --}}
+              Go!
+              </a>
+            </span>
+
+            {{!-- </span> --}}
 
         </li>
 
@@ -109,7 +112,8 @@
             <!-- Modal Trigger -->
             <span class="input-group-btn">
               <a type="button" data-target="modal1" class="btn modal-trigger">
-                <i class="material-icons">account_circle</i>
+                {{!-- <i class="material-icons">account_circle</i> --}}
+                Sign In
               </a>
             </span>
 

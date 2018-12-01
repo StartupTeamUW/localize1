@@ -70,15 +70,15 @@ p {
   font-family: 'Roboto', sans-serif;
 }
 input.big-search {
-  background: rgba(255, 255, 255, .9);
-  border: 1px red;
+  background: rgba(255, 255, 255, .7);
   text-align: center;
+  color: #666;
 }
 input.big-search::placeholder {
-  color: black;
+  color: #666;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  font-size: 1.5em;
+  font-size: 1.25em;
 }
 .interests {
   display: flex;
@@ -88,4 +88,10 @@ input.big-search::placeholder {
 }
 .switch {
   padding: 20px;
+}
+
+.contain-center-align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
