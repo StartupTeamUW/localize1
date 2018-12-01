@@ -1,10 +1,24 @@
 {{!-- FOR TESTING --}}
-
+<style>
+    ul {
+        list-style: none;
+    }
+</style>
 {{!-- TRIP HANDLEBARS WITHOUT MODELS --}}
+
+<br>
+<br>
 <div class="content container">
     <div>
-        <label for="destination">Trip Destination</label>
-        <input type="text" id="destination" class="form-control" aria-describedby="trip-text" placeholder="Enter City Name">
+        <!-- to here  chi 11/28/18 w/ search bar filering -->
+        
+            <div class="input-group">
+                <input type="hidden" name="search_param" value="all" id="search_param">
+                <input type="search" id="address" autocomplete="on" class="form-control address" placeholder="Where are we going?"
+                    style="padding-left: 8px; margin: 0; right: 2px" />
+            </div>
+
+        <!-- to here  chi 11/28/18 w/ search bar filering -->
     </div>
     <div id="wrapper1" class="col s5 offset-s1 input-field">
         <input type="date" id="startDate" class="datepicker-start" />
@@ -18,20 +32,89 @@
         <label for="trip-remark">Trip Remarks</label>
         <textarea class="form-control" id="trip-remark" aria-describedby="trip-description" placeholder="Enter Trip Description"></textarea>
     </div>
-    <button id="submitT" class="btn btn-primary float-right">Submit</button>
-</div>
 
-{{!-- test of trip data --}}
-<h1>{{msg}}</h1>
-<ul id="tripList">
-    {{#each trip}}
-    <li data-id="{{this.id}}" class="list-group-item">
-        <a href="trip/{{this.id}}">{{this.destination}}</a>
-        <button class="btn btn-danger float-right delete">ｘ</button>
-    </li>
-    {{/each}}
-</ul>
+    {{!-- KEVIN'S CHECK BOX INTERESTS --}}
+    <div class="row">
+        <h5 class="centered-headline">What are your interests?</h5>
+    </div>
 
-{{!-- test of trip data --}}
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/trip.js"></script>
+    <div class="row">
+        <div class="interests">
+            <div class="switch">
+                <label>
+                    Food
+                    <input type="checkbox" name="Food">
+                    <span class="lever"></span>
+                </label>
+            </div>
+            <div class="switch">
+                <label>
+                    Music
+                    <input type="checkbox" name="Music">
+                    <span class="lever"></span>
+                </label>
+            </div>
+            <div class="switch">
+                <label>
+                    Shows
+                    <input type="checkbox" name="Boat">
+                    <span class="lever"></span>
+                </label>
+            </div>
+            <div class="switch">
+                <label>
+                    Sports
+                    <input type="checkbox" name="Sports">
+                    <span class="lever"></span>
+                </label>
+            </div>
+            <div class="switch">
+                <label>
+                    Landmarks
+                    <input type="checkbox" name="Landmark">
+                    <span class="lever"></span>
+                </label>
+            </div>
+            <div class="switch">
+                <label>
+                    Monuments
+                    <input type="checkbox" name="Monument">
+                    <span class="lever"></span>
+                </label>
+            </div>
+            <div class="switch">
+                <label>
+                    Local Activities
+                    <input type="checkbox" name="Local Activity">
+                    <span class="lever"></span>
+                </label>
+            </div>
+            <div class="switch">
+                <label>
+                    Museums
+                    <input type="checkbox" name="Museum">
+                    <span class="lever"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+    {{!-- END KEVIN'S CHECK BOX INTERESTS --}}
+    <br>
+    <div class="row">
+        <button id="submitT" class="btn btn-primary float-right">Submit</button>
+    </div>
+
+    {{!-- test of trip data --}}
+    <h1>{{msg}}</h1>
+    <ul id="tripList">
+        {{#each trip}}
+        <li data-id="{{this.id}}" class="list-group-item">
+            <a href="trip/{{this.id}}">{{this.destination}}</a>
+            <button class="btn btn-danger float-right delete">ｘ</button>
+        </li>
+        {{/each}}
+    </ul>
+
+    {{!-- test of trip data --}}
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/js/trip.js"></script>

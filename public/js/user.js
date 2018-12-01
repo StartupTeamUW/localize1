@@ -15,11 +15,11 @@ var $oneAThing =$("#one-A-thing");
 var $hobby =$("#hobby");
 var $countries =$("#countries-lived");
 var $whatIShare =$("#what-I-share");
-// var $interests = [$('input[name ="q1"]:checked').val(), 
+var $interests = [$('input[name ="Food"]:checked').val()]
 
-// ]
+alert($interests);
 
-var $interests = $("#interests");
+// var $interests = $("#interests");
 // var $guideStatus = $("#guideStatus");
 
 var $submitBtnU = $("#submitU");
