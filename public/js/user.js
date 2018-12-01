@@ -1,7 +1,8 @@
+
 // Get references to page elements
-var $userName = $("#user-name");
-var $userEmail = $("#user-email");
-var $userPassword = $("#password");
+var $userName = $("#username");
+var $userEmail = $("#user-email-address");
+var $userPassword = $("#user-password");
 var $profilePicUrl = $("#profile-photo");
 var $firstName = $("#first-name");
 var $lastName = $("#last-name");
@@ -28,12 +29,13 @@ var $userList = $("#user-list");
 // The API object contains methods for each kind of request we'll make
 var API = {
   saveUser: function (user) {
+    console.log("USER DATA", user)
     return $.ajax({
-      headers: {
-        "Content-Type": "application/json"
-      },
-      type: "POST",
-      url: "api/users",
+      // headers: {
+      //   "Content-Type": "application/json"
+      // },
+      method: "POST",
+      url: "/api/users",
       data: JSON.stringify(user)
     });
   },
@@ -53,6 +55,7 @@ var API = {
 
 // refreshExamples gets new examples from the db and repopulates the list
 var refreshUsers = function () {
+  console.log("REFRESHING USERS")
   API.getUsers().then(function (data) {
     var $users = data.map(function (user) {
       var $a = $("<a>")
@@ -79,14 +82,14 @@ var refreshUsers = function () {
     $userList.append($users);
     //maybe add spliting here?
   });
-  location.reload();
+  // location.reload();
 };
 
 // handleFormSubmit is called whenever we submit a new example
 // Save the new example to the db and refresh the list
 var handleFormSubmit = function (event) {
-  event.preventDefault();
-
+  // event.preventDefault();
+  console.log("handling form submit")
   var user = {
     user_name: $userName.val().trim(),
     email: $userEmail.val().trim(),
@@ -109,32 +112,35 @@ var handleFormSubmit = function (event) {
 
   };
 
+  console.log("User data", user);
   // if (!(user.userName && user.userEmail)) {
   //   alert("You must enter a valid username and email address!");
   //   return;
   // }
 
-  API.saveUser(user).then(function () {
-    refreshUsers();
-  });
+  // API.saveUser(user).then(function (data) {
+  //   console.log('END OF POST REQUEST')
+  //   console.log(data)
+  //   // refreshUsers();
+  // });
 
-  $userName.val("");
-  $userEmail.val("");
-  $userPassword.val("");
-  $profilePicUrl.val("");
-  $firstName.val("");
-  $lastName.val("");
-  $gender.val("");
-  $DOB.val("");
-  $hometown.val("");
-  $bio.val("");
-  $languages.val("");
-  $whyOn.val("");
-  $oneAThing.val("");
-  $hobby.val("");
-  $countries.val("");
-  $whatIShare.val("");
-  $interests.val("");
+  // $userName.val("");
+  // $userEmail.val("");
+  // $userPassword.val("");
+  // $profilePicUrl.val("");
+  // $firstName.val("");
+  // $lastName.val("");
+  // $gender.val("");
+  // $DOB.val("");
+  // $hometown.val("");
+  // $bio.val("");
+  // $languages.val("");
+  // $whyOn.val("");
+  // $oneAThing.val("");
+  // $hobby.val("");
+  // $countries.val("");
+  // $whatIShare.val("");
+  // $interests.val("");
 
 };
 
@@ -151,6 +157,11 @@ var handleDeleteBtnClick = function () {
 };
 
 // Add event listeners to the submit and delete buttons
-$submitBtnU.on("click", handleFormSubmit);
+// $("#submitU").on("click", handleFormSubmit);
+$("#submitU").on("submit", function(){
+  console.log("working")
+});
+
+
 $userList.on("click", ".delete", handleDeleteBtnClick);
 

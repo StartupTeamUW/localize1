@@ -32,6 +32,7 @@ module.exports = function (app) {
   // })
 
   app.get("/api/users", function (req, res) {
+    console.log("GETTING ALL USERS")
     db.User.findAll({}).then(function (dbUsers) {
       res.json(dbUsers);
     });
@@ -39,8 +40,11 @@ module.exports = function (app) {
 
   // Create a new trip
   app.post("/api/users", function (req, res) {
+    console.log("REQ.BODY: ", req.body);
     db.User.create(req.body).then(function (dbUser) {
-      res.json(dbUser);
+      
+      console.log("somethinghere", dbUser);
+      res.redirect("/user/" + dbUser.dataValues.id);
     });
   });
 

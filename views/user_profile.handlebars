@@ -3,19 +3,19 @@
     <div class="col s12">
       <h4 class="centered-headline">{{msg}}</h4>
       <div class="container s12 l12">
-        <form action="">
+        <form action="/api/users" method="POST">
 
           <div class="row">
             <div class="input-field col s12">
-              <input type="text" id="user-name" class="validate">
+              <input type="text" name="user_name" id="username" class="validate">
               <label for="user-name">User Name</label>
             </div>
             <div class="input-field col s12">
-              <input type="email" id="user-email" class="validate">
+              <input type="email" id="user-email-address" class="validate">
               <label for="user-email" data-error="wrong" data-success="right">Email Address</label>
             </div>
             <div class="input-field col s6">
-              <input type="password" id="password" class="validate">
+              <input type="password" id="user-password" class="validate">
               <label for="password">Password</label>
             </div>
             <div class="input-field col s12">
