@@ -17,8 +17,6 @@ var $countries =$("#countries-lived");
 var $whatIShare =$("#what-I-share");
 var $interests = [$('input[name ="Food"]:checked').val()]
 
-alert($interests);
-
 // var $interests = $("#interests");
 // var $guideStatus = $("#guideStatus");
 

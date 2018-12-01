@@ -5,12 +5,7 @@ module.exports = function (app) {
   // Load index pages
 
   app.get("/", function (req, res) {
-    db.Example.findAll({}).then(function (dbExamples) {
-      res.render("dashboard", {
-        msg: "Welcome!",
-        examples: dbExamples
-      });
-    });
+    res.render("homepage");
   });
 
   app.get("/homepage", function (req, res) {
@@ -57,7 +52,7 @@ module.exports = function (app) {
   app.get("/user", function (req, res) {
     db.User.findAll({}).then(function (dbUsers) {
       console.log(res.body);
-      res.render("user_profile", {
+      res.render("user_form", {
         msg: "Create a User Profile",
         users: dbUsers
       });
