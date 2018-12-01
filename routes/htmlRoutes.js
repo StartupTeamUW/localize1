@@ -55,7 +55,7 @@ module.exports = function (app) {
     db.User.findAll({}).then(function (dbUsers) {
       console.log(res.body);
       res.render("user_profile", {
-        msg: "Users List here",
+        msg: "Create a User Profile",
         users: dbUsers
       });
     });
