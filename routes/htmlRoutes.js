@@ -42,6 +42,7 @@ module.exports = function (app) {
       });
     });
   });
+  
   app.get("/trip/:id", function (req, res) {
     db.Trip.findOne({ where: { id: req.params.id } }).then(function (dbTrip) {
       res.render("pastTrip", {
