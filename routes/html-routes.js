@@ -73,9 +73,9 @@ module.exports = function (app) {
 
 
 
-
+// comment out - we can see data from api
   // Render 404 page for any unmatched routes
-  app.get("*", function (req, res) {
-    res.render("404");
-  });
+  // app.get("*", function (req, res) {
+  //   res.render("404");
+  // });
 };
