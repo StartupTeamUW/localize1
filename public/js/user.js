@@ -2,6 +2,7 @@
 var $userName = $("#username");
 var $userEmail = $("#user-email-address");
 var $userPassword = $("#user-password");
+var $phoneNumber = $("#phone-number");
 var $profilePicUrl = $("#profile-photo");
 var $firstName = $("#first-name");
 var $lastName = $("#last-name");
@@ -80,8 +81,8 @@ var refreshUsers = function () {
   location.reload();
 };
 
-// handleFormSubmit is called whenever we submit a new example
-// Save the new example to the db and refresh the list
+// handleFormSubmit is called whenever we submit a new user
+// Save the new user to the db and refresh the list
 var handleFormSubmit = function (event) {
   event.preventDefault();
 
@@ -89,6 +90,7 @@ var handleFormSubmit = function (event) {
     user_name: $userName.val().trim(),
     email: $userEmail.val().trim(),
     password: $userPassword.val(),
+    phone_number: $phoneNumber.val(),
     profile_pic_url: $profilePicUrl.val(),
     first_name: $firstName.val(),
     last_name: $lastName.val(),

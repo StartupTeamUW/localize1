@@ -35,6 +35,9 @@ module.exports = function (sequelize, DataTypes) {
       //   }
       // }
     },
+    phone_number: {
+      type: DataTypes.STRING,
+    },
 
     // User Profile
     profile_pic_url: DataTypes.STRING,
@@ -50,7 +53,7 @@ module.exports = function (sequelize, DataTypes) {
       // }
     },
     whyOn:{
-      type: DataTypes.TEXT
+      type: DataTypes.STRING
     },
     languages:{
       type: DataTypes.TEXT
@@ -86,4 +89,13 @@ module.exports = function (sequelize, DataTypes) {
 
   return User;
 };
+
+// var userDetails = sequelize.define('userDetails', {
+//   userId :Sequelize.INTEGER,
+//   firstName : Sequelize.STRING,
+//   lastName : Sequelize.STRING,
+//   birthday : Sequelize.DATE
+// }, {
+//   timestamps: false
+// });
 
