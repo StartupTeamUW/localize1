@@ -63,7 +63,7 @@ module.exports = function (app) {
     db.User.findOne({ where: { id: req.params.id } }).then(function (dbUser) {
       res.render("kevinUserDetailedPage", {
         msg: "Users Card",
-        user: dbUser.dataValues,
+        user: dbUser,
         interests: dbUser.interests
       });
     });
