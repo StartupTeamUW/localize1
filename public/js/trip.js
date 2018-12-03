@@ -1,5 +1,13 @@
 // Get references to page elements
-var $destination = $("#destination");
+//added UserId
+var $UserId = $("#UserId");
+//ends
+
+//desination is not longer as deinstation in trip.handlebar (as google search is implemented)
+var $destination =$("#address");
+//ends 
+
+// var $destination = $("#destination");
 var $tripRemark = $("#trip-remark");
 var $startDate = $("#startDate");
 var $endDate = $("#endDate");
@@ -69,10 +77,15 @@ var handleFormSubmit = function (event) {
   event.preventDefault();
 
   var trip = {
-    destination: $destination.val().trim(),
+    destination: $destination.val(),
     remark: $tripRemark.val().trim(),
     start_date: $startDate.val(),
-    end_date: $endDate.val()
+    end_date: $endDate.val(),
+
+    //added UserId
+    UserId: $UserId.val()
+    //ends
+
     // tripInterests: $trip_interests.val().trim()
   };
 
@@ -84,7 +97,9 @@ var handleFormSubmit = function (event) {
   API.saveTrip(trip).then(function () {
     refreshTrips();
   });
-
+//added UserId
+ $UserId.val(""); 
+//ends
   $destination.val("");
   $tripRemark.val("");
   $startDate.val("");
