@@ -42,6 +42,12 @@ var API = {
       type: "GET"
     });
   },
+  editUsers: function (id) {
+    return $.ajax({
+      url: "api/users/" + id,
+      type: "PUT"
+    });
+  },
   deleteUser: function (id) {
     return $.ajax({
       url: "api/users/" + id,
@@ -150,7 +156,18 @@ var handleDeleteBtnClick = function () {
   });
 };
 
+var handleEditBtnClick = function () {
+  var idToEdit = $(this)
+    .parent()
+    .attr("data-id");
+
+  API.editUser(idToEdit).then(function () {
+    refreshUsers();
+  });
+};
+
 // Add event listeners to the submit and delete buttons
 $submitBtnU.on("click", handleFormSubmit);
 $userList.on("click", ".delete", handleDeleteBtnClick);
+$editProfile. on("click", ".edit", handleEditBtnClick);
 
