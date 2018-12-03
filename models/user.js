@@ -35,9 +35,9 @@ module.exports = function (sequelize, DataTypes) {
       //   }
       // }
     },
-    phone_number: {
-      type: DataTypes.STRING,
-    },
+    // phone_number: {
+    //   type: DataTypes.STRING,
+    // },
 
     // User Profile
     profile_pic_url: DataTypes.STRING,
@@ -90,12 +90,4 @@ module.exports = function (sequelize, DataTypes) {
   return User;
 };
 
-// var userDetails = sequelize.define('userDetails', {
-//   userId :Sequelize.INTEGER,
-//   firstName : Sequelize.STRING,
-//   lastName : Sequelize.STRING,
-//   birthday : Sequelize.DATE
-// }, {
-//   timestamps: false
-// });
 

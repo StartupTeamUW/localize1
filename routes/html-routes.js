@@ -25,6 +25,15 @@ module.exports = function (app) {
     });
   });
 
+  app.get("/users", function (req, res) {
+    db.User.findAll({}).then(function (dbUser) {
+      res.render("allmembers", {
+        msg: "Here are all our members",
+        users: dbUser
+      });
+    });
+  });
+
   app.get("/user/:id", function (req, res) {
     db.User.findOne({ where: { id: req.params.id } }).then(function (dbUser) {
       res.render("kevinUserDetailedPage", {
@@ -34,6 +43,7 @@ module.exports = function (app) {
       });
     });
   });
+
 
     // ============================
 // ============TRIP PAGES=================
@@ -56,20 +66,24 @@ module.exports = function (app) {
     });
   });
   
-
+  app.get("/users/trips/upcoming", function (req, res) {
+    db.Trip.findAll({}).then(function (dbTrip) {
+      res.render("alltrips", {
+        msg: "Here are our upcoming trips",
+        trip: dbTrip
+      });
+    });
+  });
  
-
-
-
-
-
-
-
-
-
-
-
-
+  app.get("/users/trips/past", function (req, res) {
+    db.User.findAll({}).then(function (dbUsers) {
+      res.render("past", {
+        msg: "Here are our past trips",
+        trip: dbUsers
+      });
+    });
+  });
+ 
 
 
 
