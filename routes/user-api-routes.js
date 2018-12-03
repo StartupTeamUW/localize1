@@ -1,5 +1,5 @@
 var db = require('../models')
-
+var bodyParser = require("body-parser")
 module.exports = function (app) {
   
   // get users and trips
