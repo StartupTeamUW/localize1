@@ -69,6 +69,16 @@ module.exports = function (app) {
     });
   });
 
+
+
+  //temporary route where you can view rating componen 12/02/18 Chi
+  app.get("/raiting", function (req, res) {
+    res.render("raiting");
+  });
+
+  //temporary route where you can view rating componen 12/02/18 Chi
+
+
   // end of user pages
 
 
