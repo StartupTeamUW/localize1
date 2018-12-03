@@ -28,7 +28,7 @@ require("./routes/trip-api-routes")(app);
 require("./routes/user-api-routes")(app);
 
 // If running a test, set syncOptions.force to true
-var syncOptions = { force: true };
+var syncOptions = { force: false };
 
 
 if (process.env.NODE_ENV === "test") {

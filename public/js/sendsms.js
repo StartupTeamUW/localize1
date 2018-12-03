@@ -1,6 +1,6 @@
 // store this in an .env file
-const accountSid = 'ACxxxxxxxxx';// process.env.TWILIO_ACCOUNT_SID;
-const authToken = 'gfdasdfh';//proccess.env.TWILIO_AUTH_TOKEN;
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = proccess.env.TWILIO_AUTH_TOKEN;
 
 const client = require("twilio")(accountSid, authToken);
 
@@ -34,3 +34,4 @@ http.createServer(app).listen(1337, () => {
       );
 })
 //run node server.js
+//run ngrok http 1337 then copy the ngrok link and put in to twilio console page,(message comes in) then send areply text to test22
