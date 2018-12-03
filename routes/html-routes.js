@@ -1,60 +1,35 @@
 var db = require("../models");
-var i;
+
 
 module.exports = function (app) {
-  // Load index pages
-
+     // ============================
+// ============HOME/INDEX PAGE=================
+//    // ============================
+  //home page being rendered with no passing data
   app.get("/", function (req, res) {
+    res.render("dashboard");
+  });
+  app.get("/homepage", function (req, res) {
     res.render("homepage");
   });
-
-  app.get("/homepage", function (req, res) {
-    db.Example.findAll({}).then(function (dbExamples) {
-      res.render("homepage", {
-        msg: "Welcome!",
-        examples: dbExamples
-      });
-    });
-  });
-  
-  // Load example page and pass in an example by id
-  app.get("/example/:id", function (req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function (dbExample) {
-      res.render("example", {
-        example: dbExample
-      });
-    });
-  });
-
-  // added trip pages
-  app.get("/trip", function (req, res) {
-    var city = req.body;
-    // KH - NEED TO GET THE CONTENT OF THE NAV SEARCH FIELD AND PASS TO THE PLACEHOLDER TEXT ON THE TRIP PAGE CITY FIELD
-    db.Trip.findAll({}).then(function (dbTrips) {
-      res.render("trip", {
-        msg: "Here are our trips",
-        trip: dbTrips
-      });
-    });
-  });
-  
-  app.get("/trip/:id", function (req, res) {
-    db.Trip.findOne({ where: { id: req.params.id } }).then(function (dbTrip) {
-      res.render("pastTrip", {
-        trip: dbTrip
-      });
-    });
-  });
-  //end of trip
-
-  // user pages
-
-  app.get("/user", function (req, res) {
+   // ============================
+// ============USER PAGES=================
+//    // ============================
+   app.get("/register", function (req, res) {
     db.User.findAll({}).then(function (dbUsers) {
-      console.log(res.body);
+      // console.log(res.body);
       res.render("user_form", {
         msg: "Create a User Profile",
         users: dbUsers
+      });
+    });
+  });
+
+  app.get("/users", function (req, res) {
+    db.User.findAll({}).then(function (dbUser) {
+      res.render("allmembers", {
+        msg: "Here are all our members",
+        users: dbUser
       });
     });
   });
@@ -70,22 +45,57 @@ module.exports = function (app) {
   });
 
 
+    // ============================
+// ============TRIP PAGES=================
+//    // ============================
 
-  //temporary route where you can view rating componen 12/02/18 Chi
-  app.get("/raiting", function (req, res) {
-    res.render("raiting");
+  app.get("/trips", function (req, res) {
+    db.Trip.findAll({}).then(function (dbTrip) {
+      res.render("trip", {
+        msg: "Here are our trips",
+        trip: dbTrip
+      });
+    });
+  });
+//using past.handlebars for single trip(temp)
+  app.get("/trip/:id", function (req, res) {
+    db.Trip.findOne({ where: { id: req.params.id } }).then(function (dbTrip) {
+      res.render("past", {
+        trip: dbTrip
+      });
+    });
+  });
+  
+  app.get("/users/trips/upcoming", function (req, res) {
+    db.Trip.findAll({}).then(function (dbTrip) {
+      res.render("upcomingtrip", {
+        msg: "Here are our upcoming trips",
+        trip: dbTrip
+      });
+    });
+  });
+ 
+  app.get("/users/trips/past", function (req, res) {
+    db.User.findAll({}).then(function (dbUsers) {
+      res.render("past", {
+        msg: "Here are our past trips",
+        trip: dbUsers
+      });
+    });
+  });
+ 
+    // ============================
+// ============RATING PAGE=================
+//    // ============================
+//NO APIT FOR RATING RIGHT NOW
+  app.get("/rating", function (req, res) {
+    res.render("rating");
   });
 
-  //temporary route where you can view rating componen 12/02/18 Chi
-
-
-  // end of user pages
-
-
-
-// comment out - we can see data from api
-  // Render 404 page for any unmatched routes
-  // app.get("*", function (req, res) {
-  //   res.render("404");
-  // });
+   // ============================
+// ============404 PAGE=================
+//    // ============================
+  app.get("*", function (req, res) {
+    res.render("404");
+  });
 };

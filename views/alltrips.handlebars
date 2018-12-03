@@ -1,0 +1,26 @@
+<h1>{{msg}}</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-8 offset-2">
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h5 class="card-title">{{msg}}</h5>
+                    {{#each trip}}
+                    <p>
+                        <strong>ID</strong>: {{trip.id}}</p>
+                    <p>
+                        <p>
+                            <strong>City</strong>: {{trip.destination}}</p>
+                        <p>
+                            <strong>Description:</strong> {{trip.remark}}</p>
+                        <p>
+                            <strong>Start Date:</strong> {{trip.start_date}}</p>
+                        <p>
+                            <strong>End Date:</strong> {{trip.end_date}}</p>
+                        {{/each}}
+                        <a href="/">← Back To Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

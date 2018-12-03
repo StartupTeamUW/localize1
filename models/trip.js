@@ -20,10 +20,10 @@ module.exports = function(sequelize, DataTypes) {
   
     Trip.associate = function(models) {
       // We're saying that a Trip should belong to an User
-      // A Trip can't be created without an User due to the foreign key constraint
+      // A Trip can't be created without an User due to the foreign key constraint -allowNull: false but rn we dont have a certain user posting
       Trip.belongsTo(models.User, {
         foreignKey: {
-          allowNull: false
+          allowNull: true
         }
       });
     };

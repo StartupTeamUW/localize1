@@ -2,9 +2,6 @@
 // api-routes.js - this file offers a set of routes for displaying and saving data to the db
 // *********************************************************************************
 
-// Dependencies
-// =============================================================
-
 // Requiring our models
 var db = require('../models')
 
@@ -42,7 +39,7 @@ module.exports = function (app) {
       res.json(dbTrip)
     })
   })
-  
+
   // POST route for saving a new Trip
   app.post('/api/trips', function (req, res) {
     db.Trip.create(req.body).then(function (dbTrip) {
@@ -90,7 +87,17 @@ module.exports = function (app) {
   //     res.json(dbTrip);
   //   });
   // });
-
+  // app.put('/api/trips', function (req, res) {
+  //   db.Trip.update(
+  //     req.body,
+  //     {
+  //       where: {
+  //         id: req.body.id
+  //       }
+  //     }).then(function (dbTrip) {
+  //       res.json(dbTrip)
+  //     })
+  // })
   // // Delete a trip by id
   // app.delete("/api/trips/:id", function (req, res) {
   //   db.Trip.destroy({ where: { id: req.params.id } }).then(function (dbTrip) {
