@@ -49,7 +49,7 @@ module.exports = function (app) {
 // ============TRIP PAGES=================
 //    // ============================
 
-  app.get("/trip", function (req, res) {
+  app.get("/trips", function (req, res) {
     db.Trip.findAll({}).then(function (dbTrips) {
       res.render("trip", {
         msg: "Here are our trips",
@@ -84,8 +84,6 @@ module.exports = function (app) {
     });
   });
  
-
-
 
     // ============================
 // ============RATING PAGE=================
