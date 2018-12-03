@@ -31,7 +31,6 @@ module.exports = function (app) {
   // Get route for retrieving a single Trip
   app.get('/api/trips/:id', function (req, res) {
 
-    // 2. Add a join here to include the User who wrote the Trip
     db.Trip.findOne({
       include: [db.User],
       // where: query
@@ -43,7 +42,7 @@ module.exports = function (app) {
       res.json(dbTrip)
     })
   })
-
+  
   // POST route for saving a new Trip
   app.post('/api/trips', function (req, res) {
     db.Trip.create(req.body).then(function (dbTrip) {
