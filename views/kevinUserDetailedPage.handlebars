@@ -105,7 +105,7 @@
     <div class="profile-pic">
       <img src="{{user.profile_pic_url}}" style="float: left;" />
     </div>
-    <h2 class="display-4 profile-name">{{name}}</h2>
+    <h2 class="display-4 profile-name">{{user.user_name}}</h2>
     <h5>{{user.hometown}}</h5>
     <p class="lead">{{user.bio}}</p>
     {{!-- awaiting userInterest data // pass user_interest key into the object but comment out for now to test detailed
@@ -181,12 +181,12 @@
         <div class="pill">{{user.interests[1]}}</div>
         <div class="pill">{{user.interests[2]}}</div> --}}
         <div class="pill interests">{{user.interests}}</div>
-        {{!-- <div id="interests-list">
+        <div id="interests-list">
           {{#each interests}}
           <div data-id="{{this.id}}" class="pill interests">
           </div>
           {{/each}}
-        </div> --}}
+        </div>
         {{!-- <div class="container"> --}}
           <br><br>
           <h4 class="center-align">Most Recent Trips:</h4>

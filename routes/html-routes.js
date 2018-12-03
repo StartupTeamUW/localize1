@@ -63,7 +63,7 @@ module.exports = function (app) {
     db.User.findOne({ where: { id: req.params.id } }).then(function (dbUser) {
       res.render("kevinUserDetailedPage", {
         msg: "Users Card",
-        user: dbUser.dataValues,
+        user: dbUser,
         interests: dbUser.interests
       });
     });
@@ -73,9 +73,9 @@ module.exports = function (app) {
 
 
 
-
+// comment out - we can see data from api
   // Render 404 page for any unmatched routes
-  app.get("*", function (req, res) {
-    res.render("404");
-  });
+  // app.get("*", function (req, res) {
+  //   res.render("404");
+  // });
 };
