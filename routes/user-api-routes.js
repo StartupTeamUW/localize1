@@ -1,5 +1,5 @@
 var db = require('../models')
-
+var bodyParser = require("body-parser")
 module.exports = function (app) {
   // app.get('/api/users', function (req, res) {
   //   // 1. Add a join to include all of each Trip's Posts
@@ -40,6 +40,8 @@ module.exports = function (app) {
   // Create a new trip
   app.post("/api/users", function (req, res) {
     db.User.create(req.body).then(function (dbUser) {
+      console.log(dbUser);
+      // res.json(dbUser)
       res.redirect("/user/" + dbUser.dataValues.id);
     });
   });
