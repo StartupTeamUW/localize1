@@ -25,3 +25,8 @@ SELECT COUNT(*) FROM Users; -- # of users signed-up in db
 SELECT COUNT(*) FROM Trips; -- # of trips created in db
 
 
+-- get past trips(compare today)
+select* from Trips t inner join Users u ON u.id = t.id where t.end_date <= now();
+
+-- get past trips for specific user
+select* from Trips t left join Users u ON u.id = t.id where t.end_date <= now() and UserId = 2;

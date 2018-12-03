@@ -21,6 +21,16 @@ INSERT INTO Trips (destination, trip_interests, start_date, end_date, createdAt,
 VALUES
 ('LA', 'Landmarks, Food', '2018-12-25', '2018-12-27', Now(), Now(), 1), -- test: jfang looking for a local who matches interests and destination
 ('Chicago', 'Museums, Music', '2018-12-25', '2018-12-27', Now(), Now(), 1),
-('Seattle', 'Landmarks, Music', '2018-12-25', '2018-12-27', Now(), Now(), 2),
+('Seattle', 'Landmarks, Music', '2018-11-11', '2018-11-16', Now(), Now(), 2),
 ('Chicago', '', '2018-12-25', '2018-12-27', Now(), Now(), 2),
 ('Seattle', 'Museums, Music', '2018-12-25', '2018-12-27', Now(), Now(), 3);
+
+
+-- add more dummy data for trips:
+-- add trips (execute after existing user created)
+INSERT INTO Trips (destination, trip_interests, start_date, end_date, createdAt, updatedAt, UserId) 
+VALUES
+('LA', 'Landmarks, Food', '2018-10-25', '2018-10-27', Now(), Now(), 2),
+('NY', 'Landmarks, Food', '2018-02-25', '2018-02-27', Now(), Now(), 2),
+('Austin', 'Landmarks, Food', '2018-01-20', '2018-01-27', Now(), Now(), 2),
+('Huston', 'Landmarks, Food', '2018-08-05', '2018-08-12', Now(), Now(), 2);
