@@ -20,7 +20,6 @@ var $whatIShare =$("#what-I-share");
 
 var $interests = $("#interests");
 var $guideStatus = $("#guideStatus");
-
 var $submitBtnU = $("#submitU");
 var $userList = $("#user-list");
 

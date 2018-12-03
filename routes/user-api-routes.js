@@ -97,7 +97,7 @@ app.delete('/api/users/:id', function (req, res) {
 })
 
 //update user info
-app.put('/api/users', function(req, res) {
+app.put('/api/users/:id', function(req, res) {
   db.User.update(
     req.body,
     {

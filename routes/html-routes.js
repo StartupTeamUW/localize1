@@ -1,5 +1,5 @@
 var db = require("../models");
-var i = 0;
+
 
 module.exports = function (app) {
      // ============================
@@ -50,17 +50,17 @@ module.exports = function (app) {
 //    // ============================
 
   app.get("/trips", function (req, res) {
-    db.Trip.findAll({}).then(function (dbTrips) {
+    db.Trip.findAll({}).then(function (dbTrip) {
       res.render("trip", {
         msg: "Here are our trips",
-        trip: dbTrips
+        trip: dbTrip
       });
     });
   });
-
+//using past.handlebars for single trip(temp)
   app.get("/trip/:id", function (req, res) {
     db.Trip.findOne({ where: { id: req.params.id } }).then(function (dbTrip) {
-      res.render("pastTrip", {
+      res.render("past", {
         trip: dbTrip
       });
     });
@@ -68,7 +68,7 @@ module.exports = function (app) {
   
   app.get("/users/trips/upcoming", function (req, res) {
     db.Trip.findAll({}).then(function (dbTrip) {
-      res.render("alltrips", {
+      res.render("upcomingtrip", {
         msg: "Here are our upcoming trips",
         trip: dbTrip
       });
@@ -84,7 +84,6 @@ module.exports = function (app) {
     });
   });
  
-
     // ============================
 // ============RATING PAGE=================
 //    // ============================
