@@ -95,7 +95,7 @@ var handleFormSubmit = function (event) {
     user_name: $userName.val().trim(),
     email: $userEmail.val().trim(),
     password: $userPassword.val(),
-    phone_number: $phoneNumber.val(),
+    // phonenumber: $phoneNumber.val(),
     profile_pic_url: $profilePicUrl.val(),
     first_name: $firstName.val(),
     last_name: $lastName.val(),
@@ -126,6 +126,7 @@ var handleFormSubmit = function (event) {
   $userName.val("");
   $userEmail.val("");
   $userPassword.val("");
+  // $phoneNumber.val("");
   $profilePicUrl.val("");
   $firstName.val("");
   $lastName.val("");
@@ -168,5 +169,5 @@ var handleEditBtnClick = function () {
 // Add event listeners to the submit and delete buttons
 $submitBtnU.on("click", handleFormSubmit);
 $userList.on("click", ".delete", handleDeleteBtnClick);
-$editProfile. on("click", ".edit", handleEditBtnClick);
+// $editProfile. on("click", ".edit", handleEditBtnClick);
 
