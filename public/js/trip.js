@@ -65,23 +65,23 @@ var refreshTrips = function () {
 };
 
 // KH - FUNTION TO TAKE IN AN ARRAY AND CONVERT IT TO A STRING TO WRITE TO THE DB
-var arrayToString = function(array) {
-  console.log(array.join(", "))
-  return array.join(", ")
-}
+// var arrayToString = function(array) {
+//   console.log(array.join(", "))
+//   return array.join(", ")
+// }
 
 // KH - FUNCTION TO TAKE CHECKBOX INPUTS AND MAKE THEM INTO AN ARRAY
-var compileInterests = function(interests) {
-  var checkedInterests = []
+// var compileInterests = function(interests) {
+//   var checkedInterests = []
   
-  interests.forEach((x) => {
-    if (x.checked) {
-      checkedInterests.push(x.value);
-    }
-  })
+//   interests.forEach((x) => {
+//     if (x.checked) {
+//       checkedInterests.push(x.value);
+//     }
+//   })
   // console.log(checkedInterests); // ARRAY
-  arrayToString(checkedInterests); // STRING VERSION OF SAME
-}
+//   arrayToString(checkedInterests); // STRING VERSION OF SAME
+// }
 
 // handleFormSubmit is called whenever we submit a new example
 // Save the new example to the db and refresh the list
@@ -89,8 +89,8 @@ var handleFormSubmit = function (event) {
   event.preventDefault();
 
   // KH - THIS FULLY CONVERTS THE CHECKBOX INPUTS INTO A STRING, BUT NEEDS TO BE WRITTIN ASYNCHRONOUSLY
-  var tripInterestString = compileInterests($tripInterests);
-  console.log(tripInterestString);
+//   var tripInterestString = compileInterests($tripInterests);
+//   console.log(tripInterestString);
 
 
   var trip = {
