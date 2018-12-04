@@ -79,12 +79,19 @@ app.get('/api/users/:range/past/:id', function (req, res) {
 
 
 //create new user
-app.post('/api/users', function (req, res) {
-  db.User.create(req.body).then(function (dbUser) {
-    res.json(dbUser)
-  })
-})
+// app.post('/api/users', function (req, res) {
+//   db.User.create(req.body).then(function (dbUser) {
+//     res.json(dbUser)
+//   })
+// })
 
+  app.post("/api/users", function (req, res) {
+    console.log("REQ.BODY: ", req.body);
+    db.User.create(req.body).then(function (dbUser) {
+      console.log("somethinghere", dbUser);
+      res.redirect("/user/" + dbUser.dataValues.id);
+    });
+  });
 //delete user
 app.delete('/api/users/:id', function (req, res) {
   db.User.destroy({
