@@ -3,11 +3,11 @@
 USE localize_db;
 
 -- add users
-INSERT INTO Users (user_name, email, password, hometown, guide_status, interests, createdAt, updatedAt) -- you can add more fields, see ./models/user.js
+INSERT INTO Users (user_name, email, password, profile_pic_url, first_name, last_name, hometown, guide_status, interests, createdAt, updatedAt) -- you can add more fields, see ./models/user.js
 VALUES
- ('jfang', 'jfang@gmail.com', 'asdsds', 'Seattle', DEFAULT, '', Now(), Now()), -- in test expects as traveler
-('ckim', 'chikm@gmail.com', 'asdsds', 'LA', true, 'Landmarks, Food', Now(), Now()), -- test output: ckim should be showing as jfang's 1st matched local guide 
-('ktran', 'ktran@gmail.com', 'asdsds', 'LA', true, 'Landmarks, Music', Now(), Now()); --  test output: ktran should be showing as jfang's 2nd closed matched local guide 
+ ('jfang', 'jfang@gmail.com', 'asdsds', 'https://placekitten.com/640/360', 'first', 'last', 'Seattle', DEFAULT, '', Now(), Now()), -- in test expects as traveler
+('ckim', 'chikm@gmail.com', 'asdsds', 'https://placekitten.com/640/360', 'first', 'last', 'LA', true, 'Landmarks, Food', Now(), Now()), -- test output: ckim should be showing as jfang's 1st matched local guide 
+('ktran', 'ktran@gmail.com', 'asdsds', 'https://placekitten.com/640/360', 'first', 'last', 'LA', true, 'Landmarks, Music', Now(), Now()); --  test output: ktran should be showing as jfang's 2nd closed matched local guide 
 
 -- *TBD* add Interests (execute after existing user created)
 INSERT INTO Interests (interests, createdAt, updatedAt, UserId)
