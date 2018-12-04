@@ -153,7 +153,8 @@
               </label>
             </div>
             <div class="col s6">
-              <button id="submitU" class="waves-effect waves-light btn-large">Save
+              <input type="submit">
+              <button id="submitU" type="submit" class="waves-effect waves-light btn-large submit">Save
                 <i class="material-icons right">send</i>
               </button>
             </div>
@@ -172,7 +173,9 @@
     {{#each users}}
     <li data-id="{{this.id}}" class="list-group-item">
       {{!-- BEGIN USER SUMMARY VIEW --}}
-      <a href="user/{{this.id}}">
+
+      {{> userInfo/profile}}
+      {{!-- <a href="user/{{this.id}}">
         <div class="container">
           <div class="trip-summary-container s12 l10">
             <div class="profile-pic">
@@ -192,7 +195,7 @@
           </div>
         </div>
       </a>
-      <br>
+      <br> --}}
       {{!-- END USER SUMMARY VIEW --}}
     </li>
     {{/each}}
@@ -204,3 +207,9 @@
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/user.js"></script>
+<script>
+  alert("js loading");
+  $(".submit").on("click", function () {
+    alert("anything")
+  })
+</script>

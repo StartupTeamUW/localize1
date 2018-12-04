@@ -1,18 +1,18 @@
 <div class="container">
-  <hr>
-  <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-      <img src="{{user.profilePicUrl}}" style="float: left;" />
-      <h2 class="display-4">{{user.userName}}</h1>
-        <h3>{{user.hometown}}, {{user.DOB}}</h3>
-        <p class="lead">{{user.bio}}</p>
-        <div class="interest-tokens">
-          <ul>
-            {{#each user.interests}}
-            <li class="interests" id="{{this.user.interests}}"> <span class="badge badge-pill badge-primary">{{this.}}</span></li>
-            {{/each}}
-          </ul>
-        </div>
+  <div class="trip-summary-container s12 l10">
+    <div class="profile-pic">
+      <img src="{{this.profile_pic_url}}" style="float: left;" />
+    </div>
+    <h2 class="display-4 profile-name">{{this.user_name}}</h2>
+    <h5>{{this.hometown}}</h5>
+    <p class="lead">{{this.bio}}</p>
+    <div class="interest-tokens">
+      <ul>
+        {{#each this_interests}}
+        <li class="interests" id="{{this.text}}"> <span class="badge badge-pill badge-primary">{{this.text}}</span></li>
+        {{/each}}
+      </ul>
     </div>
   </div>
 </div>
+<br>

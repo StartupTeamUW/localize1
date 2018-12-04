@@ -14,14 +14,14 @@
 
     {{!-- added UserId --}}
     <div id="wrapper3">
-        <input type="number" id="UserId" placeholder="UserId"/>
-     </div>
+        <input type="number" id="UserId" placeholder="UserId" />
+    </div>
     {{!-- ends --}}
 
 
     <div>
         <!-- to here  chi 11/28/18 w/ search bar filering -->
-      
+
         <div class="form-group">
             <label for="category">Who is posting</label>
             <select class="custom-select" id="author">
@@ -124,10 +124,8 @@
     <h1>{{msg}}</h1>
     <ul id="tripList">
         {{#each trip}}
-        <li data-id="{{this.id}}" class="list-group-item">
-            <a href="trip/{{this.id}}">{{this.destination}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-        </li>
+            {{> trips/trip}}
+        <br>
         {{/each}}
     </ul>
 
