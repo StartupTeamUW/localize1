@@ -2,7 +2,7 @@
 var $userName = $("#username");
 var $userEmail = $("#user-email-address");
 var $userPassword = $("#user-password");
-var $phoneNumber = $("#phone-number");
+// var $phoneNumber = $("#phone-number");
 var $profilePicUrl = $("#profile-photo");
 var $firstName = $("#first-name");
 var $lastName = $("#last-name");
@@ -11,15 +11,14 @@ var $DOB = $("#DOB");
 var $hometown = $("#hometown");
 var $bio = $("#bio");
 var $languages = $("#languages");
-var $whyOn =$("#why-on");
-var $oneAThing =$("#one-A-thing");
-var $hobby =$("#hobby");
-var $countries =$("#countries-lived");
-var $whatIShare =$("#what-I-share");
+var $whyOn = $("#why-on");
+var $oneAThing = $("#one-A-thing");
+var $hobby = $("#hobby");
+var $countries = $("#countries-lived");
+var $whatIShare = $("#what-I-share");
 // var $interests = [$('input[name ="Food"]:checked').val()]
-
 var $interests = $("#interests");
-var $guideStatus = $("#guideStatus");
+// var $guideStatus = $("#guideStatus");
 var $submitBtnU = $("#submitU");
 var $userList = $("#user-list");
 
@@ -41,12 +40,12 @@ var API = {
       type: "GET"
     });
   },
-  editUsers: function (id) {
-    return $.ajax({
-      url: "api/users/" + id,
-      type: "PUT"
-    });
-  },
+  // editUsers: function (id) {
+  //   return $.ajax({
+  //     url: "api/users/" + id,
+  //     type: "PUT"
+  //   });
+  // },
   deleteUser: function (id) {
     return $.ajax({
       url: "api/users/" + id,
@@ -156,15 +155,15 @@ var handleDeleteBtnClick = function () {
   });
 };
 
-var handleEditBtnClick = function () {
-  var idToEdit = $(this)
-    .parent()
-    .attr("data-id");
+// var handleEditBtnClick = function () {
+//   var idToEdit = $(this)
+//     .parent()
+//     .attr("data-id");
 
-  API.editUser(idToEdit).then(function () {
-    refreshUsers();
-  });
-};
+//   API.editUser(idToEdit).then(function () {
+//     refreshUsers();
+//   });
+// };
 
 // Add event listeners to the submit and delete buttons
 $submitBtnU.on("click", handleFormSubmit);

@@ -5,8 +5,7 @@
     <div class="col s12">
       <h4 class="centered-headline">{{msg}}</h4>
       <div class="container s12 l12">
-        {{!-- <form method="POST"> --}}
-
+        <form action="/api/users" method="POST">
           <div class="row">
             <div class="input-field col s12">
               <input type="text" id="username" class="validate" name="user_name">
@@ -159,7 +158,8 @@
             </div>
 
           </div>
-        {{!-- </form> --}}
+
+        </form>
       </div>
     </div>
   </div>
@@ -181,13 +181,13 @@
             <h2 class="display-4 profile-name">{{this.user_name}}</h2>
             <h5>{{this.hometown}}</h5>
             <p class="lead">{{this.bio}}</p>
-            <div class="interest-tokens">
+            {{!-- <div class="interest-tokens">
               <ul>
                 {{#each this_interests}}
                 <li class="interests" id="{{this.text}}"> <span class="badge badge-pill badge-primary">{{this.text}}</span></li>
                 {{/each}}
               </ul>
-            </div>
+            </div> --}}
             <button class="btn btn-danger float-right delete">ｘ</button>
           </div>
         </div>
