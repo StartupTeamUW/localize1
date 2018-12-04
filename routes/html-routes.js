@@ -34,7 +34,7 @@ module.exports = function (app) {
     });
   });
 
-  app.get("/users/:id", function (req, res) {
+  app.get("/user/:id", function (req, res) {
     db.User.findOne({ where: { id: req.params.id } }).then(function (dbUser) {
       res.render("kevinUserDetailedPage", {
         msg: "Users Card",
@@ -43,8 +43,6 @@ module.exports = function (app) {
       });
     });
   });
-
-
     // ============================
 // ============TRIP PAGES=================
 //    // ============================
@@ -52,7 +50,7 @@ module.exports = function (app) {
   app.get("/trips", function (req, res) {
     db.Trip.findAll({}).then(function (dbTrip) {
       res.render("trip", {
-        msg: "Most recent trip planned",
+        msg: "Here are our trips",
         trip: dbTrip
       });
     });
