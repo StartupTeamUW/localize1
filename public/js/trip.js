@@ -48,7 +48,6 @@ var refreshTrips = function () {
           "data-id": trip.id
         })
         .append($a);
-
       var $button = $("<button>")
         .addClass("btn btn-danger float-right delete")
         .text("ｘ");

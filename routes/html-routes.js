@@ -2,21 +2,7 @@ var db = require("../models");
 
 
 module.exports = function (app) {
-     // ============================
-// ============HOME & INDEX PAGE=================
-//    // ============================
-  //home page being rendered with no passing data
-  app.get("/", function (req, res) {
-    db.User.findAll({}).then(function (dbUsers) {
-      res.render("index", {
-        msg: "Create a User Profile",
-        users: dbUsers
-      });
-    });
-  });
-  app.get("/homepage", function (req, res) {
-    res.render("homepage");
-  });
+
    // ============================
 // ============USER PAGES=================
 //    // ============================
@@ -94,7 +80,22 @@ module.exports = function (app) {
   app.get("/rating", function (req, res) {
     res.render("rating");
   });
-
+  
+     // ============================
+// ============HOME & INDEX PAGE=================
+//    // ============================
+  //home page being rendered with no passing data
+  app.get("/", function (req, res) {
+    db.User.findAll({}).then(function (dbUsers) {
+      res.render("index", {
+        msg: "Create a User Profile",
+        users: dbUsers
+      });
+    });
+  });
+  app.get("/homepage", function (req, res) {
+    res.render("homepage");
+  });
    // ============================
 // ============404 PAGE=================
 //    // ============================
