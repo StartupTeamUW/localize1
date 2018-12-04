@@ -1,44 +1,40 @@
-<div class="navbar-fixed">
-  <nav>
+<nav>
     <div class="nav-wrapper">
-      <a href="/" class="brand-logo">Localize</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <!-- changed from here -->
+      <a href="#!" class="brand-logo">Localize</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
         <li style="margin-top: -2px; margin-left: 15px; margin-right:15px">
           <div class="input-group-btn search-panel">
-            <!-- Dropdown Trigger -->
-
-            {{!-- KH - DROP DOWN NAVE MENU - CURRENTLY NOT IN USE --}}
-            {{!-- <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
-            <!-- Dropdown Structure -->
-            <ul id='dropdown1' class='dropdown-content' role="menu">
-              <li><a href="#city">City</a></li>
-              <li><a href="#host">Host</a></li>
-              <li><a href="#interest">Interest</a></li>
-              <li><a href="#dates"><i class="material-icons">view_module</i>Dates</a></li>
-              <li class="divider" tabindex="-1"></li>
-              <li><a href="#all"><i class="material-icons">cloud</i>All</a></li>
-            </ul> --}}
           </div>
         </li>
-
-        {{!-- <li style="margin-top: -2px; margin-left: 15px; margin-right:15px">
-            <button class="btn btn-default" type="button">
-              <span class="glyphicon glyphicon-search buttonsize">
-                <i class="material-icons">flight_takeoff</i>
-              </span>
-            </button>
-        </li> --}}
-
-        <!-- to here  chi 11/28/18 w/ search bar filering -->
-
-
-        {{!-- !!!! KH - STYLING ISSUE - the <a> link is a white color for some reason --}}
           <li>
             <!-- Modal Trigger -->
             <span class="input-group-btn">
               <a type="button" data-target="modal1" class="btn modal-trigger">
-                {{!-- <i class="material-icons">account_circle</i> --}}
+                Sign In
+              </a>
+            </span>
+          </li>
+          <li>
+            <span class="input-group-btn">
+              <a type="button" data-target="modal1" class="btn" href="/register">
+                Sign Up
+              </a>
+            </span>
+          </li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li style="margin-top: -2px; margin-left: 15px; margin-right:15px">
+          <div class="input-group-btn search-panel">
+          </div>
+        </li>
+          <li>
+            <!-- Modal Trigger -->
+            <span class="input-group-btn">
+              <a type="button" data-target="modal1" class="btn modal-trigger">
                 Sign In
               </a>
             </span>
@@ -48,32 +44,11 @@
           <li>
             <span class="input-group-btn">
               <a type="button" data-target="modal1" class="btn" href="/register">
-                {{!-- <i class="material-icons">account_circle</i> --}}
                 Sign Up
               </a>
             </span>
-
           </li>
-
-          {{!-- KH - EMAIL BUTTON - PURPOSE NOT CLEAR --}}
-          {{!-- <li>
-            <a type="button" class="btn btn-secondary">
-              <i class="material-icons">
-                email
-              </i>
-              </button>
-            </a>
-          </li> --}}
-
-          {{!-- KH - SIGN OUT BUTTON - NEED TO MAKE CONTEXTUAL TO EITHER LOGGED IN OR NOT --}}
-          {{!-- <li>
-            <a type="button" class="btn btn-secondary" id="loginBtn">Signout</button>
-            </a>
-          </li> --}}
-      </ul>
-    </div>
-  </nav>
-</div>
+  </ul>
 
 <!-- Modal Structure -->
 <div id="modal1" class="modal">
