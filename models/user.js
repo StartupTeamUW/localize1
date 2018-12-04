@@ -35,10 +35,15 @@ module.exports = function (sequelize, DataTypes) {
       //   }
       // }
     },
-    // phone_number: {
+    // phonenumber: {
     //   type: DataTypes.STRING,
+    //         // allowNull: false,
+    //   // validate: {
+    //   //   len: {
+    //   //     args: 9
+    //   //   }
+    //   // }
     // },
-
     // User Profile
     profile_pic_url: DataTypes.STRING,
     first_name: DataTypes.STRING,

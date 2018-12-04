@@ -82,67 +82,67 @@
             <h5 class="centered-headline">What are your interests?</h5>
           </div>
 
-          <div class="row">
+          <div class="row" id="interests">
             <div class="interests">
               <div class="switch">
                 <label>
                   Food
-                  <input type="checkbox" class="interest-checkbox" name="interests" value="Food">
+                  <input type="checkbox" name="Food">
                   <span class="lever"></span>
                 </label>
               </div>
               <div class="switch">
                 <label>
                   Music
-                  <input type="checkbox" class="interest-checkbox" name="interests" value="Music">
+                  <input type="checkbox" name="Music">
                   <span class="lever"></span>
                 </label>
               </div>
               <div class="switch">
                 <label>
                   Shows
-                  <input type="checkbox" class="interest-checkbox" name="interests" value="Boat">
+                  <input type="checkbox" name="Boat">
                   <span class="lever"></span>
                 </label>
               </div>
               <div class="switch">
                 <label>
                   Sports
-                  <input type="checkbox" class="interest-checkbox" name="interests" value="Sports">
+                  <input type="checkbox" name="Sports">
                   <span class="lever"></span>
                 </label>
               </div>
               <div class="switch">
                 <label>
                   Landmarks
-                  <input type="checkbox" class="interest-checkbox" name="interests" value="Landmark">
+                  <input type="checkbox" name="Landmark">
                   <span class="lever"></span>
                 </label>
               </div>
               <div class="switch">
                 <label>
                   Monuments
-                  <input type="checkbox" class="interest-checkbox" name="interests" value="Monument">
+                  <input type="checkbox" name="Monument">
                   <span class="lever"></span>
                 </label>
               </div>
               <div class="switch">
                 <label>
                   Local Activities
-                  <input type="checkbox" class="interest-checkbox" name="interests" value="Local Activity">
+                  <input type="checkbox" name="Local Activity">
                   <span class="lever"></span>
                 </label>
               </div>
               <div class="switch">
                 <label>
                   Museums
-                  <input type="checkbox" class="interest-checkbox" name="interests" value="Museum">
+                  <input type="checkbox" name="Museum">
                   <span class="lever"></span>
                 </label>
               </div>
             </div>
           </div>
-          {{!-- END KEVIN'S CHECK BOX INTERESTS --}}
+          {{!-- KEVIN'S CHECK BOX INTERESTS --}}
           <br>
           <div class="row">
             <div class="input-field col s6 center-align">
@@ -152,11 +152,13 @@
               </label>
             </div>
             <div class="col s6">
-              <button id="submitU" type="submit" class="waves-effect waves-light btn-large submit">Save
+              <button id="submitU" class="waves-effect waves-light btn-large">Save
                 <i class="material-icons right">send</i>
               </button>
             </div>
+
           </div>
+
         </form>
       </div>
     </div>
@@ -172,7 +174,7 @@
       {{!-- BEGIN USER SUMMARY VIEW --}}
       <a href="user/{{this.id}}">
         <div class="container">
-          <div class="trip-summary-container s12 l10">
+          <div class="tripx-summary-container s12 l10">
             <div class="profile-pic">
               <img src="{{this.profile_pic_url}}" />
             </div>
@@ -191,7 +193,6 @@
         </div>
       </a>
       <br>
-      {{> userInfo/profile}}
       {{!-- END USER SUMMARY VIEW --}}
     </li>
     {{/each}}
