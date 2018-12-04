@@ -16,7 +16,7 @@ var $oneAThing =$("#one-A-thing");
 var $hobby =$("#hobby");
 var $countries =$("#countries-lived");
 var $whatIShare =$("#what-I-share");
-// var $interests = [$('input[name ="Food"]:checked').val()]
+var $interests = document.getElementsByName("interests");
 
 var $interests = $("#interests");
 var $guideStatus = $("#guideStatus");
@@ -55,6 +55,18 @@ var API = {
   }
 };
 
+// KH - FUNCTION TO TAKE CHECKBOX INPUTS AND MAKE THEM INTO AN ARRAY
+var compileInterests = function(interests) {
+  var checkedInterests = []
+  interests.forEach((x) => {
+    if (x.checked) {
+      checkedInterests.push(x.value);
+    }
+  })
+
+  console.log(checkedInterests);
+}
+
 // refreshExamples gets new examples from the db and repopulates the list
 var refreshUsers = function () {
   API.getUsers().then(function (data) {
@@ -91,6 +103,8 @@ var refreshUsers = function () {
 var handleFormSubmit = function (event) {
 
   event.preventDefault();
+
+  compileInterests($interests);
 
   var user = {
     user_name: $userName.val().trim(),
