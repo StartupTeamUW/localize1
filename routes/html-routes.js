@@ -26,10 +26,10 @@ module.exports = function (app) {
   });
 
   app.get("/users", function (req, res) {
-    db.User.findAll({}).then(function (dbUser) {
+    db.User.findAll({}).then(function (dbUsers) {
       res.render("allmembers", {
         msg: "Here are all our members",
-        users: dbUser
+        users: dbUsers
       });
     });
   });
@@ -43,8 +43,6 @@ module.exports = function (app) {
       });
     });
   });
-
-
     // ============================
 // ============TRIP PAGES=================
 //    // ============================

@@ -1,13 +1,6 @@
-// Get references to page elements
-//added UserId
+
 var $UserId = $("#UserId");
-//ends
-
-//desination is not longer as deinstation in trip.handlebar (as google search is implemented)
 var $destination =$("#address");
-//ends 
-
-// var $destination = $("#destination");
 var $tripRemark = $("#trip-remark");
 var $startDate = $("#startDate");
 var $endDate = $("#endDate");
