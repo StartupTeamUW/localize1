@@ -6,6 +6,8 @@
 }
 body {}
 .trip-summary-container {
+  display: flex;
+  flex-direction: row;
   background: rgb(99, 194, 231);
   color: aliceblue;
   padding: 20px;
@@ -13,8 +15,8 @@ body {}
 }
 .profile-pic {
   float: left;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   position: relative;
   overflow: hidden;
   border-radius: 50%;
@@ -22,10 +24,16 @@ body {}
   display: flex;
   justify-content: center;
 }
+
+.profile-data {
+  margin-left: 20px;
+}
+
 .profile-name {
   font-family: 'Montserrat Alternates', sans-serif;
   font-weight: 800;
 }
+
 img {
   height: 100%;
   width: auto;

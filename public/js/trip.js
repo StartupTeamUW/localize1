@@ -12,7 +12,7 @@ var $tripRemark = $("#trip-remark");
 var $startDate = $("#startDate");
 var $endDate = $("#endDate");
 var $tripList = $("#tripList");
-// var $tripInterests = $("trip_interests")
+var $tripInterests = document.getElementsByName("interests");
 var $submitBtnT = $("#submitT");
 
 // The API object contains methods for each kind of request we'll make
@@ -71,10 +71,24 @@ var refreshTrips = function () {
   location.reload();
 };
 
+// KH - FUNCTION TO TAKE CHECKBOX INPUTS AND MAKE THEM INTO AN ARRAY
+var compileInterests = function(interests) {
+  var checkedInterests = []
+  interests.forEach((x) => {
+    if (x.checked) {
+      checkedInterests.push(x.value);
+    }
+  })
+
+  console.log(checkedInterests);
+}
+
 // handleFormSubmit is called whenever we submit a new example
 // Save the new example to the db and refresh the list
 var handleFormSubmit = function (event) {
   event.preventDefault();
+
+  compileInterests($tripInterests);
 
   var trip = {
     destination: $destination.val(),

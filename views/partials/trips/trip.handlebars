@@ -1,0 +1,24 @@
+<li data-id="{{this.id}}" class="list-group-item">
+
+    <div class="container">
+        <div class="trip-summary-container s12 l10">
+            <div class="profile-pic">
+                <img src="https://picsum.photos/640/360" style="float: left;" />
+            </div>
+            <div class="profile-data">
+                <h2 class="display-4 profile-name">{{this.destination}}</h2>
+                <h5>{{this.start_date}}</h5>
+                <p class="lead">Summary text of the trip</p>
+                <div class="interest-tokens">
+                    <ul>
+                        {{#each trip_interests}}
+                        <li class="interests" id="{{this.text}}"> <span class="badge badge-pill badge-primary">Example
+                                Interest</span></li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+            <button class="waves-effect waves-light btn-small delete">remove</button>
+        </div>
+    </div>
+</li>
