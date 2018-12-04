@@ -39,7 +39,7 @@ module.exports = function (app) {
       res.render("kevinUserDetailedPage", {
         msg: "Users Card",
         users: dbUser,
-        
+        interests: dbUser.interests
       });
     });
   });
