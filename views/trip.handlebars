@@ -39,81 +39,24 @@
         <textarea class="form-control" id="trip-remark" aria-describedby="trip-description" placeholder="Enter Trip Description"></textarea>
     </div>
 
-    {{!-- KEVIN'S CHECK BOX INTERESTS --}}
-    <div class="row">
-        <h5 class="centered-headline">What are your interests?</h5>
+    <div>
+        <label for="trip-remark">Travel Interests</label>
+        <textarea class="form-control" id="interests" aria-describedby="trip-description" placeholder="Enter Trip Interests" name="interests"></textarea>
     </div>
-    <div class="row">
-        <div class="interests">
-            <div class="switch">
-                <label>
-                    Food
-                    <input type="checkbox" class="interest-checkbox" name="interests" value="Food">
-                    <span class="lever"></span>
-                </label>
-            </div>
-            <div class="switch">
-                <label>
-                    Music
-                    <input type="checkbox" class="interest-checkbox" name="interests" value="Music">
-                    <span class="lever"></span>
-                </label>
-            </div>
-            <div class="switch">
-                <label>
-                    Shows
-                    <input type="checkbox" class="interest-checkbox" name="interests" value="Boat">
-                    <span class="lever"></span>
-                </label>
-            </div>
-            <div class="switch">
-                <label>
-                    Sports
-                    <input type="checkbox" class="interest-checkbox" name="interests" value="Sports">
-                    <span class="lever"></span>
-                </label>
-            </div>
-            <div class="switch">
-                <label>
-                    Landmarks
-                    <input type="checkbox" class="interest-checkbox" name="interests" value="Landmark">
-                    <span class="lever"></span>
-                </label>
-            </div>
-            <div class="switch">
-                <label>
-                    Monuments
-                    <input type="checkbox" class="interest-checkbox" name="interests" value="Monument">
-                    <span class="lever"></span>
-                </label>
-            </div>
-            <div class="switch">
-                <label>
-                    Local Activities
-                    <input type="checkbox" class="interest-checkbox" name="interests" value="Local Activity">
-                    <span class="lever"></span>
-                </label>
-            </div>
-            <div class="switch">
-                <label>
-                    Museums
-                    <input type="checkbox" class="interest-checkbox" name="interests" value="Museum">
-                    <span class="lever"></span>
-                </label>
-            </div>
-        </div>
-    </div>
+
+
+    {{!-- KEVIN'S CHECK BOX INTERESTS - NOT IN USE UNTIL CHECK BOX IS INCORPORATED, BUT UNCOMMENT AND IT WILL POPULATE--}}
+        {{!-- {{> forms/interests}} --}}
     {{!-- END KEVIN'S CHECK BOX INTERESTS --}}
     <br>
     <div class="row">
         <button id="submitT" class="btn btn-primary float-right">Submit</button>
     </div>
     <h4>{{msg}}</h4>
-    <ul id="tripList">
+    <div id="tripList" class="collection">
         {{#each trip}}
-        {{> trips/trip}}
-        <br>
+        {{> trips/trip-small}}
         {{/each}}
-    </ul>
+    </div>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="/js/trip.js"></script>

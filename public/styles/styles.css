@@ -38,6 +38,7 @@ img {
   height: 100%;
   width: auto;
 }
+
 .trip-interests {
   list-style: none;
   display: inline;
@@ -105,7 +106,10 @@ input.big-search::placeholder {
 }
 
 
-
+.title {
+  font-size: 2em;
+  font-weight: 600;
+}
 
 
 /* Dropdown Button */
