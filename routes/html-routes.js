@@ -3,11 +3,16 @@ var db = require("../models");
 
 module.exports = function (app) {
      // ============================
-// ============HOME/INDEX PAGE=================
+// ============HOME & INDEX PAGE=================
 //    // ============================
   //home page being rendered with no passing data
   app.get("/", function (req, res) {
-    res.render("dashboard");
+    db.User.findAll({}).then(function (dbUsers) {
+      res.render("index", {
+        msg: "Create a User Profile",
+        users: dbUsers
+      });
+    });
   });
   app.get("/homepage", function (req, res) {
     res.render("homepage");
