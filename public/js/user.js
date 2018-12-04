@@ -16,7 +16,7 @@ var $oneAThing =$("#one-A-thing");
 var $hobby =$("#hobby");
 var $countries =$("#countries-lived");
 var $whatIShare =$("#what-I-share");
-// var $interests = [$('input[name ="Food"]:checked').val()]
+var $interests = document.getElementsByName("interests");
 
 var $interests = $("#interests");
 var $guideStatus = $("#guideStatus");
@@ -55,6 +55,18 @@ var API = {
   }
 };
 
+// KH - FUNCTION TO TAKE CHECKBOX INPUTS AND MAKE THEM INTO AN ARRAY
+var compileInterests = function(interests) {
+  var checkedInterests = []
+  interests.forEach((x) => {
+    if (x.checked) {
+      checkedInterests.push(x.value);
+    }
+  })
+
+  console.log(checkedInterests);
+}
+
 // refreshExamples gets new examples from the db and repopulates the list
 var refreshUsers = function () {
   API.getUsers().then(function (data) {
@@ -90,8 +102,9 @@ var refreshUsers = function () {
 // Save the new user to the db and refresh the list
 var handleFormSubmit = function (event) {
 
-  alert("handle form");
   event.preventDefault();
+
+  compileInterests($interests);
 
   var user = {
     user_name: $userName.val().trim(),
@@ -120,8 +133,6 @@ var handleFormSubmit = function (event) {
   //   alert("You must enter a valid username and email address!");
   //   return;
   // }
-
-  console.log(user);
 
   API.saveUser(user).then(function () {
     refreshUsers();
@@ -171,10 +182,6 @@ var handleEditBtnClick = function () {
 };
 
 // Add event listeners to the submit and delete buttons
-// $submitBtnU.on("click", handleFormSubmit);
-
-$submitBtnU.on("click", function () {
-  alert("anything");
-});
+$submitBtnU.on("click", handleFormSubmit);
 
 $userList.on("click", ".delete", handleDeleteBtnClick);

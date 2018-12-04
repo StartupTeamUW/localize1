@@ -83,67 +83,67 @@
             <h5 class="centered-headline">What are your interests?</h5>
           </div>
 
-          <div class="row" id="interests">
+          <div class="row">
             <div class="interests">
               <div class="switch">
                 <label>
                   Food
-                  <input type="checkbox" name="Food">
+                  <input type="checkbox" class="interest-checkbox" name="interests" value="Food">
                   <span class="lever"></span>
                 </label>
               </div>
               <div class="switch">
                 <label>
                   Music
-                  <input type="checkbox" name="Music">
+                  <input type="checkbox" class="interest-checkbox" name="interests" value="Music">
                   <span class="lever"></span>
                 </label>
               </div>
               <div class="switch">
                 <label>
                   Shows
-                  <input type="checkbox" name="Boat">
+                  <input type="checkbox" class="interest-checkbox" name="interests" value="Boat">
                   <span class="lever"></span>
                 </label>
               </div>
               <div class="switch">
                 <label>
                   Sports
-                  <input type="checkbox" name="Sports">
+                  <input type="checkbox" class="interest-checkbox" name="interests" value="Sports">
                   <span class="lever"></span>
                 </label>
               </div>
               <div class="switch">
                 <label>
                   Landmarks
-                  <input type="checkbox" name="Landmark">
+                  <input type="checkbox" class="interest-checkbox" name="interests" value="Landmark">
                   <span class="lever"></span>
                 </label>
               </div>
               <div class="switch">
                 <label>
                   Monuments
-                  <input type="checkbox" name="Monument">
+                  <input type="checkbox" class="interest-checkbox" name="interests" value="Monument">
                   <span class="lever"></span>
                 </label>
               </div>
               <div class="switch">
                 <label>
                   Local Activities
-                  <input type="checkbox" name="Local Activity">
+                  <input type="checkbox" class="interest-checkbox" name="interests" value="Local Activity">
                   <span class="lever"></span>
                 </label>
               </div>
               <div class="switch">
                 <label>
                   Museums
-                  <input type="checkbox" name="Museum">
+                  <input type="checkbox" class="interest-checkbox" name="interests" value="Museum">
                   <span class="lever"></span>
                 </label>
               </div>
             </div>
           </div>
-          {{!-- KEVIN'S CHECK BOX INTERESTS --}}
+          {{!-- END KEVIN'S CHECK BOX INTERESTS --}}
           <br>
           <div class="row">
             <div class="input-field col s6 center-align">
@@ -153,14 +153,14 @@
               </label>
             </div>
             <div class="col s6">
-              <input type="submit">
               <button id="submitU" type="submit" class="waves-effect waves-light btn-large submit">Save
                 <i class="material-icons right">send</i>
               </button>
             </div>
 
           </div>
-        {{!-- </form> --}}
+          {{!--
+        </form> --}}
       </div>
     </div>
   </div>
@@ -175,27 +175,7 @@
       {{!-- BEGIN USER SUMMARY VIEW --}}
 
       {{> userInfo/profile}}
-      {{!-- <a href="user/{{this.id}}">
-        <div class="container">
-          <div class="trip-summary-container s12 l10">
-            <div class="profile-pic">
-              <img src="{{this.profile_pic_url}}" />
-            </div>
-            <h2 class="display-4 profile-name">{{this.user_name}}</h2>
-            <h5>{{this.hometown}}</h5>
-            <p class="lead">{{this.bio}}</p>
-            <div class="interest-tokens">
-              <ul>
-                {{#each this_interests}}
-                <li class="interests" id="{{this.text}}"> <span class="badge badge-pill badge-primary">{{this.text}}</span></li>
-                {{/each}}
-              </ul>
-            </div>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </div>
-        </div>
-      </a>
-      <br> --}}
+
       {{!-- END USER SUMMARY VIEW --}}
     </li>
     {{/each}}
@@ -207,9 +187,3 @@
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/user.js"></script>
-<script>
-  alert("js loading");
-  $(".submit").on("click", function () {
-    alert("anything")
-  })
-</script>
