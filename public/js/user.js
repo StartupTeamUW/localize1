@@ -90,7 +90,6 @@ var refreshUsers = function () {
 // Save the new user to the db and refresh the list
 var handleFormSubmit = function (event) {
 
-  alert("handle form");
   event.preventDefault();
 
   var user = {
@@ -120,8 +119,6 @@ var handleFormSubmit = function (event) {
   //   alert("You must enter a valid username and email address!");
   //   return;
   // }
-
-  console.log(user);
 
   API.saveUser(user).then(function () {
     refreshUsers();
@@ -171,10 +168,6 @@ var handleEditBtnClick = function () {
 };
 
 // Add event listeners to the submit and delete buttons
-// $submitBtnU.on("click", handleFormSubmit);
-
-$submitBtnU.on("click", function () {
-  alert("anything");
-});
+$submitBtnU.on("click", handleFormSubmit);
 
 $userList.on("click", ".delete", handleDeleteBtnClick);
