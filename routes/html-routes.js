@@ -52,7 +52,7 @@ module.exports = function (app) {
   app.get("/trips", function (req, res) {
     db.Trip.findAll({}).then(function (dbTrip) {
       res.render("trip", {
-        msg: "Here are our trips",
+        msg: "Most recent trip planned",
         trip: dbTrip
       });
     });
