@@ -26,15 +26,15 @@ module.exports = function (app) {
   });
 
   app.get("/users", function (req, res) {
-    db.User.findAll({}).then(function (dbUser) {
+    db.User.findAll({}).then(function (dbUsers) {
       res.render("allmembers", {
         msg: "Here are all our members",
-        users: dbUser
+        users: dbUsers
       });
     });
   });
 
-  app.get("/user/:id", function (req, res) {
+  app.get("/users/:id", function (req, res) {
     db.User.findOne({ where: { id: req.params.id } }).then(function (dbUser) {
       res.render("kevinUserDetailedPage", {
         msg: "Users Card",
