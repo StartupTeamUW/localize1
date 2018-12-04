@@ -2,7 +2,7 @@
 var $userName = $("#username");
 var $userEmail = $("#user-email-address");
 var $userPassword = $("#user-password");
-var $phoneNumber = $("#phone-number");
+var $phonenumber = $("#phone-number");
 var $profilePicUrl = $("#profile-photo");
 var $firstName = $("#first-name");
 var $lastName = $("#last-name");
@@ -94,7 +94,7 @@ var handleFormSubmit = function (event) {
     user_name: $userName.val().trim(),
     email: $userEmail.val().trim(),
     password: $userPassword.val(),
-    phonenumber: $phoneNumber.val(),
+    phonenumber: $phonenumber.val(),
     profile_pic_url: $profilePicUrl.val(),
     first_name: $firstName.val(),
     last_name: $lastName.val(),
@@ -125,7 +125,7 @@ var handleFormSubmit = function (event) {
   $userName.val("");
   $userEmail.val("");
   $userPassword.val("");
-  $phoneNumber.val("");
+  $phonenumber.val("");
   $profilePicUrl.val("");
   $firstName.val("");
   $lastName.val("");
