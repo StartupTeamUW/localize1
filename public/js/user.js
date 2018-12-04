@@ -119,6 +119,8 @@ var handleFormSubmit = function (event) {
   //   return;
   // }
 
+  console.log(user);
+
   API.saveUser(user).then(function () {
     refreshUsers();
   });
@@ -168,5 +170,5 @@ var handleEditBtnClick = function () {
 // Add event listeners to the submit and delete buttons
 $submitBtnU.on("click", handleFormSubmit);
 $userList.on("click", ".delete", handleDeleteBtnClick);
-$editProfile. on("click", ".edit", handleEditBtnClick);
+// $editProfile.on("click", ".edit", handleEditBtnClick);
 
