@@ -1,54 +1,57 @@
 <nav>
-    <div class="nav-wrapper">
-      
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li style="margin-top: -2px; margin-left: 15px; margin-right:15px">
-          <div class="input-group-btn search-panel">
-          </div>
-        </li>
-          <li>
-            <!-- Modal Trigger -->
-            <span class="">
-              <a data-target="modal1" class="btn modal-trigger">
-                <i class="material-icons">account_circle</i>
-              </a>
-            </span>
-          </li>
-          <li>
-            <span class="input-group-btn">
-              <a data-target="modal1" class="btn" href="/register">
-                Sign Up
-              </a>
-            </span>
-          </li>
-      </ul>
+  <div class="nav-wrapper">
+
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+      <li style="margin-top: -2px; margin-left: 15px; margin-right:15px">
+        <div class="input-group-btn search-panel">
+        </div>
+      </li>
+      <li>
+        <!-- Modal Trigger -->
+        <span class="">
+          <a data-target="modal1" class="btn modal-trigger">
+            <i class="material-icons">account_circle</i>
+          </a>
+        </span>
+      </li>
+      <li>
+        <span class="input-group-btn">
+          <a data-target="modal1" class="btn" href="/register">
+            Sign Up
+          </a>
+        </span>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<ul class="sidenav" id="mobile-demo">
+  {{!-- <li style="margin-top: -2px; margin-left: 15px; margin-right:15px">
+    <div class="input-group-btn search-panel">
     </div>
-  </nav>
+  </li> --}}
+  <li>
+    <h3>Localize</h3>
+  </li>
+  <li>
+    <!-- Modal Trigger -->
+    <span class="input-group-btn">
+      <a data-target="modal1" class="btn modal-trigger">
+        Sign In
+      </a>
+    </span>
 
-  <ul class="sidenav" id="mobile-demo">
-    <li style="margin-top: -2px; margin-left: 15px; margin-right:15px">
-          <div class="input-group-btn search-panel">
-          </div>
-        </li>
-          <li>
-            <!-- Modal Trigger -->
-            <span class="input-group-btn">
-              <a data-target="modal1" class="btn modal-trigger">
-                Sign In
-              </a>
-            </span>
+  </li>
 
-          </li>
-
-          <li>
-            <span class="input-group-btn">
-              <a data-target="modal1" class="btn" href="/register">
-                Sign Up
-              </a>
-            </span>
-          </li>
-  </ul>
+  <li>
+    <span class="input-group-btn">
+      <a data-target="modal1" class="btn" href="/register">
+        Sign Up
+      </a>
+    </span>
+  </li>
+</ul>
 
 <!-- Modal Structure -->
 <div id="modal1" class="modal">

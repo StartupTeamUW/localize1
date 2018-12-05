@@ -1,5 +1,6 @@
-{{> nav/navbar-homepage}}
-
+<div id="navbar">
+  {{> nav/navbar-homepage}}
+</div>
 
 <div class="row homepage-row">
   <div class="col s12">
@@ -7,7 +8,24 @@
       <div class="container">
         <div class="row ">
           <h1 class="homepage-h1">LOCALIZE</h1>
-          <input id="address" class="big-search" placeholder="Where Are You Headed?" />
+          <div class="row align-center center-align">
+            <!-- Modal Trigger -->
+            <span class="input-group-btn">
+              <a data-target="modal1" class="btn modal-trigger">
+                {{!-- <i class="material-icons">account_circle</i> --}}
+                Sign In
+              </a>
+            </span>
+            <span class="input-group-btn">
+              <a data-target="modal1" class="btn" href="/register">
+                Sign Up
+              </a>
+            </span>
+          </div>
+          <br><br>
+          <div class="row">
+            <input id="address" class="big-search" placeholder="Where Are You Headed?" />
+          </div>
         </div>
         <div class="row  contain-center-align">
           <a href="/new_trip">
@@ -23,9 +41,9 @@
     </div>
   </div>
 </div>
-<div class="row homepage-row">
-  <div class="parallax">
-    <div class="col s6 homepage-content-div">
+<div class="row homepage-row parallax1" id="app-description">
+  <div class="">
+    <div class="col s12 m8 l6 offset-m4 offset-l6 homepage-content-div">
       <h3>Travel Like a Local</h3>
       <p>Localize is a tool that helps you plan your next adventure. Just tell us where you are traveling and what your
         interests are,
@@ -36,27 +54,71 @@
         guides in your destination city. Get out there and travel like a local!
       </p>
     </div>
+    {{!-- <div class="parallax"><img src="/public/imgs/nikola-jovanovic-198375-unsplash.jpg" alt=""></div> --}}
   </div>
 </div>
 
 <div class="row homepage-row">
-  <div class="col s12 m4 l4 homepage-content-div">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum consectetur libero itaque aliquam voluptas
-      quisquam voluptatum unde illo quae, assumenda at sequi quas, officia qui quasi odit iusto. Ab, mollitia!</p>
+  <div class="col s12 m4 l4">
+    <div class="card">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="/imgs/james-garcia-76433-unsplash.jpg">
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">Cool People<i class="material-icons right">more_vert</i></span>
+        <p><a href="#">This is a link</a></p>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Great User Base<i class="material-icons right">close</i></span>
+        <p>Localize users are passionate about their cities. Say hello to some of our fine folks!</p>
+      </div>
+    </div>
   </div>
-  <div class="col s12 m4 l4 homepage-content-div">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum consectetur libero itaque aliquam voluptas
-      quisquam voluptatum unde illo quae, assumenda at sequi quas, officia qui quasi odit iusto. Ab, mollitia!</p>
+  <div class="col s12 m4 l4">
+    <div class="card">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="/imgs/aditya-chinchure-570860-unsplash.jpg">
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">Awesome Destinations<i class="material-icons right">more_vert</i></span>
+        <p><a href="#">Explore Cities</a></p>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Dozens of Cities<i class="material-icons right">close</i></span>
+        <p>Localize has enthusiatic guides in nearly every city. Check out some popular destinations.</p>
+      </div>
+    </div>
   </div>
-  <div class="col s12 m4 l4 homepage-content-div">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum consectetur libero itaque aliquam voluptas
-      quisquam voluptatum unde illo quae, assumenda at sequi quas, officia qui quasi odit iusto. Ab, mollitia!</p>
+  <div class="col s12 m4 l4">
+    <div class="card">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="/imgs/robin-worrall-749755-unsplash.jpg">
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">Easy to Use<i class="material-icons right">more_vert</i></span>
+        <p><a href="#">Sign Up!</a></p>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Easy to Use<i class="material-icons right">close</i></span>
+        <p>Localize is fun and easy to use. Sign up today!</p>
+      </div>
+    </div>
   </div>
 </div>
-<div class="row homepage-row">
-  <div class="col s12">
-    <div class="parallax">
+<div class="row homepage-row parallax2">
+  <div class="">
+    <div class="col s12 m8 l6 homepage-content-div">
+      <h3>Travel Like a Local</h3>
+      <p>Localize is a tool that helps you plan your next adventure. Just tell us where you are traveling and what your
+        interests are,
+        and we'll have a look at our database of users across the country for cool, fun people to be your guide!
+      </p>
+      <p>Whether you're into music, restaurants, museums, or whatever, Localize is the best way to meet and coordinate
+        with enthiusiastic
+        guides in your destination city. Get out there and travel like a local!
+      </p>
     </div>
+    {{!-- <div class="parallax"><img src="/public/imgs/nikola-jovanovic-198375-unsplash.jpg" alt=""></div> --}}
   </div>
 </div>
 <div class="row homepage-row">

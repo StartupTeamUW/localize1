@@ -8,7 +8,7 @@
 .trip-summary-container {
   display: flex;
   flex-direction: row;
-  background: rgb(99, 194, 231);
+  background: #B5F3F3;
   color: aliceblue;
   padding: 20px;
   height: 100%;
@@ -43,7 +43,7 @@ img {
   display: inline;
 }
 .pill {
-  background: rgb(116, 218, 252);
+  background: #B5F3F3;
   border-radius: 10px;
   margin: 0 16px 0 0;
   padding: 4px 16px;
@@ -59,7 +59,7 @@ img {
   background: rgb(252, 116, 161);
 }
 nav {
-  background-color: rgba(39, 192, 159, 0.342);
+  background-color: #B5F3F3;
 }
 nav .brand-logo {
   color: black;
@@ -79,13 +79,20 @@ nav .brand-logo {
   font-family: 'Montserrat Alternates', sans-serif;
   font-weight: 800;
   font-size: 11.5vw;
-  margin: 50px auto;
-  color: rgb(255, 58, 58);
+  margin: 50px auto 20px auto;
+  color: #FE8622;
 }
 h4, h5 {
   font-family: 'Roboto', sans-serif;
   font-weight: lighter;
 }
+
+h3 {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 800;
+  color: #FE8622;
+}
+
 p {
   font-family: 'Roboto', sans-serif;
 }
@@ -106,6 +113,10 @@ input.form-control::placeholder {
   font-family: 'Roboto', sans-serif;
 }
 
+.input-group-btn {
+  margin: auto 10px;
+}
+
 .interests {
   display: flex;
   flex-direction: row;
@@ -123,14 +134,19 @@ input.form-control::placeholder {
 }
 
 .homepage-content-div {
-  height: 200px;
-  
+  /* height: 200px; */
+  padding: 50px;
+  background-color: rgba(255, 255, 255, .9)
 }
 
 .homepage-row {
   padding: 50px;
-  
-  background: rgba(39, 192, 159, 0.342);
+  margin-bottom: 0px;
+  background: #B5F3F3;
+}
+
+.row .col {
+  padding: 26px;
 }
 
 /* Dropdown Button */
@@ -147,9 +163,9 @@ input.form-control::placeholder {
   position: relative;
   display: inline-block;
 }
-.parallax { 
+.parallax1 { 
   /* The image used */
-  background-image: url("imgs/nikola-jovanovic-198375-unsplash.jpg");
+  background-image: url("/imgs/lance-anderson-636845-unsplash.jpg");
 
   /* Set a specific height */
   height: 400px; 
@@ -160,3 +176,34 @@ input.form-control::placeholder {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.parallax2 { 
+  /* The image used */
+  background-image: url("/imgs/paul-rysz-225870-unsplash.jpg");
+
+  /* Set a specific height */
+  height: 400px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#navbar {
+  position: fixed; /* Make it stick/fixed */
+  top: -70px; /* Hide the navbar 50 px outside of the top view */
+  width: 100%; /* Full width */
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  z-index: 1000;
+}
+
+.sidenav {
+  background-color: rgba(255, 255, 255, .9);
+}
+
+.sidenav li {
+  margin: 20px;
+}
+
