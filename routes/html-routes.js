@@ -3,10 +3,10 @@ var db = require("../models");
 
 module.exports = function (app) {
 
-   // ============================
-// ============USER PAGES=================
-//    // ============================
-   app.get("/register", function (req, res) {
+  // ============================
+  // ============USER PAGES=================
+  //    // ============================
+  app.get("/register", function (req, res) {
     db.User.findAll({}).then(function (dbUsers) {
       // console.log(res.body);
       res.render("user_form", {
@@ -18,7 +18,7 @@ module.exports = function (app) {
 
   app.get("/users", function (req, res) {
     db.User.findAll({}).then(function (dbUsers) {
-      res.render("allmembers", {
+      res.render("allusers", {
         msg: "Here are all our members",
         users: dbUsers
       });
@@ -27,78 +27,60 @@ module.exports = function (app) {
 
   app.get("/user/:id", function (req, res) {
     db.User.findOne({ where: { id: req.params.id } }).then(function (dbUser) {
-      res.render("kevinUserDetailedPage", {
+      res.render("user_dashboard", {
         msg: "Users Card",
         user: dbUser,
         interests: dbUser.interests
       });
     });
   });
-    // ============================
-// ============TRIP PAGES=================
-//    // ============================
 
-  app.get("/trips", function (req, res) {
+  // ============================
+  // ============TRIP PAGES=================
+  //    // ============================
+
+  app.get("/new_trip", function (req, res) {
     db.Trip.findAll({}).then(function (dbTrip) {
-      res.render("trip", {
+      res.render("trip_form", {
         msg: "Here are our trips",
         trip: dbTrip
       });
     });
   });
-//using past.handlebars for single trip(temp)
+
+  app.get("/trips", function (req, res) {
+    db.Trip.findAll({}).then(function (dbTrip) {
+      res.render("trips", {
+        msg: "Here are our trips",
+        trip: dbTrip
+      });
+    });
+  });
+
   app.get("/trip/:id", function (req, res) {
     db.Trip.findOne({ where: { id: req.params.id } }).then(function (dbTrip) {
-      res.render("past", {
+      res.render("trip", {
         trip: dbTrip
       });
     });
   });
-  
-  app.get("/users/trips/upcoming", function (req, res) {
-    db.Trip.findAll({}).then(function (dbTrip) {
-      res.render("upcomingtrip", {
-        msg: "Here are our upcoming trips",
-        trip: dbTrip
-      });
-    });
-  });
- 
-  app.get("/users/trips/past", function (req, res) {
-    db.User.findAll({}).then(function (dbUsers) {
-      res.render("past", {
-        msg: "Here are our past trips",
-        trip: dbUsers
-      });
-    });
-  });
- 
-    // ============================
-// ============RATING PAGE=================
-//    // ============================
-//NO APIT FOR RATING RIGHT NOW
-  app.get("/rating", function (req, res) {
-    res.render("rating");
-  });
-  
-     // ============================
-// ============HOME & INDEX PAGE=================
-//    // ============================
+
+  // ============================
+  // ============HOME & INDEX PAGE=================
+  //    // ============================
   //home page being rendered with no passing data
   app.get("/", function (req, res) {
     db.User.findAll({}).then(function (dbUsers) {
-      res.render("index", {
+      res.render("homepage", {
         msg: "Create a User Profile",
         users: dbUsers
       });
     });
   });
-  app.get("/homepage", function (req, res) {
-    res.render("homepage");
-  });
-   // ============================
-// ============404 PAGE=================
-//    // ============================
+
+  // ============================
+  // ============404 PAGE=================
+  //    // ============================
   app.get("*", function (req, res) {
     res.render("404");
   });

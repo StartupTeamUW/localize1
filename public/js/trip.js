@@ -134,7 +134,6 @@ var handleDeleteBtnClick = function () {
   API.deleteTrip(idToDelete).then(function () {
     refreshTrips();
   });
-
 };
 
 // Add event listeners to the submit and delete buttons
