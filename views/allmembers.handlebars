@@ -1,12 +1,26 @@
-
 {{> nav/navbar}}
 <br><br>
 <ul id="user-list">
   {{#each users}}
   <li data-id="{{this.id}}" class="list-group-item">
-    {{> userInfo/profile}}
+    <a href="user/{{this.id}}">
+      {{!-- {{> userInfo/profile}} --}}
+      <div class="container">
+        <div class="trip-summary-container s12 l10">
+          <div class="profile-pic">
+            <img src="{{this.profile_pic_url}}" style="float: left;" />
+          </div>
+          <div class="profile-data">
+            <h2 class="display-4 profile-name">{{this.user_name}}</h2>
+            <h5>{{this.hometown}}</h5>
+            <p class="lead">{{this.bio}}</p>
+            <h5 class="hide">{{this.email}}</h5>
+             <h5>{{this.interests}}</h5>
+          </div>
+        </div>
+      </div>
+      <br>
   </li>
   {{/each}}
 </ul>
 <a href="/">← Back To Home</a>
-

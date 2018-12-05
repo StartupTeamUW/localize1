@@ -1,9 +1,9 @@
 {{!-- FOR TESTING --}}
-<style>
+{{!-- <style>
     ul {
         list-style: none;
     }
-</style>
+</style> --}}
 {{!-- TRIP HANDLEBARS WITHOUT MODELS --}}
 {{> nav/navbar-no-search}}
 <br>
@@ -41,79 +41,79 @@
 
     {{!-- KEVIN'S CHECK BOX INTERESTS --}}
     <div class="row">
-        <h5 class="centered-headline">What are your interests?</h5>
+        <h5 class="centered-headline">What are you interested in doing during this trip?</h5>
     </div>
-    <div class="row">
-        <div class="interests">
-            <div class="switch">
+   <div class="row" id="interests">
+            <div class="interests">
+              <div class="switch">
                 <label>
-                    Food
-                    <input type="checkbox" class="interest-checkbox" name="interests" value="Food">
-                    <span class="lever"></span>
+                  Food
+                  <input type="checkbox" name="food">
+                  <span class="lever"></span>
                 </label>
-            </div>
-            <div class="switch">
+              </div>
+              <div class="switch">
                 <label>
-                    Music
-                    <input type="checkbox" class="interest-checkbox" name="interests" value="Music">
-                    <span class="lever"></span>
+                  Music
+                  <input type="checkbox" name="music">
+                  <span class="lever"></span>
                 </label>
-            </div>
-            <div class="switch">
+              </div>
+              <div class="switch">
                 <label>
-                    Shows
-                    <input type="checkbox" class="interest-checkbox" name="interests" value="Boat">
-                    <span class="lever"></span>
+                  Concerts
+                  <input type="checkbox" name="concert">
+                  <span class="lever"></span>
                 </label>
-            </div>
-            <div class="switch">
+              </div>
+              <div class="switch">
                 <label>
-                    Sports
-                    <input type="checkbox" class="interest-checkbox" name="interests" value="Sports">
-                    <span class="lever"></span>
+                  Sports
+                  <input type="checkbox" name="sports">
+                  <span class="lever"></span>
                 </label>
-            </div>
-            <div class="switch">
+              </div>
+              <div class="switch">
                 <label>
-                    Landmarks
-                    <input type="checkbox" class="interest-checkbox" name="interests" value="Landmark">
-                    <span class="lever"></span>
+                  Landmarks
+                  <input type="checkbox" name="landmark">
+                  <span class="lever"></span>
                 </label>
-            </div>
-            <div class="switch">
+              </div>
+              <div class="switch">
                 <label>
-                    Monuments
-                    <input type="checkbox" class="interest-checkbox" name="interests" value="Monument">
-                    <span class="lever"></span>
+                  Monuments
+                  <input type="checkbox" name="monument">
+                  <span class="lever"></span>
                 </label>
-            </div>
-            <div class="switch">
+              </div>
+              <div class="switch">
                 <label>
-                    Local Activities
-                    <input type="checkbox" class="interest-checkbox" name="interests" value="Local Activity">
-                    <span class="lever"></span>
+                  Local Events
+                  <input type="checkbox" name="localevents">
+                  <span class="lever"></span>
                 </label>
-            </div>
-            <div class="switch">
+              </div>
+              <div class="switch">
                 <label>
-                    Museums
-                    <input type="checkbox" class="interest-checkbox" name="interests" value="Museum">
-                    <span class="lever"></span>
+                  Nature
+                  <input type="checkbox" name="museum">
+                  <span class="lever"></span>
                 </label>
+              </div>
             </div>
-        </div>
-    </div>
+          </div>
     {{!-- END KEVIN'S CHECK BOX INTERESTS --}}
     <br>
     <div class="row">
         <button id="submitT" class="btn btn-primary float-right">Submit</button>
     </div>
-    <h4>{{msg}}</h4>
-    <ul id="tripList">
+    {{!-- <h4>{{msg}}</h4>
+    <ul id="trip-list">
         {{#each trip}}
         {{> trips/trip}}
         <br>
         {{/each}}
-    </ul>
+    </ul> --}}
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="/js/trip.js"></script>

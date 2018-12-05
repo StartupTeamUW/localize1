@@ -26,7 +26,7 @@ module.exports = function (app) {
   })
 
   // Get route for retrieving a single Trip
-  app.get('/api/trips/:id', function (req, res) {
+  app.get('/api/trip/:id', function (req, res) {
 
     db.Trip.findOne({
       include: [db.User],

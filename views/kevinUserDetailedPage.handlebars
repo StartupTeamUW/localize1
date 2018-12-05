@@ -101,29 +101,23 @@
 
 {{!-- BEGIN USER SUMMARY VIEW --}}
 
-{{> userInfo/profile}}
+{{!-- {{> userInfo/profile}} --}}
 
-{{!-- <div class="container">
+
+<div class="container">
   <div class="trip-summary-container s12 l10">
     <div class="profile-pic">
       <img src="{{user.profile_pic_url}}" style="float: left;" />
     </div>
     <div class="profile-data">
-      <h2 class="display-4 profile-name">{{this.user_name}}</h2>
-      <h5>{{this.hometown}}</h5>
-      <p class="lead">{{this.bio}}</p>
-      <div class="interest-tokens">
-        <ul>
-          {{#each this_interests}}
-          <li class="interests" id="{{this.text}}"> <span class="badge badge-pill badge-primary">{{this.text}}</span></li>
-          {{/each}}
-        </ul>
-      </div>
+      <h2 class="display-4 profile-name">{{user.user_name}}</h2>
+      <h5>{{user.hometown}}</h5>
+      <p class="lead">{{user.bio}}</p>
+            <h5>{{user.interests}}</h5>
     </div>
   </div>
 </div>
-<br> --}}
-
+<br>
 {{!-- END USER SUMMARY VIEW --}}
 
 {{!-- BEGIN USER DETAIL VIEW --}}
@@ -135,18 +129,6 @@
         <h5>About me:</h5>
         <div class="pill gender">{{user.gender}}</div>
         <div class="pill language">{{user.languages}}</div>
-
-        {{!-- <div class="pill language">{{user.language[0]}}</div>
-        <div class="pill language">{{user.language[2]}}</div> --}}
-        {{!-- <div id="language-list">
-          {{#each languages}}
-          <div data-id="{{this.id}}" class="pill language">
-          </div>
-          {{/each}}
-        </div> --}}
-        {{!-- <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit, amet consectetur
-          adipisicing elit. Dicta, cumque! Modi dolores ea quia rerum accusantium illum! Corporis, ea itaque
-          voluptatibus laborum quasi aliquam dolorum eligendi hic odit placeat temporibus.</p> --}}
         <h5>Why I’m on Localize</h5>
         <p>{{user.whyOn}}</p>
         <h5>One Amazing Thing I’ve Done</h5>
@@ -156,9 +138,6 @@
         <br>
         <hr>
         <br>
-        {{!-- <div class="pill">USA</div>
-        <div class="pill">France</div>
-        <h5>Countries I’ve Lived In</h5> --}}
         <h5>Countries I’ve Lived In</h5>
         <div class="pill countries">{{user.countries}}</div>
 
@@ -168,6 +147,7 @@
           </div>
           {{/each}}
         </div> --}}
+
         {{!-- pass on interest key word into object data --}}
         {{!-- <h5>What I Can Share with other Localizers</h5>
         <div class="pill">Room</div>
@@ -185,13 +165,13 @@
         {{!-- <div class="pill">{{user.interests[0]}}</div>
         <div class="pill">{{user.interests[1]}}</div>
         <div class="pill">{{user.interests[2]}}</div> --}}
-        <div class="pill interests">{{user.interests}}</div>
-        <div id="interests-list">
+        <div>{{user.interests}}</div>
+        {{!-- <div id="interests-list">
           {{#each interests}}
           <div data-id="{{this.id}}" class="pill interests">
           </div>
           {{/each}}
-        </div>
+        </div> --}}
         {{!-- <div class="container"> --}}
           <br><br>
           <h4 class="center-align">Most Recent Trips:</h4>
