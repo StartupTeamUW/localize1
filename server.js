@@ -28,7 +28,7 @@ require("./routes/user-api-routes")(app);
 require("./routes/html-routes")(app);
 
 // If running a test, set syncOptions.force to true
-var syncOptions = { force: false };
+var syncOptions = { force: true };
 
 
 if (process.env.NODE_ENV === "test") {
