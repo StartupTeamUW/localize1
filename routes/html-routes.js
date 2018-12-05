@@ -54,11 +54,10 @@ app.get("/plantrip", function (req, res) {
     });
   });
 
-
-//using past.handlebars for single trip(temp)
+//using singletrip.handlebars for single trip(temp)
   app.get("/trip/:id", function (req, res) {
     db.Trip.findOne({ where: { id: req.params.id } }).then(function (dbTrip) {
-      res.render("past", {
+      res.render("singletrip", {
         trip: dbTrip
       });
     });

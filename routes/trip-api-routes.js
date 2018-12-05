@@ -26,7 +26,7 @@ module.exports = function (app) {
   })
 
   // Get route for retrieving a single Trip
-  app.get('/api/trip/:id', function (req, res) {
+  app.get('/api/trips/:id', function (req, res) {
 
     db.Trip.findOne({
       include: [db.User],
@@ -43,8 +43,9 @@ module.exports = function (app) {
   // POST route for saving a new Trip
   app.post('/api/trips', function (req, res) {
     db.Trip.create(req.body).then(function (dbTrip) {
-      res.json(dbTrip)
-    })
+      console.log("somethinghere", dbTrip);
+      res.redirect("/trips");
+    });
   })
 
   // DELETE route for deleting trips
