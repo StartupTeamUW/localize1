@@ -58,17 +58,27 @@ img {
 .language {
   background: rgb(252, 116, 161);
 }
+nav {
+  background-color: rgba(39, 192, 159, 0.342);
+}
 nav .brand-logo {
   color: black;
   font-family: 'Montserrat Alternates', sans-serif;
   font-weight: 800;
   margin-left: 20px;
 }
+
+@media only screen and (min-width: 993px) {
+  nav a.sidenav-trigger {
+    display: none;
+  }
+}
+
 .homepage-h1 {
   text-align: center;
   font-family: 'Montserrat Alternates', sans-serif;
   font-weight: 800;
-  font-size: 13vw;
+  font-size: 11.5vw;
   margin: 50px auto;
   color: rgb(255, 58, 58);
 }
@@ -90,6 +100,12 @@ input.big-search::placeholder {
   font-weight: 400;
   font-size: 1.25em;
 }
+
+input.form-control::placeholder {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
 .interests {
   display: flex;
   flex-direction: row;
