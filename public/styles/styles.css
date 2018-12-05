@@ -4,7 +4,7 @@
 .centered-headline {
   text-align: center;
 }
-body {}
+
 .trip-summary-container {
   display: flex;
   flex-direction: row;
@@ -66,6 +66,8 @@ nav .brand-logo {
 }
 .homepage-h1 {
   text-align: center;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 800;
   font-size: 13vw;
   margin: 50px auto;
   color: rgb(255, 58, 58);
@@ -104,9 +106,16 @@ input.big-search::placeholder {
   justify-content: center;
 }
 
+.homepage-content-div {
+  height: 200px;
+  
+}
 
-
-
+.homepage-row {
+  padding: 50px;
+  
+  background: rgba(39, 192, 159, 0.342);
+}
 
 /* Dropdown Button */
 .dropbtn {
@@ -122,4 +131,16 @@ input.big-search::placeholder {
   position: relative;
   display: inline-block;
 }
+.parallax { 
+  /* The image used */
+  background-image: url("imgs/nikola-jovanovic-198375-unsplash.jpg");
 
+  /* Set a specific height */
+  height: 400px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
