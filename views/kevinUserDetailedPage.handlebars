@@ -101,29 +101,23 @@
 
 {{!-- BEGIN USER SUMMARY VIEW --}}
 
-{{> userInfo/profile}}
+{{!-- {{> userInfo/profile}} --}}
 
-{{!-- <div class="container">
+
+<div class="container">
   <div class="trip-summary-container s12 l10">
     <div class="profile-pic">
       <img src="{{user.profile_pic_url}}" style="float: left;" />
     </div>
     <div class="profile-data">
-      <h2 class="display-4 profile-name">{{this.user_name}}</h2>
-      <h5>{{this.hometown}}</h5>
-      <p class="lead">{{this.bio}}</p>
-      <div class="interest-tokens">
-        <ul>
-          {{#each this_interests}}
-          <li class="interests" id="{{this.text}}"> <span class="badge badge-pill badge-primary">{{this.text}}</span></li>
-          {{/each}}
-        </ul>
-      </div>
+      <h2 class="display-4 profile-name">{{user.user_name}}</h2>
+      <h5>{{user.hometown}}</h5>
+      <p class="lead">{{user.bio}}</p>
+      <h5>{{user.interests}}</h5>
     </div>
   </div>
 </div>
-<br> --}}
-
+<br>
 {{!-- END USER SUMMARY VIEW --}}
 
 {{!-- BEGIN USER DETAIL VIEW --}}
@@ -135,18 +129,6 @@
         <h5>About me:</h5>
         <div class="pill gender">{{user.gender}}</div>
         <div class="pill language">{{user.languages}}</div>
-
-        {{!-- <div class="pill language">{{user.language[0]}}</div>
-        <div class="pill language">{{user.language[2]}}</div> --}}
-        {{!-- <div id="language-list">
-          {{#each languages}}
-          <div data-id="{{this.id}}" class="pill language">
-          </div>
-          {{/each}}
-        </div> --}}
-        {{!-- <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit, amet consectetur
-          adipisicing elit. Dicta, cumque! Modi dolores ea quia rerum accusantium illum! Corporis, ea itaque
-          voluptatibus laborum quasi aliquam dolorum eligendi hic odit placeat temporibus.</p> --}}
         <h5>Why I’m on Localize</h5>
         <p>{{user.whyOn}}</p>
         <h5>One Amazing Thing I’ve Done</h5>
@@ -156,93 +138,56 @@
         <br>
         <hr>
         <br>
-        {{!-- <div class="pill">USA</div>
-        <div class="pill">France</div>
-        <h5>Countries I’ve Lived In</h5> --}}
         <h5>Countries I’ve Lived In</h5>
         <div class="pill countries">{{user.countries}}</div>
-
-        {{!-- <div id="countries-list">
-          {{#each countries}}
-          <div data-id="{{this.id}}" class="pill countries">
-          </div>
-          {{/each}}
-        </div> --}}
-        {{!-- pass on interest key word into object data --}}
-        {{!-- <h5>What I Can Share with other Localizers</h5>
-        <div class="pill">Room</div>
-        <div class="pill">Guide</div>
-        <div class="pill">Advice</div> --}}
         <h5>What I Can Share with other Localizers</h5>
         <div class="pill share">{{user.what_I_share}}</div>
-        {{!-- <div id="share-list">
-          {{#each shares}}
-          <div data-id="{{this.id}}" class="pill shares">
-          </div>
-          {{/each}}
-        </div> --}}
         <h5>Interests</h5>
-        {{!-- <div class="pill">{{user.interests[0]}}</div>
-        <div class="pill">{{user.interests[1]}}</div>
-        <div class="pill">{{user.interests[2]}}</div> --}}
-        <div class="pill interests">{{user.interests}}</div>
-        <div id="interests-list">
-          {{#each interests}}
-          <div data-id="{{this.id}}" class="pill interests">
+        <div>{{user.interests}}</div>
+        <br><br>
+        <h4 class="center-align">Most Recent Trips:</h4>
+        <div class="row">
+          <div class="card col s4">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="https://picsum.photos/100/100">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">San Francisco<i class="material-icons right">more_vert</i></span>
+              <p><a href="#">Saw the sights!</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">San Francisco<i class="material-icons right">close</i></span>
+              <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            </div>
           </div>
-          {{/each}}
+          <div class="card col s4">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="https://picsum.photos/100/100">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Chicago<i class="material-icons right">more_vert</i></span>
+              <p><a href="#">Ate myself silly!</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Chicago<i class="material-icons right">close</i></span>
+              <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            </div>
+          </div>
+          <div class="card col s4">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="https://picsum.photos/100/100">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Nashville<i class="material-icons right">more_vert</i></span>
+              <p><a href="#">All about that twang</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Nashville<i class="material-icons right">close</i></span>
+              <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            </div>
+          </div>
         </div>
-        {{!-- <div class="container"> --}}
-          <br><br>
-          <h4 class="center-align">Most Recent Trips:</h4>
-          <div class="row">
-            <div class="card col s4">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" src="https://picsum.photos/100/100">
-              </div>
-              <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">San Francisco<i class="material-icons right">more_vert</i></span>
-                <p><a href="#">Saw the sights!</a></p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">San Francisco<i class="material-icons right">close</i></span>
-                <p>Here is some more information about this product that is only revealed once clicked on.</p>
-              </div>
-            </div>
-
-            <div class="card col s4">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" src="https://picsum.photos/100/100">
-              </div>
-              <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Chicago<i class="material-icons right">more_vert</i></span>
-                <p><a href="#">Ate myself silly!</a></p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Chicago<i class="material-icons right">close</i></span>
-                <p>Here is some more information about this product that is only revealed once clicked on.</p>
-              </div>
-            </div>
-
-            <div class="card col s4">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" src="https://picsum.photos/100/100">
-              </div>
-              <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Nashville<i class="material-icons right">more_vert</i></span>
-                <p><a href="#">All about that twang</a></p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Nashville<i class="material-icons right">close</i></span>
-                <p>Here is some more information about this product that is only revealed once clicked on.</p>
-              </div>
-            </div>
-          </div>
-          {{!--
-        </div> --}}
-
       </div>
     </li>
   </ul>
 </div>
-{{!-- END USER DETAIL VIEW --}}
