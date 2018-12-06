@@ -8,15 +8,7 @@
             <div class="profile-data">
                 <h2 class="display-4 profile-name">{{this.destination}}</h2>
                 <h5>{{this.start_date}}</h5>
-                <p class="lead">Summary text of the trip</p>
-                <div class="interest-tokens">
-                    <ul>
-                        {{#each trip_interests}}
-                        <li class="interests" id="{{this.text}}"> <span class="badge badge-pill badge-primary">Example
-                                Interest</span></li>
-                        {{/each}}
-                    </ul>
-                </div>
+                <p class="lead">{{this.start_date}}</p>
             </div>
             <button class="waves-effect waves-light btn-small delete">remove</button>
         </div>

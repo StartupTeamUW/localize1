@@ -1,0 +1,102 @@
+{{!-- FOR TESTING --}}
+{{!-- TRIP HANDLEBARS WITHOUT MODELS --}}
+{{> nav/navbar-no-search}}
+<br>
+<br>
+<div class="content container">
+  <form action="/api/trips" method="POST">
+    {{!-- added UserId for testing --}}
+    <div id="wrapper3">
+      <input type="number" id="UserId" placeholder="UserId" />
+    </div>
+    {{!-- ends --}}
+    <div>
+      <div class="form-group">
+        <label for="category">Who is posting</label>
+        <select class="custom-select" id="author">
+        </select>
+      </div>
+      <div class="input-group">
+        <input type="hidden" name="search_param" value="all" id="search_param">
+        <input type="search" id="address" autocomplete="on" class="form-control address" placeholder="Destination"
+          style="padding-left: 8px; margin: 0; right: 2px" />
+      </div>
+    </div>
+    <div id="wrapper1" class="col s5 offset-s1 input-field">
+      <input type="date" id="startDate" class="datepicker-start" />
+      <label for="startDate"></label>
+    </div>
+    <div id="wrapper2" class="col s5 input-field">
+      <input type="date" id="endDate" class="datepicker-end" />
+      <label for="endDate"></label>
+    </div>
+    <div>
+      <label for="trip-remark">Trip Remarks</label>
+      <textarea class="form-control" id="trip-remark" aria-describedby="trip-description" placeholder="Enter Trip Description"></textarea>
+    </div>
+    <div class="row">
+      <h5 class="centered-headline">What are you interested in doing during this trip?</h5>
+    </div>
+    <div class="row" id="interests">
+      <div class="interests">
+        <div class="switch">
+          <label>
+            <input type="checkbox" name="food" class="filled-in" checked="checked" /> <span> Food</span> </label>
+        </div>
+        <div class="switch">
+          <label>
+            <input type="checkbox" name="hiking" class="filled-in" checked="checked" /> <span> Hiking/Nature</span>
+          </label>
+        </div>
+        <div class="switch">
+          <label>
+            <input type="checkbox" name="concert" class="filled-in" checked="checked" /> <span>Concert</span> </label>
+        </div>
+        <div class="switch">
+          <label>
+            <input type="checkbox" name="outdoor" class="filled-in" checked="checked" /> <span> Outdoor</span> </label>
+        </div>
+        <div class="switch">
+          <label>
+            <input type="checkbox" name="landmark" class="filled-in" checked="checked" /> <span> Landmarks</span>
+          </label>
+        </div>
+        <div class="switch">
+          <label>
+            <input type="checkbox" name="monuments" class="filled-in" checked="checked" /> <span> Monuments</span>
+          </label>
+        </div>
+        <div class="switch">
+          <label>
+            <input type="checkbox" name="localevents" class="filled-in" checked="checked" /> <span> Local Events</span>
+          </label>
+        </div>
+        <div class="switch">
+          <label>
+            <input type="checkbox" name="clubbing" class="filled-in" checked="checked" /> <span> Clubbing</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <button id="submitT" class="btn btn-primary float-right">Plan this trip</button>
+    </div>
+  </form>
+</div>
+
+
+
+
+{{!-- <h4>{{msg}}</h4>
+<ul id="trip-list">
+  {{#each trip}}
+  {{> trips/trip}}
+  <br>
+  {{/each}}
+</ul> --}}
+
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/trip.js"></script>

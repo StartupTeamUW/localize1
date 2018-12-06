@@ -36,17 +36,29 @@ module.exports = function (app) {
     // ============================
 // ============TRIP PAGES=================
 //    // ============================
+<<<<<<< HEAD
 
 
+=======
+app.get("/plantrip", function (req, res) {
+  db.Trip.findAll({}).then(function (dbTrip) {
+    res.render("plantrip", {
+      msg: "Plan a new trip",
+      trip: dbTrip
+    });
+  });
+});
+>>>>>>> 7b22bf3c3397eb03fc4d4e72cac6ef9249b4cc51
   app.get("/trips", function (req, res) {
     db.Trip.findAll({}).then(function (dbTrip) {
-      res.render("trip", {
+      res.render("alltrips", {
         msg: "Here are our trips",
         trip: dbTrip
       });
     });
   });
 
+<<<<<<< HEAD
  
 
 //inside /trips
@@ -56,9 +68,12 @@ module.exports = function (app) {
 
 
 //using past.handlebars for single trip(temp)
+=======
+//using singletrip.handlebars for single trip(temp)
+>>>>>>> 7b22bf3c3397eb03fc4d4e72cac6ef9249b4cc51
   app.get("/trip/:id", function (req, res) {
     db.Trip.findOne({ where: { id: req.params.id } }).then(function (dbTrip) {
-      res.render("past", {
+      res.render("singletrip", {
         trip: dbTrip
       });
     });

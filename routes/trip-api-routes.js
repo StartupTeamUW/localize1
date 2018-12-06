@@ -48,11 +48,17 @@ module.exports = function (app) {
     console.log(req.body)
   
     db.Trip.create(req.body).then(function (dbTrip) {
+<<<<<<< HEAD
       res.json(dbTrip)
       console.log(dbTrip)
     })
     
     
+=======
+      console.log("somethinghere", dbTrip);
+      res.redirect("/trips");
+    });
+>>>>>>> 7b22bf3c3397eb03fc4d4e72cac6ef9249b4cc51
   })
 
   // DELETE route for deleting trips

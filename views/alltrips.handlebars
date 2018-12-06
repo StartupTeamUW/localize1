@@ -1,26 +1,25 @@
-<h1>{{msg}}</h1>
-<div class="container">
-    <div class="row">
-        <div class="col-8 offset-2">
-            <div class="card mt-4">
-                <div class="card-body">
-                    <h5 class="card-title">{{msg}}</h5>
-                    {{#each trip}}
-                    <p>
-                        <strong>ID</strong>: {{trip.id}}</p>
-                    <p>
-                        <p>
-                            <strong>City</strong>: {{trip.destination}}</p>
-                        <p>
-                            <strong>Description:</strong> {{trip.remark}}</p>
-                        <p>
-                            <strong>Start Date:</strong> {{trip.start_date}}</p>
-                        <p>
-                            <strong>End Date:</strong> {{trip.end_date}}</p>
-                        {{/each}}
-                        <a href="/">← Back To Home</a>
+{{> nav/navbar}}
+<br><br>
+<ul id="trip-list">
+    {{#each trip}}
+    <li data-id="{{this.id}}" class="list-group-item">
+        <a href="trip/{{this.id}}">
+            {{!-- {{> trips/trip}} --}}
+            <div class="container">
+                <div class="trip-summary-container s12 l10">
+                    <div class="profile-pic">
+                        <img src="https://picsum.photos/640/360" style="float: left;" />
+                    </div>
+                    <div class="profile-data">
+                        <h2 class="display-4 profile-name">{{this.destination}}</h2>
+                        <h5>{{this.start_date}}</h5>
+                        <p class="lead">{{this.start_date}}</p>
+                         <h5>{{this.trip_interests}}</h5>
+                    </div>
+                    <button class="waves-effect waves-light btn-small delete">remove</button>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
+    </li>
+    {{/each}}
+</ul>
+<a href="/">← Back To Home</a>
