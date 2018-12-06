@@ -40,11 +40,19 @@ module.exports = function (app) {
     })
   })
 
+
+  
   // POST route for saving a new Trip
+
   app.post('/api/trips', function (req, res) {
+    console.log(req.body)
+  
     db.Trip.create(req.body).then(function (dbTrip) {
       res.json(dbTrip)
+      console.log(dbTrip)
     })
+    
+    
   })
 
   // DELETE route for deleting trips

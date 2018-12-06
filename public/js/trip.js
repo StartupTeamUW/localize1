@@ -6,7 +6,8 @@ var $startDate = $("#startDate");
 var $endDate = $("#endDate");
 var $tripList = $("#tripList");
 var $tripInterests = document.getElementsByName("interests");
-var $submitBtnT = $("#submitT");
+//18/12/04 CHi - change the name of the id to confirm because the page needs to wait until host is selected on the modal. 
+var $submitBtnT = $("#confirm");
 
 // The API object contains methods for each kind of request we'll make
 var API = {
@@ -102,7 +103,7 @@ var handleFormSubmit = function (event) {
     UserId: $UserId.val(),
     //ends
 
-    trip_interests: tripInterestString
+    // trip_interests: tripInterestString
   };
 
   // if (!(trip.destination && trip.remark)) {
@@ -138,7 +139,9 @@ var handleDeleteBtnClick = function () {
 };
 
 // Add event listeners to the submit and delete buttons
+
+  
+//continue the processing
 $submitBtnT.on("click", handleFormSubmit);
 $tripList.on("click", ".delete", handleDeleteBtnClick);
-
 

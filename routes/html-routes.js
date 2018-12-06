@@ -8,7 +8,6 @@ module.exports = function (app) {
 //    // ============================
    app.get("/register", function (req, res) {
     db.User.findAll({}).then(function (dbUsers) {
-      // console.log(res.body);
       res.render("user_form", {
         msg: "Create a User Profile",
         users: dbUsers
@@ -38,6 +37,7 @@ module.exports = function (app) {
 // ============TRIP PAGES=================
 //    // ============================
 
+
   app.get("/trips", function (req, res) {
     db.Trip.findAll({}).then(function (dbTrip) {
       res.render("trip", {
@@ -46,6 +46,15 @@ module.exports = function (app) {
       });
     });
   });
+
+ 
+
+//inside /trips
+//db.trips post trip in the database
+//on a successful post, redirect to dashboard (profile/id);
+//as your redirect, pass route data
+
+
 //using past.handlebars for single trip(temp)
   app.get("/trip/:id", function (req, res) {
     db.Trip.findOne({ where: { id: req.params.id } }).then(function (dbTrip) {
