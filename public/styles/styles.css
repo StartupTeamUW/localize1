@@ -1,130 +1,4 @@
-/* .list-group-item {
-  line-height: 2.5;
-}
-.centered-headline {
-  text-align: center;
-}
-body {}
-.trip-summary-container {
-  display: flex;
-  flex-direction: row;
-  background: rgb(99, 194, 231);
-  color: aliceblue;
-  padding: 20px;
-  height: 100%;
-}
-.profile-pic {
-  float: left;
-  width: 150px;
-  height: 150px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 50%;
-  object-fit: contain;
-  display: flex;
-  justify-content: center;
-}
-
-.profile-data {
-  margin-left: 20px;
-}
-
-.profile-name {
-  font-family: 'Montserrat Alternates', sans-serif;
-  font-weight: 800;
-}
-
-img {
-  height: 100%;
-  width: auto;
-}
-.trip-interests {
-  list-style: none;
-  display: inline;
-}
-.pill {
-  background: rgb(116, 218, 252);
-  border-radius: 10px;
-  margin: 0 16px 0 0;
-  padding: 4px 16px;
-  display: inline;
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 600;
-}
-.gender {
-  background: rgb(139, 252, 116);
-}
-.language {
-  background: rgb(252, 116, 161);
-}
-nav .brand-logo {
-  color: black;
-  font-family: 'Montserrat Alternates', sans-serif;
-  font-weight: 800;
-  margin-left: 20px;
-}
-.homepage-h1 {
-  text-align: center;
-  font-size: 13vw;
-  margin: 50px auto;
-  color: rgb(255, 58, 58);
-}
-h4, h5 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: lighter;
-}
-p {
-  font-family: 'Roboto', sans-serif;
-}
-input.big-search {
-  background: rgba(255, 255, 255, .7);
-  text-align: center;
-  color: #666;
-}
-input.big-search::placeholder {
-  color: #666;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-size: 1.25em;
-}
-.interests {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.switch {
-  padding: 20px;
-}
-
-.contain-center-align {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-
-
-
-/* Dropdown Button */
-/* .dropbtn {
-  background-color: rgb(252, 116, 161);
-  color: white;
-  padding: 10px;
-  font-size: 16px;
-  border: none;
-} */
-
-/* The container <div> - needed to position the dropdown content */
-/* .dropdown {
-  position: relative;
-  display: inline-block;
-}
- */ 
- /* =========from here new kevin's slacked over css file================= */
- .list-group-item {
+.list-group-item {
   line-height: 2.5;
 }
 .centered-headline {
@@ -402,3 +276,17 @@ input.form-control::placeholder {
   margin: 20px;
 }
 
+.card .card-content {
+  background-color: #FFEEBE;
+}
+
+.card .card-title {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 3vmax;
+  color: #444;
+
+}
+
+#info-cards {
+  background-color: rgba(20, 153, 153, .5);
+}

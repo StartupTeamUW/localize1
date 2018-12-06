@@ -1,7 +1,5 @@
 # LOCALIZE
 
-
-
 ## [Link to Localize](https://www.createjs.com/soundjs)
 
 ## Part 1- our MVP:
