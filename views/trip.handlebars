@@ -54,8 +54,11 @@
     </div>
     <h4>{{msg}}</h4>
     <div id="tripList" class="collection">
-        {{#each trip}}
+        {{!-- {{#each trip}}
         {{> trips/trip-small}}
+        {{/each}} --}}
+        {{#each user}}
+        {{> userInfo/user-small}}
         {{/each}}
     </div>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
