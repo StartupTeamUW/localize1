@@ -1,0 +1,80 @@
+<nav>
+  <div class="nav-wrapper">
+
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+      <li style="margin-top: -2px; margin-left: 15px; margin-right:15px">
+        <div class="input-group-btn search-panel">
+        </div>
+      </li>
+      <li>
+        <!-- Modal Trigger -->
+        <span class="">
+          <a data-target="modal1" class="btn modal-trigger">
+            <i class="material-icons">account_circle</i>
+          </a>
+        </span>
+      </li>
+      <li>
+        <span class="input-group-btn">
+          <a data-target="modal1" class="btn" href="/register">
+            Sign Up
+          </a>
+        </span>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<ul class="sidenav" id="mobile-demo">
+  {{!-- <li style="margin-top: -2px; margin-left: 15px; margin-right:15px">
+    <div class="input-group-btn search-panel">
+    </div>
+  </li> --}}
+  <li>
+    <h3>Localize</h3>
+  </li>
+  <li>
+    <!-- Modal Trigger -->
+    <span class="input-group-btn">
+      <a data-target="modal1" class="btn modal-trigger">
+        Sign In
+      </a>
+    </span>
+
+  </li>
+
+  <li>
+    <span class="input-group-btn">
+      <a data-target="modal1" class="btn" href="/register">
+        Sign Up
+      </a>
+    </span>
+  </li>
+</ul>
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <h4>Sign In</h4>
+    <form action="">
+      <div class="input-field col s12">
+        <input type="text" id="user-name" class="validate">
+        <label for="user-name">User Name</label>
+      </div>
+      <div class="input-field col s12">
+        <input type="email" id="user-email" class="validate">
+        <label for="user-email" data-error="wrong" data-success="right">Email Address</label>
+      </div>
+      <div class="input-field col s6">
+        <input type="password" id="password" class="validate">
+        <label for="password">Password</label>
+      </div>
+    </form>
+
+    <button id="submitU" class="waves-effect waves-light btn-large">Sign In
+      <i class="material-icons right">send</i>
+    </button>
+  </div>
+  <div class="modal-footer"></div>
+</div>

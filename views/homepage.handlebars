@@ -1,42 +1,189 @@
-{{> nav/navbar-no-search}}
+<div id="navbar">
+  {{> nav/navbar-homepage}}
+</div>
 
-<div class="parallax-container">
-  <div class="container">
-    <div class="row">
-      <h1 class="homepage-h1">LOCALIZE</h1>
-      <input id="address" class="big-search" placeholder="Where Are You Headed?" />
-    </div>
-    <div class="row contain-center-align">
-      <a href="/trips">
-        <button class="btn btn-default">
-          <span class="glyphicon glyphicon-search buttonsize">
-            Let's Go!
-          </span>
-        </button>
-      </a>
+<div class="row homepage-row">
+  <div class="col s12">
+    <div class="">
+      <div class="container">
+        <div class="row ">
+          <h1 class="homepage-h1">LOCALIZE</h1>
+          <div class="row align-center center-align">
+            <!-- Modal Trigger -->
+            <span class="input-group-btn">
+              <a data-target="modal1" class="btn modal-trigger">
+                {{!-- <i class="material-icons">account_circle</i> --}}
+                Sign In
+              </a>
+            </span>
+            <span class="input-group-btn">
+              <a data-target="modal1" class="btn" href="/register">
+                Sign Up
+              </a>
+            </span>
+          </div>
+          <br><br>
+          <div class="row">
+            <input id="address" class="big-search" placeholder="Where Are You Headed?" />
+          </div>
+        </div>
+        <div class="row  contain-center-align">
+          <a href="/new_trip">
+            <button class="btn btn-default">
+              <span class="glyphicon glyphicon-search buttonsize">
+                Let's Go!
+              </span>
+            </button>
+          </a>
+        </div>
+      </div>
+      {{!-- <div class="parallax"></div> --}}
     </div>
   </div>
-  <div class="parallax"><img src="imgs/nikola-jovanovic-198375-unsplash.jpg"></div>
 </div>
-<div>
-  <div class="container">
-    <div class="row">
-      <a href="/users">View All Members</a>
-     
-     <a href="/trips">View All Trips</a>
+<div class="row homepage-row parallax1" id="app-description">
+  <div class="">
+    <div class="col s12 m8 l6 offset-m4 offset-l6 homepage-content-div">
+      <h3>Travel Like a Local</h3>
+      <p>Localize is a tool that helps you plan your next adventure. Just tell us where you are traveling and what your
+        interests are,
+        and we'll have a look at our database of users across the country for cool, fun people to be your guide!
+      </p>
+      <p>Whether you're into music, restaurants, museums, or whatever, Localize is the best way to meet and coordinate
+        with enthiusiastic
+        guides in your destination city. Get out there and travel like a local!
+      </p>
+    </div>
+    {{!-- <div class="parallax"><img src="/public/imgs/nikola-jovanovic-198375-unsplash.jpg" alt=""></div> --}}
+  </div>
+</div>
 
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, obcaecati. Incidunt, minus quod ea, cumque
-        tempora quis laudantium nostrum natus saepe hic, blanditiis perspiciatis. Placeat labore vel omnis libero at.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, impedit! Illum labore ipsum sit quis earum, a
-        numquam explicabo molestiae neque rem rerum aliquam, repellendus atque beatae ipsam possimus alias.</p>
+<div class="row homepage-row" id="info-cards">
+  <div class="col s12 m12 l4">
+    <div class="card">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="/imgs/james-garcia-76433-unsplash.jpg">
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">Cool People<i class="material-icons right">more_vert</i></span>
+        <p><a href="#">Make a Friend</a></p>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Great User Base<i class="material-icons right">close</i></span>
+        <p>Localize users are passionate about their cities. Say hello to some of our fine folks!</p>
+      </div>
     </div>
   </div>
+  <div class="col s12 m12 l4">
+    <div class="card">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="/imgs/aditya-chinchure-570860-unsplash.jpg">
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">Awesome Destinations<i class="material-icons right">more_vert</i></span>
+        <p><a href="#">Explore Cities</a></p>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Dozens of Cities<i class="material-icons right">close</i></span>
+        <p>Localize has enthusiatic guides in nearly every city. Check out some popular destinations.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col s12 m12 l4">
+    <div class="card">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="/imgs/robin-worrall-749755-unsplash.jpg">
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">Easy to Use<i class="material-icons right">more_vert</i></span>
+        <p><a href="/register">Sign Up!</a></p>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Easy to Use<i class="material-icons right">close</i></span>
+        <p>Localize is fun and easy to use. Sign up today!</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row homepage-row parallax2">
+  <div class="">
+    <div class="col s12 m8 l6 homepage-content-div">
+      <h3>Follow Your Interests</h3>
+      <p>Localize puts the focus on the things that excite you most. Every city offers something unique, and with
+        Localize's trip planning
+        search you can plan the perfect trip and get pointed in the right direction by people who really know!
+      </p>
+      <p>Sign up today, or try a search to see what kind of new experiences you have in store!
+      </p>
+    </div>
+    {{!-- <div class="parallax"><img src="/public/imgs/nikola-jovanovic-198375-unsplash.jpg" alt=""></div> --}}
+  </div>
+</div>
+<div class="row homepage-row">
+  <h3 class="center-align">Meet some of our cool users</h3>
+  <div class="col s12 ">
+    <div class="container">
+      <div class="trip-summary-container s12 l10">
+        <div class="profile-pic-container">
+          <div class="profile-pic">
+            <img src="https://placebear.com/540/460" style="float: left;" />
+          </div>
+        </div>
+        <div class="profile-data">
+          <h2 class="display-4 profile-name">Bear Bearington</h2>
+          <h5 class="user-card-city">Anchorage, AK</h5> <span class="guide-badge blue">Guide</span> <a href="#"><img
+              class="contact" src="/imgs/kisspng-ipma-email-telephone-message-email-icon-5acf36458d39e5.4305648115235292855785.png"
+              alt=""></a>
 
+          <p class="lead">Hi, I'm Bear form Alaska and I can show you all the best spots for fish and happy hour deals</p>
+          <div class="interest-tokens">
+            <ul>
+
+              <li class="interest-badge red" id="fish"> <span class="">Fish</span></li>
+              <li class="interest-badge red" id="Bars"> <span class="">Bars</span></li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>
+<div class="container">
+      <div class="trip-summary-container s12 l10">
+        <div class="profile-pic-container">
+          <div class="profile-pic">
+            <img src="https://placebear.com/1000/500" style="float: left;" />
+          </div>
+        </div>
+        <div class="profile-data">
+          <h2 class="display-4 profile-name">Belinda Bearr</h2>
+          <h5 class="user-card-city">Seattle, WA</h5> <span class="guide-badge blue">Guide</span> <a href="#"><img
+              class="contact" src="/imgs/kisspng-ipma-email-telephone-message-email-icon-5acf36458d39e5.4305648115235292855785.png"
+              alt=""></a>
+
+          <p class="lead">I'm love the great outdoors and go on hikes around Seattle all the time. Come visit and I'll 
+            show you some of the best views you can find around Puget Sound!
+          </p>
+          <div class="interest-tokens">
+            <ul>
+
+              <li class="interest-badge red" id="Outdoors"> <span class="">Outdoors</span></li>
+              <li class="interest-badge red" id="Hiking"> <span class="">Hiking</span></li>
+              <li class="interest-badge red" id="Local Cuisine"> <span class="">Local Cuisine</span></li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="row homepage-row">
+  <h3>Favorite Destinations</h3>
+  <div class="col s12 homepage-content-div">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum consectetur libero itaque aliquam voluptas
+      quisquam voluptatum unde illo quae, assumenda at sequi quas, officia qui quasi odit iusto. Ab, mollitia!</p>
+  </div>
 </div>
 
-<div class="parallax-container">
-  <div class="parallax"><img src="https://picsum.photos/1200/1200"></div>
-</div>
-
-<br>
-<br>
+<script src="/js/homepage.js"></script>
