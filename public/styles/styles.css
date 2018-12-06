@@ -276,3 +276,17 @@ input.form-control::placeholder {
   margin: 20px;
 }
 
+.card .card-content {
+  background-color: #FFEEBE;
+}
+
+.card .card-title {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 3vmax;
+  color: #444;
+
+}
+
+#info-cards {
+  background-color: rgba(20, 153, 153, .5);
+}
