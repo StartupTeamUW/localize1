@@ -1,7 +1,5 @@
 # LOCALIZE
 
-Localize
-
 Have you ever wished for a local guide who enjoys doing the same things as you do? Well, Localize is a fun app that can help you find a perfect host when you are traveling to an unfamiliar city. Localize lets our traveling users find local-host users in the city where they are traveling to based on the common interests the two parties share. With Localize, the planning aspect of your trip will be made simple and easy while the quality of the trip itself gets elevated!
 
 Getting Started
@@ -32,6 +30,7 @@ Mysql -uroot
 Source schema.sql
 Source seeds.sql
 Quit
+
 Running the tests
 
 Right click on your server.js file and click “run on command prompt or terminal”
