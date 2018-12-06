@@ -29,7 +29,7 @@ module.exports = function (app) {
       res.render("kevinUserDetailedPage", {
         msg: "Users Card",
         user: dbUser,
-        interests: dbUser.interests
+        // interests: dbUser.interests
       });
     });
   });
