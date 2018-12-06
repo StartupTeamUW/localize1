@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="trip-summary-container s12 l10">
+    <div class="profile-pic">
+      <img src="{{user.profile_pic_url}}" style="float: left;" />
+    </div>
+    <div class="profile-data">
+      <h2 class="display-4 profile-name">{{user.user_name}}</h2>
+      <h5>{{user.hometown}}</h5>
+      <p class="lead">{{user.bio}}</p>
+      <div class="interest-tokens">
+        <ul>
+          {{#each user_interests}}
+          <li class="interests" id="{{user.text}}"> <span class="badge badge-pill badge-primary">{{this.text}}</span></li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<br>

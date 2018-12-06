@@ -8,15 +8,28 @@
 .trip-summary-container {
   display: flex;
   flex-direction: row;
-  background: #B5F3F3;
+  background: #149999;
   color: aliceblue;
   padding: 20px;
   height: 100%;
+  border-radius: 4px;
+  -webkit-box-shadow: 1px 1px 4px 1px rgba(158,158,158,1);
+-moz-box-shadow: 1px 1px 4px 1px rgba(158,158,158,1);
+box-shadow: 1px 1px 4px 1px rgba(158,158,158,1);
 }
+
+.profile-pic-container {
+
+}
+
+.user-card-city {
+  display: inline;
+}
+
 .profile-pic {
   float: left;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   position: relative;
   overflow: hidden;
   border-radius: 50%;
@@ -32,12 +45,31 @@
 .profile-name {
   font-family: 'Montserrat Alternates', sans-serif;
   font-weight: 800;
+  width: 100%;    
+  font-size: 4rem;
+  margin-top: 0px;
+}
+
+.badge {
+justify-self: flex-start
 }
 
 img {
   height: 100%;
   width: auto;
+  border-radius: 50%;
+    margin: auto;
+    margin-right: 20px;
 }
+
+img.contact {
+  position: relative;
+  bottom: -8px;
+  height: 28px;
+  width: auto;
+  left: 6px;
+}
+
 .trip-interests {
   list-style: none;
   display: inline;
@@ -58,6 +90,16 @@ img {
 .language {
   background: rgb(252, 116, 161);
 }
+
+
+.countries {
+  background: cyan;
+}
+
+.share {
+  background: rgb(169, 179, 31);
+}
+
 nav {
   background-color: #B5F3F3;
 }
@@ -123,6 +165,33 @@ input.form-control::placeholder {
   justify-content: center;
   flex-wrap: wrap;
 }
+.interest-badge {
+  list-style: none;
+  display: inline;
+  padding: 6px;
+  border-radius: 4px;
+}
+
+.guide-badge {
+  position: relative;
+  top: -2px;
+  list-style: none;
+  display: inline;
+  font-size: .75em;
+  padding: 2px;
+  margin-left: 10px;
+  border-radius: 4px;
+}
+
+/* .contact {
+  position: relative;
+  bottom: 0px;
+  left: 0px;
+  margin: auto;
+  width: 50px;
+  height: auto;
+} */
+
 .switch {
   padding: 20px;
 }
