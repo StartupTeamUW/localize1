@@ -1,4 +1,4 @@
-.list-group-item {
+/* .list-group-item {
   line-height: 2.5;
 }
 .centered-headline {
@@ -109,6 +109,242 @@ input.big-search::placeholder {
 
 
 /* Dropdown Button */
+/* .dropbtn {
+  background-color: rgb(252, 116, 161);
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+} */
+
+/* The container <div> - needed to position the dropdown content */
+/* .dropdown {
+  position: relative;
+  display: inline-block;
+}
+ */ 
+ /* =========from here new kevin's slacked over css file================= */
+ .list-group-item {
+  line-height: 2.5;
+}
+.centered-headline {
+  text-align: center;
+}
+
+.trip-summary-container {
+  display: flex;
+  flex-direction: row;
+  background: #149999;
+  color: aliceblue;
+  padding: 20px;
+  height: 100%;
+  border-radius: 4px;
+  -webkit-box-shadow: 1px 1px 4px 1px rgba(158,158,158,1);
+-moz-box-shadow: 1px 1px 4px 1px rgba(158,158,158,1);
+box-shadow: 1px 1px 4px 1px rgba(158,158,158,1);
+}
+
+.profile-pic-container {
+
+}
+
+.user-card-city {
+  display: inline;
+}
+
+.profile-pic {
+  float: left;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  object-fit: contain;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-data {
+  margin-left: 20px;
+}
+
+.profile-name {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 800;
+  width: 100%;    
+  font-size: 4rem;
+  margin-top: 0px;
+}
+
+.badge {
+justify-self: flex-start
+}
+
+img {
+  height: 100%;
+  width: auto;
+  border-radius: 50%;
+    margin: auto;
+    margin-right: 20px;
+}
+
+img.contact {
+  position: relative;
+  bottom: -8px;
+  height: 28px;
+  width: auto;
+  left: 6px;
+}
+
+.trip-interests {
+  list-style: none;
+  display: inline;
+}
+.pill {
+  background: #B5F3F3;
+  border-radius: 10px;
+  margin: 0 16px 0 0;
+  padding: 4px 16px;
+  display: inline;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+}
+.gender {
+  background: rgb(139, 252, 116);
+}
+.language {
+  background: rgb(252, 116, 161);
+}
+
+
+.countries {
+  background: cyan;
+}
+
+.share {
+  background: rgb(169, 179, 31);
+}
+
+nav {
+  background-color: #B5F3F3;
+}
+nav .brand-logo {
+  color: black;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 800;
+  margin-left: 20px;
+}
+
+@media only screen and (min-width: 993px) {
+  nav a.sidenav-trigger {
+    display: none;
+  }
+}
+
+.homepage-h1 {
+  text-align: center;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 800;
+  font-size: 11.5vw;
+  margin: 50px auto 20px auto;
+  color: #FE8622;
+}
+h4, h5 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: lighter;
+}
+
+h3 {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 800;
+  color: #FE8622;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
+input.big-search {
+  background: rgba(255, 255, 255, .7);
+  text-align: center;
+  color: #666;
+}
+input.big-search::placeholder {
+  color: #666;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.25em;
+}
+
+input.form-control::placeholder {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+.input-group-btn {
+  margin: auto 10px;
+}
+
+.interests {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.interest-badge {
+  list-style: none;
+  display: inline;
+  padding: 6px;
+  border-radius: 4px;
+}
+
+.guide-badge {
+  position: relative;
+  top: -2px;
+  list-style: none;
+  display: inline;
+  font-size: .75em;
+  padding: 2px;
+  margin-left: 10px;
+  border-radius: 4px;
+}
+
+/* .contact {
+  position: relative;
+  bottom: 0px;
+  left: 0px;
+  margin: auto;
+  width: 50px;
+  height: auto;
+} */
+
+.switch {
+  padding: 20px;
+}
+
+.contain-center-align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homepage-content-div {
+  /* height: 200px; */
+  padding: 50px;
+  background-color: rgba(255, 255, 255, .9)
+}
+
+.homepage-row {
+  padding: 50px;
+  margin-bottom: 0px;
+  background: #B5F3F3;
+}
+
+.row .col {
+  padding: 26px;
+}
+
+/* Dropdown Button */
 .dropbtn {
   background-color: rgb(252, 116, 161);
   color: white;
@@ -121,5 +357,48 @@ input.big-search::placeholder {
 .dropdown {
   position: relative;
   display: inline-block;
+}
+.parallax1 { 
+  /* The image used */
+  background-image: url("/imgs/lance-anderson-636845-unsplash.jpg");
+
+  /* Set a specific height */
+  height: 400px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax2 { 
+  /* The image used */
+  background-image: url("/imgs/paul-rysz-225870-unsplash.jpg");
+
+  /* Set a specific height */
+  height: 400px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#navbar {
+  position: fixed; /* Make it stick/fixed */
+  top: -70px; /* Hide the navbar 50 px outside of the top view */
+  width: 100%; /* Full width */
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  z-index: 1000;
+}
+
+.sidenav {
+  background-color: rgba(255, 255, 255, .9);
+}
+
+.sidenav li {
+  margin: 20px;
 }
 
