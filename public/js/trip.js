@@ -1,5 +1,5 @@
 
-var $UserId = $("#UserId");
+// var $UserId = $("#UserId");
 var $destination =$("#address");
 var $tripRemark = $("#trip-remark");
 var $startDate = $("#startDate");
@@ -62,6 +62,7 @@ var refreshTrips = function () {
   location.reload();
 };
 
+var UserId = 1; 
 
 // handleFormSubmit is called whenever we submit a new example
 // Save the new example to the db and refresh the list
@@ -75,7 +76,7 @@ var handleFormSubmit = function (event) {
     end_date: $endDate.val(),
     trip_interests: $tripInterests.val(),
     //added UserId
-    UserId: $UserId.val()
+    UserId: UserId
     //ends
   };
 
@@ -88,7 +89,7 @@ var handleFormSubmit = function (event) {
     refreshTrips();
   });
 //added UserId
- $UserId.val(""); 
+//  $UserId.val(""); 
 //ends
   $destination.val("");
   $tripRemark.val("");
