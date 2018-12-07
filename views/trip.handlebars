@@ -1,0 +1,25 @@
+{{!-- FOR TESTING --}}
+<style>
+    ul {
+        list-style: none;
+    }
+</style>
+{{!-- TRIP HANDLEBARS WITHOUT MODELS --}}
+<div id="navbar">
+    {{> nav/navbar-no-search}}
+</div>
+
+<br>
+<br>
+<div class="content container">
+
+    <h4>{{msg}}</h4>
+    <ul id="tripList">
+        {{#each trip}}
+        {{> trips/trip}}
+        <br>
+        {{/each}}
+    </ul>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/trip.js"></script>

@@ -59,14 +59,19 @@ module.exports = function (app) {
 // ============TRIP PAGES=================
 //    // ============================
 
-  app.get("/trips", function (req, res) {
+  // ============================
+  // ============TRIP PAGES=================
+  //    // ============================
+
+  app.get("/new_trip", function (req, res) {
     db.Trip.findAll({}).then(function (dbTrip) {
-      res.render("trip", {
+      res.render("trip_form", {
         msg: "Here are our trips",
         trip: dbTrip
       });
     });
   });
+  
 //using past.handlebars for single trip(temp)
   app.get("/trip/:id", function (req, res) {
     db.Trip.findOne({ where: { id: req.params.id } }).then(function (dbTrip) {
@@ -111,4 +116,24 @@ module.exports = function (app) {
 
 
 
+
+  // ============================
+  // ============HOME & INDEX PAGE=================
+  //    // ============================
+  //home page being rendered with no passing data
+  app.get("/", function (req, res) {
+    db.User.findAll({}).then(function (dbUsers) {
+      res.render("homepage", {
+        msg: "Create a User Profile",
+        users: dbUsers
+      });
+    });
+  });
+
+  // ============================
+  // ============404 PAGE=================
+  //    // ============================
+  app.get("*", function (req, res) {
+    res.render("404");
+  });
 };

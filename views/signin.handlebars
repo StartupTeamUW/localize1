@@ -1,19 +1,17 @@
-<!DOCTYPE html>
-<html>
- 
-<head>
-    <title></title>
+<div id="navbar">
+{{> nav/navbar-signin}}
+</div>
+
+
     <style>
-        h4 {color: darkgoldenrod;}
+        
         #wrapper {
         padding: 50px 25% 0 25%;
         }
     </style>
-</head>
- 
-<body>
+
     <div id="wrapper">
-        <h4>Sign In</h4>
+        <h3>Sign In</h3>
         <p>{{message}}</p>
 
         <form id="signin" name="signin" method="post" action="signin">
@@ -26,6 +24,3 @@
             </button>
         </form>
     </div>
-</body>
- 
-</html>
