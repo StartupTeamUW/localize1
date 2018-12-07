@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title></title>
+    <style>
+        h4 {color: darkgoldenrod;}
+        #wrapper {
+        padding: 50px 25% 0 25%;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+      <h4>Sign Up</h4>
+      <p>{{message}}</p>
+
+      <form id="signup" name="signup" method="post" action="/signup">
+          <label for="email">Email Address</label>
+          <input class="text" name="email" type="email" />
+          <label for="user_name">User Name</label>
+          <input name="user_name" type="text" />
+          <label for="first_name">First Name</label>
+          <input name="first_name" type="text" />
+          <label for="last_name">Last Name</label>
+          <input name="last_name" type="text" />
+          <label for="password">Password</label>
+          <input name="password" type="password" />
+          <input class="btn" type="submit" value="Sign Up" />
+      </form>
+    </div>
+</body>
+ 
+</html>
+
+
