@@ -18,19 +18,18 @@
   3. As a user, I want to be able to enter my trip information and receive ratings.
    
 
-- Nice-To-Haves
+## Nice-To-Haves
   * turn web into a mobile app
   * Google Maps API
   * Live chat
   
- ## Part 1- Street-Fight Game as a glance:
+ ## Part 1- Getting started:
+   1. NPM install all dependencies
+   2. 
 
 
- ### Highlights of our game features
- <!-- ![Authentication](images/game.png "Sign-in via Google Account")
+ ### Highlights of our page features
 
- ![Live Chat](images/chat.png "Chat with your opponent")
-  -->
 #### Instructions:
   * Log in
   * Press keys to move characters according to our instructions per player
@@ -39,12 +38,16 @@
   * Tap chatbox to start a conversation.
   
   
-### Material and Tools
+### Libraries
   * Node.js
-  * [ORM](https://www.createjs.com/soundjs)
+  * [Sequelize](https://www.createjs.com/soundjs)
   * [Material Design Lite](https://github.com/google/material-design-lite)
   * [MySQL](https://firebase.google.com)
-  * [Sprite.js library](https://spritejs.readthedocs.io/en/latest/)
+  * [Handlebars](https://spritejs.readthedocs.io/en/latest/)
+  * [Twilio](https://firebase.google.com)
+  * [Googlemaps Autofill](https://firebase.google.com)
+  * [Express JS](https://firebase.google.com)
+  * [Passport JS](https://firebase.google.com)
  
 ### Copyrights and Acknowledgements
   * [Privacy](https://termsfeed.com/privacy-policy/6cf81f38974eab1bf5dc46b1e06725e6)
