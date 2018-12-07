@@ -2,19 +2,19 @@
   <div class="trip-summary-container s12 l10">
     <div class="profile-pic-container">
       <div class="profile-pic">
-        <img src="https://placebear.com/540/460" style="float: left;" />
+        <img src="{{user.profile_pic_url}}" style="float: left;" />
       </div>
     </div>
     <div class="profile-data">
-      <h2 class="display-4 profile-name">{{this.user_name}}</h2>
-      <h5>{{this.hometown}}</h5>
-      <p class="lead">{{this.bio}}</p>
-      <h5>{{this.email}}</h5>
-      <h2 class="display-4 profile-name">Bear Bearington</h2>
-      <h5 class="user-card-city">Anchorage, AK</h5> <span class="guide-badge blue">Guide</span> <a href="#"><img class="contact"
+      <h2 class="display-4 profile-name">{{user.user_name}}</h2>
+      <h5>{{user.hometown}}</h5>
+      <p class="lead">{{user.bio}}</p>
+      <h5>{{user.email}}</h5>
+      <h2 class="display-4 profile-name">{{user.first_name}} {{user.last_name}}</h2>
+      <h5 class="user-card-city">{{user.hometown}}</h5> <span class="guide-badge blue">Guide</span> <a href="#"><img class="contact"
           src="/imgs/kisspng-ipma-email-telephone-message-email-icon-5acf36458d39e5.4305648115235292855785.png" alt=""></a>
 
-      <p class="lead">Hi, I'm Bear form Alaska and I can show you all the best spots for fish and happy hour deals</p>
+      <p class="lead">{{user.bio}}</p>
       <div class="interest-tokens">
         <ul>
 
