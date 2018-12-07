@@ -37,7 +37,8 @@
   <li>
     <!-- Modal Trigger -->
     <span class="input-group-btn">
-      <a data-target="modal1" class="btn modal-trigger">
+      {{!-- <a data-target="modal1" class="btn modal-trigger"> --}}
+      <a class="btn" href="/signin">
         Sign In
       </a>
     </span>
@@ -46,15 +47,18 @@
 
   <li>
     <span class="input-group-btn">
-      <a data-target="modal1" class="btn" href="/register">
+      <a data-target="modal1" class="btn" href="/signup">
         Sign Up
       </a>
     </span>
   </li>
 </ul>
 
+
+{{!-- jia puts into separete file: signin.handlebars --}}
+
 <!-- Modal Structure -->
-<div id="modal1" class="modal">
+{{!-- <div id="modal1" class="modal">
   <div class="modal-content">
     <h4>Sign In</h4>
     <form action="">
@@ -77,4 +81,4 @@
     </button>
   </div>
   <div class="modal-footer"></div>
-</div>
+</div> --}}
