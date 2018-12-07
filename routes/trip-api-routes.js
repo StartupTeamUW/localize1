@@ -1,7 +1,6 @@
 // *********************************************************************************
 // api-routes.js - this file offers a set of routes for displaying and saving data to the db
 // *********************************************************************************
-
 // Requiring our models
 var db = require('../models')
 
@@ -19,7 +18,6 @@ module.exports = function (app) {
     db.Trip.findAll({
       where: query,
       include: [db.User]
-      // where: query
     }).then(function (dbTrip) {
       res.json(dbTrip)
     })
@@ -40,26 +38,30 @@ module.exports = function (app) {
     })
   })
 
+ 
 
-  
-  // POST route for saving a new Trip
+
+  //12/06/18 CHI what below code sending what the user just entered in /plantrip page upon clikcing the confirm button on our webpage. 
+  //this logic goes with app.get "/trips" route in html-routes.js. that code will receive things we pass on from /api/trips
 
   app.post('/api/trips', function (req, res) {
-    console.log(req.body)
-  
-    db.Trip.create(req.body).then(function (dbTrip) {
-<<<<<<< HEAD
-      res.json(dbTrip)
-      console.log(dbTrip)
-    })
-    
-    
-=======
-      console.log("somethinghere", dbTrip);
-      res.redirect("/trips");
-    });
->>>>>>> 7b22bf3c3397eb03fc4d4e72cac6ef9249b4cc51
-  })
+
+    const url = require('url');    
+db.Trip.create(req.body).then(function (dbTrip) {
+  console.log("hereeee", req.body)
+  res.redirect(url.format({
+    pathname:"/trips",
+    query: dbTrip.dataValues
+  }));
+});
+
+  });
+
+  //12/06/18 change stops here
+
+
+
+
 
   // DELETE route for deleting trips
   app.delete('/api/trips/:id', function (req, res) {

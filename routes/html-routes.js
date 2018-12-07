@@ -36,41 +36,48 @@ module.exports = function (app) {
     // ============================
 // ============TRIP PAGES=================
 //    // ============================
-<<<<<<< HEAD
-
-
-=======
 app.get("/plantrip", function (req, res) {
+  // reference req.user or req.session to get logged in user
   db.Trip.findAll({}).then(function (dbTrip) {
     res.render("plantrip", {
       msg: "Plan a new trip",
       trip: dbTrip
+      // user: <userobj from req.user or req.session>
     });
   });
 });
->>>>>>> 7b22bf3c3397eb03fc4d4e72cac6ef9249b4cc51
+
+
+
+//12/06/18 CHI below is receiving data from two sources. one from app.GET(/api/trips) in trip-api-routes, all the data from api/trips (stored trips and users data)
+//The second part is from app.POST(/api/tirps) in trip-api-routes, the data user just entered in /plantrip page. 
+//then is comparing user's destination (or where they are traveling to) with hometown of a user. This will at least pull the matching person.   
   app.get("/trips", function (req, res) {
-    db.Trip.findAll({}).then(function (dbTrip) {
+    console.log("HIIIIII", req.query)
+
+
+
+    db.User.findAll({
+      where: {
+        hometown: req.query.destination
+      },
+        include: [db.Trip]
+    }).then(function (dbTrip) {
+      console.log("BYEEEEEEEEE", dbTrip)
+
+
       res.render("alltrips", {
         msg: "Here are our trips",
         trip: dbTrip
       });
     });
-  });
 
-<<<<<<< HEAD
+  });
+  //12/06/18 change stops here
+
  
 
-//inside /trips
-//db.trips post trip in the database
-//on a successful post, redirect to dashboard (profile/id);
-//as your redirect, pass route data
-
-
-//using past.handlebars for single trip(temp)
-=======
 //using singletrip.handlebars for single trip(temp)
->>>>>>> 7b22bf3c3397eb03fc4d4e72cac6ef9249b4cc51
   app.get("/trip/:id", function (req, res) {
     db.Trip.findOne({ where: { id: req.params.id } }).then(function (dbTrip) {
       res.render("singletrip", {

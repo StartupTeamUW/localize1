@@ -4,16 +4,9 @@ var $destination =$("#address");
 var $tripRemark = $("#trip-remark");
 var $startDate = $("#startDate");
 var $endDate = $("#endDate");
-<<<<<<< HEAD
-var $tripList = $("#tripList");
-var $tripInterests = document.getElementsByName("interests");
-//18/12/04 CHi - change the name of the id to confirm because the page needs to wait until host is selected on the modal. 
-var $submitBtnT = $("#confirm");
-=======
 var $tripList = $("#trip-list");
 var $tripInterests = $("#interests");
 var $submitBtnT = $("#submitT");
->>>>>>> 7b22bf3c3397eb03fc4d4e72cac6ef9249b4cc51
 
 // The API object contains methods for each kind of request we'll make
 var API = {
@@ -84,17 +77,13 @@ var handleFormSubmit = function (event) {
     //added UserId
     UserId: $UserId.val()
     //ends
-<<<<<<< HEAD
-
-    // trip_interests: tripInterestString
-=======
->>>>>>> 7b22bf3c3397eb03fc4d4e72cac6ef9249b4cc51
   };
 
   // if (!(trip.destination && trip.remark)) {
   //   alert("You must enter an trip destination and trip interests!");
   //   return;
   // }
+  
 
   API.saveTrip(trip).then(function () {
     refreshTrips();
@@ -127,6 +116,6 @@ var handleDeleteBtnClick = function () {
 
   
 //continue the processing
-$submitBtnT.on("click", handleFormSubmit);
+// $submitBtnT.on("click", handleFormSubmit);
 $tripList.on("click", ".delete", handleDeleteBtnClick);
 
