@@ -1,36 +1,122 @@
-<!DOCTYPE html>
-<html>
- 
-<head>
-    <title></title>
-    <style>
-        h4 {color: darkgoldenrod;}
+<div id="navbar">
+    {{> nav/navbar-signin}}
+</div>
+
+
+
+<style>
+    h4 {color: darkgoldenrod;}
         #wrapper {
         padding: 50px 25% 0 25%;
         }
     </style>
-</head>
-<body>
-    <div id="wrapper">
-      <h4>Sign Up</h4>
-      <p>{{message}}</p>
 
-      <form id="signup" name="signup" method="post" action="/signup">
-          <label for="email">Email Address</label>
-          <input class="text" name="email" type="email" />
-          <label for="user_name">User Name</label>
-          <input name="user_name" type="text" />
-          <label for="first_name">First Name</label>
-          <input name="first_name" type="text" />
-          <label for="last_name">Last Name</label>
-          <input name="last_name" type="text" />
-          <label for="password">Password</label>
-          <input name="password" type="password" />
-          <input class="btn" type="submit" value="Sign Up" />
-      </form>
+<div id="wrapper">
+    <h3>Sign Up</h3>
+    <p>{{message}}</p>
+
+    <form id="signup" class="col s10 m10 l8" name="signup" method="post" action="/signup">
+        <label for="email">Email Address</label>
+        <input class="text" name="email" type="email" />
+        <label for="user_name">User Name</label>
+        <input name="user_name" type="text" />
+        <label for="first_name">First Name</label>
+        <input name="first_name" type="text" />
+        <label for="last_name">Last Name</label>
+        <input name="last_name" type="text" />
+        <label for="password">Password</label>
+        <input name="password" type="password" />
+        <label for="phone-number">Phone Number</label>
+        <input type="number" id="phonenum" class="validate" name="phonenumber">
+        <label for="profile-photo" data-error="wrong" data-success="right">Profile Photo URL</label>
+        <input type="text" id="profile-photo" class="validate" name="profile_pic_url">
+        <label for="gender">Gender</label>
+        <input type="text" id="gender" class="validate" name="gender">
+        <label for="DOB"></label>
+        <input type="date" id="DOB" class="datepicker" name="DOB">
+        <label for="hometown">Hometown</label>
+        <input type="text" id="hometown" class="validate" name="hometown">
+        <label for="bio">About Me</label>
+        <textarea id="bio" class="materialize-textarea" name="bio"></textarea>
+        <label for="languages">What languages do you speak?</label>
+        <textarea id="languages" class="materialize-textarea" name="languages"></textarea>
+        <label for="why-on">Why I am on Localize</label>
+        <textarea id="why-on" class="materialize-textarea" name="whyOn"></textarea>
+        <label for="one-A-thing">One Amazing Thing I've Done</label>
+        <textarea id="one-A-thing" class="materialize-textarea" name="one_Athing"></textarea>
+        <label for="hobby">Favourite Music, Movies, and Books</label>
+        <textarea id="hobby" class="materialize-textarea" name="hobby"></textarea>
+        <label for="countries-lived">Countries I’ve Lived In</label>
+        <textarea id="countries-lived" class="materialize-textarea" name="countries"></textarea>
+        <label for="what-I-share">What can you share with other Localizers</label>
+        <textarea id="what-I-share" class="materialize-textarea" name="what_I_share"></textarea>
+</div>
+{{!-- KEVIN'S CHECK BOX INTERESTS --}}
+<div class="row">
+    <h5 class="centered-headline">What are your interests?</h5>
+</div>
+<div class="row" id="user-interests">
+    <div class="interests">
+        <div class="switch">
+            <label>
+                Food
+                <input type="checkbox" name="food">
+                <span class="lever"></span>
+            </label>
+        </div>
+        <div class="switch">
+            <label>
+                Music
+                <input type="checkbox" name="music">
+                <span class="lever"></span>
+            </label>
+        </div>
+        <div class="switch">
+            <label>
+                Concerts
+                <input type="checkbox" name="concert">
+                <span class="lever"></span>
+            </label>
+        </div>
+        <div class="switch">
+            <label>
+                Sports
+                <input type="checkbox" name="sports">
+                <span class="lever"></span>
+            </label>
+        </div>
+        <div class="switch">
+            <label>
+                Landmarks
+                <input type="checkbox" name="landmark">
+                <span class="lever"></span>
+            </label>
+        </div>
+        <div class="switch">
+            <label>
+                Monuments
+                <input type="checkbox" name="monument">
+                <span class="lever"></span>
+            </label>
+        </div>
+        <div class="switch">
+            <label>
+                Local Events
+                <input type="checkbox" name="localevents">
+                <span class="lever"></span>
+            </label>
+        </div>
+        <div class="switch">
+            <label>
+                Nature
+                <input type="checkbox" name="museum">
+                <span class="lever"></span>
+            </label>
+        </div>
     </div>
-</body>
- 
-</html>
+</div>
 
 
+<input class="btn" type="submit" value="Sign Up" />
+</form>
+</div>

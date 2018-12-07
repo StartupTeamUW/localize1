@@ -71,6 +71,7 @@ module.exports = function (app) {
       });
     });
   });
+  
 //using past.handlebars for single trip(temp)
   app.get("/trip/:id", function (req, res) {
     db.Trip.findOne({ where: { id: req.params.id } }).then(function (dbTrip) {
