@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": null,
-    "database": "localize_db",
+    "database": "kz7wbftgh63cmdm",
     "host": "localhost",
     "dialect": "mysql"
   },
