@@ -1,0 +1,26 @@
+<div id="navbar">
+{{> nav/navbar-signin}}
+</div>
+
+
+    <style>
+        
+        #wrapper {
+        padding: 50px 25% 0 25%;
+        }
+    </style>
+
+    <div id="wrapper">
+        <h3>Sign In</h3>
+        <p>{{message}}</p>
+
+        <form id="signin" name="signin" method="post" action="signin">
+            <label for="email">Email Address</label>
+            <input class="text" name="email" class="validate" type="text" />
+            <label for="password">Password</label>
+            <input name="password" class="validate" type="password" />
+            <button class="waves-effect waves-light btn-large" type="submit" class="validate" value="Sign In" />
+                <i class="material-icons right">send</i>
+            </button>
+        </form>
+    </div>

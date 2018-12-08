@@ -4,6 +4,7 @@
         list-style: none;
     }
 </style>
+<<<<<<< HEAD
 {{!-- TRIP HANDLEBARS WITHOUT MODELS --}} {{> nav/navbar-no-search}}
 <br>
 <br>
@@ -134,3 +135,24 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/trip.js"></script>
 <script src="/routes/trip-api-routes.js"></script>
+=======
+{{!-- TRIP HANDLEBARS WITHOUT MODELS --}}
+<div id="navbar">
+    {{> nav/navbar-no-search}}
+</div>
+
+<br>
+<br>
+<div class="content container">
+
+    <h4>{{msg}}</h4>
+    <ul id="tripList">
+        {{#each trip}}
+        {{> trips/trip}}
+        <br>
+        {{/each}}
+    </ul>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/trip.js"></script>
+>>>>>>> 4d0ee654a463c2c2f9e4ebba10ec06102c374f26

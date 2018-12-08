@@ -1,5 +1,5 @@
 
-var $UserId = $("#UserId");
+// var $UserId = $("#UserId");
 var $destination =$("#address");
 var $tripRemark = $("#trip-remark");
 var $startDate = $("#startDate");
@@ -62,11 +62,37 @@ var refreshTrips = function () {
   location.reload();
 };
 
+var UserId = 1; // KH - JIA, WHAT IS THIS DOING?
+// KH - FUNTION TO TAKE IN AN ARRAY AND CONVERT IT TO A STRING TO WRITE TO THE DB
+var arrayToString = function(array) {
+  var string = array.join(", ");
+  
+  return string;
+}
+
+// KH - FUNCTION TO TAKE CHECKBOX INPUTS AND MAKE THEM INTO AN ARRAY
+var compileInterests = function(interests) {
+  var checkedInterests = []
+  
+  interests.forEach((x) => {
+    if (x.checked) {
+      checkedInterests.push(x.value);
+    }
+  })
+  console.log(checkedInterests); // ARRAY
+  return arrayToString(checkedInterests); // STRING VERSION OF SAME
+}
 
 // handleFormSubmit is called whenever we submit a new example
 // Save the new example to the db and refresh the list
 var handleFormSubmit = function (event) {
   event.preventDefault();
+
+  // KH - THIS FULLY CONVERTS THE CHECKBOX INPUTS INTO A STRING, BUT NEEDS TO BE WRITTIN ASYNCHRONOUSLY
+  var tripInterestString = compileInterests($tripInterests);
+  console.log(tripInterestString);
+  
+
 
   var trip = {
     destination: $destination.val(),
@@ -75,9 +101,11 @@ var handleFormSubmit = function (event) {
     end_date: $endDate.val(),
     trip_interests: $tripInterests.val(),
     //added UserId
-    UserId: $UserId.val()
+    UserId: UserId
     //ends
   };
+
+  console.log(trip);
 
   // if (!(trip.destination && trip.remark)) {
   //   alert("You must enter an trip destination and trip interests!");
@@ -89,7 +117,7 @@ var handleFormSubmit = function (event) {
     refreshTrips();
   });
 //added UserId
- $UserId.val(""); 
+//  $UserId.val(""); 
 //ends
   $destination.val("");
   $tripRemark.val("");
@@ -109,7 +137,6 @@ var handleDeleteBtnClick = function () {
   API.deleteTrip(idToDelete).then(function () {
     refreshTrips();
   });
-
 };
 
 // Add event listeners to the submit and delete buttons

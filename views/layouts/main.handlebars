@@ -26,7 +26,30 @@
       $('.sidenav').sidenav();
     });
   </script>
-  <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/places.js@1.11.0"></script>
+    <script src="./autocomplete.js"></script>
+    <!--Google Map JS-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5lSGcPQkieKi9JEwoRUb2IqZ656nfPl0&callback=initMap" type="text/javascript"></script>
+<script type="text/javascript">
+(function() {
+    var placesAutocomplete = places({
+      container: document.querySelector('#address')
+    });
+  
+    var $address = document.querySelector('#address')
+    placesAutocomplete.on('change', function(e) {
+      $address.textContent = e.suggestion.value 
+    });
+  
+    placesAutocomplete.on('clear', function() {
+      $address.textContent = 'none';
+    });
+  
+  })();
+  
+</script>
+
+  {{!-- <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places" type="text/javascript"></script>
   <script type="text/javascript">
     function initialize() {
 
@@ -39,7 +62,8 @@
       var autocomplete = new google.maps.places.Autocomplete(input, options);
     }
     google.maps.event.addDomListener(window, 'load', initialize);
-  </script>
+  </script> --}}
+
 
 </body>
 
