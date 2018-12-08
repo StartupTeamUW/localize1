@@ -12,7 +12,9 @@ module.exports = function(app, passport) {
  
     app.get('/dashboard', isLoggedIn, authController.dashboard);
     // app.get('/users', isLoggedIn, authController.members);
+    app.get('/plantrip', isLoggedIn, authController.plantrip);
 
+    app.get('/home', isLoggedIn, authController.home);
 
     app.get('/logout', authController.logout);
  

@@ -41,10 +41,10 @@ module.exports = function (app) {
 // ============TRIP PAGES=================
 //    // ============================
 app.get("/plantrip", function (req, res) {
-  db.Trip.findAll({}).then(function (dbTrip) {
+  db.User.findAll({}).then(function (dbTrip) {
     res.render("plantrip", {
       msg: "Plan a new trip",
-      trip: dbTrip
+      user: dbTrip
     });
   });
 });

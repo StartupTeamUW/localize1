@@ -64,10 +64,10 @@ module.exports = function (app) {
   //    // ============================
 
   app.get("/plantrip", function (req, res) {
-    db.Trip.findAll({}).then(function (dbTrip) {
+    db.User.findAll({}).then(function (dbTrip) {
       res.render("trip_form", {
         msg: "Here are our trips",
-        trip: dbTrip
+        user: dbTrip
       });
     });
 
