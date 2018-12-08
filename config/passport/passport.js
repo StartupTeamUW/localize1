@@ -49,8 +49,6 @@
 
       else
       {
-        // var guide_status = 	$('input[name="guide_status"]:checked').val()
-
         var userPassword = generateHash(password);
         var data =
         { email:email,
@@ -68,8 +66,8 @@
         whyOn: req.body.whyOn,
         one_Athing: req.body.one_Athing,
         hobby: req.body.hobby,
-        what_I_share: req.body.what_I_share,
-        guide_status: req.body.guide_status
+        what_I_share: req.body.what_I_share
+        // guide_status: req.body.guide_status
 
 
         };

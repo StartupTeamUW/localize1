@@ -32,43 +32,43 @@
         <input name="password" type="password" />
 
         <label for="phone-number">Phone Number</label>
-        <input type="number" id="phonenum" class="validate" name="phonenumber">
+        <input type="number"  name="phonenumber">
 
         <label for="profile_pic_url" data-error="wrong" data-success="right">Profile Photo URL</label>
-        <input type="text" id="profile_pic_url" class="validate" name="profile_pic_url">
+        <input type="text"  name="profile_pic_url">
 
         <label for="gender">Gender</label>
-        <input type="text" id="gender" class="validate" name="gender">
+        <input type="text" name="gender">
 
         <label for="DOB"></label>
-        <input type="date" id="DOB" class="datepicker" name="DOB">
+        <input type="date" class="datepicker" name="DOB">
 
         <label for="hometown">Hometown</label>
-        <input type="text" id="hometown" class="validate" name="hometown">
+        <input type="text" name="hometown">
 
         <label for="bio">About Me</label>
-        <textarea id="bio" class="materialize-textarea" name="bio"></textarea>
+        <textarea class="materialize-textarea" name="bio"></textarea>
         <label for="languages">What languages do you speak?</label>
 
         {{!-- for future improvement, add option list --}}
         <textarea id="languages" class="materialize-textarea" name="languages"></textarea>
 
         <label for="whyOn">Why I am on Localize</label>
-        <textarea id="whyOn" class="materialize-textarea" name="whyOn"></textarea>
+        <textarea class="materialize-textarea" name="whyOn"></textarea>
 
         <label for="one_Athing">One Amazing Thing I've Done</label>
-        <textarea id="one_Athing" class="materialize-textarea" name="one_Athing"></textarea>
+        <textarea class="materialize-textarea" name="one_Athing"></textarea>
 
         {{!-- i think we should skip this, very similar to personal interest --}}
         <label for="hobby">Favourite Music, Movies, and Books</label>
-        <textarea id="hobby" class="materialize-textarea" name="hobby"></textarea>
+        <textarea class="materialize-textarea" name="hobby"></textarea>
 
         {{!-- skip countries, too many question for now and we can get country from hometown when there's location option implemented --}}
-        {{!-- <label for="countries">Countries I’ve Lived In</label>
-        <textarea id="countries" class="materialize-textarea" name="countries"></textarea> --}}
+        <label for="countries">Countries I’ve Lived In</label>
+        <textarea class="materialize-textarea" name="countries"></textarea>
 
         <label for="what_I_share">What can you share with other Localizers</label>
-        <textarea id="what_I_share" class="materialize-textarea" name="what_I_share"></textarea>
+        <textarea class="materialize-textarea" name="what_I_share"></textarea>
 
 
 {{!-- KEVIN'S CHECK BOX INTERESTS --}}
@@ -140,7 +140,8 @@
 {{!-- <div class="row"> --}}
 <div class="input-field col s6 center-align">
     <label for="guide_status">
-    <input id="guide_status" type="checkbox" />
+    {{!-- <input id="guide_status" name="guide_status" type="checkbox" /> --}}
+    {{!-- <input name="guide_status" type="checkbox" checked=1 >  --}}
     <span>Are you open to be a guide?</span>
     </label>
  </div>
@@ -158,3 +159,4 @@
 
 </form>
 </div>
+
