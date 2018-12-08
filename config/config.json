@@ -3,7 +3,7 @@
     "username": "root",
     "password": null,
     "database": "kz7wbftgh63cmdm",
-    "host": "localhost",
+    "host": "o3iyl77734b9n3tg.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {
