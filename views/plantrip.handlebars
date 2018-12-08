@@ -1,38 +1,39 @@
-{{!-- FOR TESTING --}}
-{{!-- TRIP HANDLEBARS WITHOUT MODELS --}}
-{{> nav/navbar-no-search}}
+{{> nav/navbar}}
 <br>
 <br>
-<div class="content container">
+<div class="content container s12 m4 l8">
   <form action="/api/trips" method="POST">
     {{!-- added UserId for testing --}}
     <div id="wrapper3">
-      <input type="number" id="UserId" placeholder="UserId" />
+      <input type="number" id="UserId" placeholder="Who is posting" />
+      {{!-- <input type="hidden" name="userId" id="UserId" placeholder="UserId" value=user.id} />
+      --}}
     </div>
     {{!-- ends --}}
     <div>
       <div class="form-group">
-        <label for="category">Who is posting</label>
+        <label for="category">UserId</label>
         <select class="custom-select" id="author">
         </select>
       </div>
       <div class="input-group">
         <input type="hidden" name="search_param" value="all" id="search_param">
-        <input type="search" id="address" autocomplete="on" class="form-control address" placeholder="Destination"
+        <input type="search" id="address" autocomplete="on" class="form-control address" name="destination" placeholder="Destination"
           style="padding-left: 8px; margin: 0; right: 2px" />
       </div>
     </div>
     <div id="wrapper1" class="col s5 offset-s1 input-field">
-      <input type="date" id="startDate" class="datepicker-start" />
+      <input type="date" id="startDate" class="datepicker-start" name="start_date" />
       <label for="startDate"></label>
     </div>
     <div id="wrapper2" class="col s5 input-field">
-      <input type="date" id="endDate" class="datepicker-end" />
+      <input type="date" id="endDate" class="datepicker-end" name="end_date" />
       <label for="endDate"></label>
     </div>
     <div>
       <label for="trip-remark">Trip Remarks</label>
-      <textarea class="form-control" id="trip-remark" aria-describedby="trip-description" placeholder="Enter Trip Description"></textarea>
+      <textarea class="form-control" id="trip-remark" aria-describedby="trip-description" placeholder="Enter Trip Description"
+        name="remark"></textarea>
     </div>
     <div class="row">
       <h5 class="centered-headline">What are you interested in doing during this trip?</h5>

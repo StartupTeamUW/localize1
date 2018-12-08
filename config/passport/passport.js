@@ -54,7 +54,20 @@
         { email:email,
         password:userPassword,
         first_name: req.body.first_name,
-        last_name: req.body.last_name
+        last_name: req.body.last_name,
+        phonenumber: req.body.phonenumber,
+        profile_pic_url: req.body.profile_pic_url,
+        gender: req.body.gender,
+        DOB: req.body.DOB,
+        hometown: req.body.hometown,
+        bio: req.body.bio,
+        languages: req.body.languages,
+        whyOn: req.body.whyOn,
+        one_Athing: req.body.one_Athing,
+        hobby: req.body.hobby,
+        countries: req.body.countries,
+        what_I_share: req.body.what_I_share,
+        interests: req.body.interests
         };
 
 

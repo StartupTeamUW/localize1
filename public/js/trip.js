@@ -111,6 +111,7 @@ var handleFormSubmit = function (event) {
   //   alert("You must enter an trip destination and trip interests!");
   //   return;
   // }
+  
 
   API.saveTrip(trip).then(function () {
     refreshTrips();
@@ -139,7 +140,9 @@ var handleDeleteBtnClick = function () {
 };
 
 // Add event listeners to the submit and delete buttons
-$submitBtnT.on("click", handleFormSubmit);
-$tripList.on("click", ".delete", handleDeleteBtnClick);
 
+  
+//continue the processing
+// $submitBtnT.on("click", handleFormSubmit);
+$tripList.on("click", ".delete", handleDeleteBtnClick);
 

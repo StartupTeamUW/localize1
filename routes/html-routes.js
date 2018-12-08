@@ -63,13 +63,14 @@ module.exports = function (app) {
   // ============TRIP PAGES=================
   //    // ============================
 
-  app.get("/new_trip", function (req, res) {
+  app.get("/plantrip", function (req, res) {
     db.Trip.findAll({}).then(function (dbTrip) {
       res.render("trip_form", {
         msg: "Here are our trips",
         trip: dbTrip
       });
     });
+
   });
   
 //using past.handlebars for single trip(temp)
