@@ -74,6 +74,25 @@ nav .brand-logo {
   margin: 20px;
 }
 
+#address {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #444;
+  font-size: 1em;
+  position: relative;
+  top: 5px;
+  padding-left: 5px;
+}
+
+#address::placeholder {
+  color: #888;
+  position: relative;
+  top: 1px;
+}
+
+.input-group {
+  width: 350px;
+}
 
 
 /* HOMEPAGE STYLES */

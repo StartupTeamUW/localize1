@@ -46,29 +46,24 @@
 
 {{!-- kimmy's testing --}}
 
+
 {{> nav/navbar}}
 
+
+
+<br><br>
 <div class="container">
-<button> Edit Trip</button>
-  <div class="row">
-    <div class="col-8 offset-2">
-      <div class="card mt-4">
-        <div class="card-body">
-          <h5 class="card-title">{{msg}}</h5>
-          <p>
-            <strong>ID</strong>: {{trip.id}}</p>
-          <p>
-            <p>
-              <strong>Destination</strong>: {{trip.destination}}</p>
-            <p>
-              <strong>Highlights of trip: </strong> {{trip.remark}}</p>
-            <p>
-              <strong>Start Date:</strong> {{trip.start_date}}</p>
-            <p>
-              <strong>End Date:</strong> {{trip.end_date}}</p>
-            <a href="/">← Back To Home</a>
-        </div>
-      </div>
+  <div class="trip-summary-container s12 l10">
+    <div class="profile-pic">
+      <img src="https://picsum.photos/640/360" style="float: left;" />
     </div>
+    <div class="profile-data">
+      <h2 class="display-4 profile-name">{{trip.destination}}</h2>
+      <h5>{{trip.start_date}}</h5>
+      <p class="lead">{{trip.start_date}}</p>
+      <h5>{{trip.trip_interests}}</h5>
+    </div>
+    <button class="waves-effect waves-light btn-small edit">edit</button>
+    <button class="waves-effect waves-light btn-small red lighten-1 delete">remove</button>
   </div>
 </div>
