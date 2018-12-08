@@ -30,7 +30,9 @@ VALUES
 -- add trips (execute after existing user created)
 INSERT INTO Trips (destination, trip_interests, start_date, end_date, createdAt, updatedAt, UserId) 
 VALUES
-('LA', 'Landmarks, Food', '2018-10-25', '2018-10-27', Now(), Now(), 2),
-('NY', 'Landmarks, Food', '2018-02-25', '2018-02-27', Now(), Now(), 2),
-('Austin', 'Landmarks, Food', '2018-01-20', '2018-01-27', Now(), Now(), 2),
-('Huston', 'Landmarks, Food', '2018-08-05', '2018-08-12', Now(), Now(), 2);
+('Chicago', 'Landmarks, Food', '2018-10-25', '2018-10-27', Now(), Now(), 1),
+('New York', 'Concerts, Clubbing', '2018-02-25', '2018-02-27', Now(), Now(), 1),
+('Nashville', 'Concert, Landmarks, Food', '2018-01-20', '2018-01-27', Now(), Now(), 2),
+('Seattle', 'Monuments, Clubbing', '2018-06-05', '2018-08-12', Now(), Now(), 1);
+('San Francisco', 'Landmarks, Food', '2018-04-05', '2018-08-12', Now(), Now(), 2);
+('Detroit', 'Food, Museums', '2018-08-05', '2018-08-12', Now(), Now(), 3);
