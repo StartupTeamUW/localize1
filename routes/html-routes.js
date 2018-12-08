@@ -24,16 +24,6 @@ module.exports = function (app) {
    // ============================
 // ============USER PAGES=================
 //    // ============================
-<<<<<<< HEAD
-   app.get("/register", function (req, res) {
-    db.User.findAll({}).then(function (dbUsers) {
-      res.render("user_form", {
-        msg: "Create a User Profile",
-        users: dbUsers
-      });
-    });
-  });
-=======
   //  app.get("/register", function (req, res) {
   //   db.User.findAll({}).then(function (dbUsers) {
   //     // console.log(res.body);
@@ -63,54 +53,8 @@ module.exports = function (app) {
   //     });
   //   });
   // });
->>>>>>> 4d0ee654a463c2c2f9e4ebba10ec06102c374f26
 
 
-<<<<<<< HEAD
-  app.get("/user/:id", function (req, res) {
-    db.User.findOne({ where: { id: req.params.id } }).then(function (dbUser) {
-      res.render("kevinUserDetailedPage", {
-        msg: "Users Card",
-        user: dbUser,
-        // interests: dbUser.interests
-      });
-    });
-  });
-    // ============================
-// ============TRIP PAGES=================
-//    // ============================
-app.get("/plantrip", function (req, res) {
-  // reference req.user or req.session to get logged in user
-  db.Trip.findAll({}).then(function (dbTrip) {
-    res.render("plantrip", {
-      msg: "Plan a new trip",
-      trip: dbTrip
-      // user: <userobj from req.user or req.session>
-    });
-  });
-});
-
-
-
-//12/06/18 CHI below is receiving data from two sources. one from app.GET(/api/trips) in trip-api-routes, all the data from api/trips (stored trips and users data)
-//The second part is from app.POST(/api/tirps) in trip-api-routes, the data user just entered in /plantrip page. 
-//then is comparing user's destination (or where they are traveling to) with hometown of a user. This will at least pull the matching person.   
-  app.get("/trips", function (req, res) {
-    console.log("HIIIIII", req.query)
-
-
-
-    db.User.findAll({
-      where: {
-        hometown: req.query.destination
-      },
-        include: [db.Trip]
-    }).then(function (dbTrip) {
-      console.log("BYEEEEEEEEE", dbTrip)
-
-
-      res.render("alltrips", {
-=======
     // ============================
 // ============TRIP PAGES=================
 //    // ============================
@@ -122,23 +66,14 @@ app.get("/plantrip", function (req, res) {
   app.get("/new_trip", function (req, res) {
     db.Trip.findAll({}).then(function (dbTrip) {
       res.render("trip_form", {
->>>>>>> 4d0ee654a463c2c2f9e4ebba10ec06102c374f26
         msg: "Here are our trips",
         trip: dbTrip
       });
     });
 
   });
-<<<<<<< HEAD
-  //12/06/18 change stops here
-
- 
-
-//using singletrip.handlebars for single trip(temp)
-=======
   
 //using past.handlebars for single trip(temp)
->>>>>>> 4d0ee654a463c2c2f9e4ebba10ec06102c374f26
   app.get("/trip/:id", function (req, res) {
     db.Trip.findOne({ where: { id: req.params.id } }).then(function (dbTrip) {
       res.render("past", {

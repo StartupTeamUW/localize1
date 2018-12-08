@@ -19,6 +19,7 @@
     "express-session": "^1.15.6",
     "install": "^0.12.2",
     "materialize-css": "^1.0.0-rc.2",
+    "mysql": "^2.16.0",
     "mysql2": "^1.5.3",
     "node-fetch": "^2.3.0",
     "nodemon": "^1.18.7",

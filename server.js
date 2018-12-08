@@ -16,8 +16,6 @@ app.use(express.json());
 app.use(express.static("public"));
 
 
-<<<<<<< HEAD
-=======
 //For BodyParser
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -29,7 +27,6 @@ app.use(passport.session()); // persistent login sessions
 
 
 
->>>>>>> 4d0ee654a463c2c2f9e4ebba10ec06102c374f26
 // Handlebars
 app.engine(
   "handlebars",
