@@ -49,12 +49,29 @@
 
       else
       {
+        // var guide_status = 	$('input[name="guide_status"]:checked').val()
+
         var userPassword = generateHash(password);
         var data =
         { email:email,
         password:userPassword,
         first_name: req.body.first_name,
-        last_name: req.body.last_name
+        last_name: req.body.last_name,
+        user_name: req.body.user_name,
+        phonenumber: req.body.phonenum,
+        profile_pic_url: req.body.profile_pic_url,
+        gender: req.body.gender,
+        DOB: req.body.DOB,
+        hometown: req.body.hometown,
+        bio: req.body.bio,
+        languages: req.body.languages,
+        whyOn: req.body.whyOn,
+        one_Athing: req.body.one_Athing,
+        hobby: req.body.hobby,
+        what_I_share: req.body.what_I_share,
+        guide_status: req.body.guide_status
+
+
         };
 
 
