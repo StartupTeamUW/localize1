@@ -1,4 +1,10 @@
+
+<div id="navbar">
 {{> nav/navbar}}
+</div>
+
+
+
 <br><br>
 <ul id="trip-list">
     {{#each trip}}
@@ -14,7 +20,7 @@
                         <h2 class="display-4 profile-name">{{this.destination}}</h2>
                         <h5>{{this.start_date}}</h5>
                         <p class="lead">{{this.start_date}}</p>
-                         <h5>{{this.trip_interests}}</h5>
+                        <h5>{{this.trip_interests}}</h5>
                     </div>
                     <button class="waves-effect waves-light btn-small delete">remove</button>
                 </div>
@@ -22,4 +28,13 @@
     </li>
     {{/each}}
 </ul>
-<a href="/">← Back To Home</a>
+<br>
+<div class="row contain-center-align">
+    <a href="/">
+        <button class="btn btn-default">
+            <span class="glyphicon glyphicon-search buttonsize">
+                Back to Home
+            </span>
+        </button>
+    </a>
+</div>

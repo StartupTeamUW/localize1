@@ -1,9 +1,165 @@
-.list-group-item {
-  line-height: 2.5;
+/* UNIVERSAL ELEMENTS */
+
+
+img {
+  height: 100%;
+  width: auto;
+  border-radius: 50%;
+    margin: auto;
+    margin-right: 20px;
 }
-.centered-headline {
+
+img.contact {
+  position: relative;
+  bottom: -8px;
+  height: 28px;
+  width: auto;
+  left: 6px;
+}
+
+nav {
+  background-color: #B5F3F3;
+}
+
+@media only screen and (min-width: 993px) {
+  nav a.sidenav-trigger {
+    display: none;
+  }
+}
+
+h4, h5 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: lighter;
+}
+
+h3 {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 800;
+  color: #FE8622;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+.contain-center-align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* NAVIGATION ELEMENTS */
+
+nav .brand-logo {
+  color: black;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 800;
+  margin-left: 20px;
+}
+
+#navbar {
+  position: fixed; /* Make it stick/fixed */
+  top: -70px; /* Hide the navbar 50 px outside of the top view */
+  width: 100%; /* Full width */
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  z-index: 1000;
+}
+
+.sidenav {
+  background-color: rgba(255, 255, 255, .9);
+}
+
+.sidenav li {
+  margin: 20px;
+}
+
+#address {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #444;
+  font-size: 1em;
+  position: relative;
+  top: 5px;
+  padding-left: 5px;
+}
+
+#address::placeholder {
+  color: #888;
+  position: relative;
+  top: 1px;
+}
+
+.input-group {
+  width: 350px;
+}
+
+
+/* HOMEPAGE STYLES */
+
+.homepage-h1 {
   text-align: center;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 800;
+  font-size: 11.5vw;
+  margin: 50px auto 20px auto;
+  color: #FE8622;
 }
+
+.homepage-content-div {
+  /* height: 200px; */
+  padding: 50px;
+  background-color: rgba(255, 255, 255, .9)
+}
+
+.homepage-row {
+  padding: 50px;
+  margin-bottom: 0px;
+  background: #B5F3F3;
+}
+
+.parallax1 { 
+  /* The image used */
+  background-image: url("/imgs/lance-anderson-636845-unsplash.jpg");
+
+  /* Set a specific height */
+  height: 400px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax2 { 
+  /* The image used */
+  background-image: url("/imgs/paul-rysz-225870-unsplash.jpg");
+
+  /* Set a specific height */
+  height: 400px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+input.big-search {
+  background: rgba(255, 255, 255, .7);
+  text-align: center;
+  color: #666;
+}
+input.big-search::placeholder {
+  color: #666;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.25em;
+}
+
+
+/* USERS AND TRIP INFO STYLES */
 
 .trip-summary-container {
   display: flex;
@@ -14,8 +170,8 @@
   height: 100%;
   border-radius: 4px;
   -webkit-box-shadow: 1px 1px 4px 1px rgba(158,158,158,1);
--moz-box-shadow: 1px 1px 4px 1px rgba(158,158,158,1);
-box-shadow: 1px 1px 4px 1px rgba(158,158,158,1);
+  -moz-box-shadow: 1px 1px 4px 1px rgba(158,158,158,1);
+  box-shadow: 1px 1px 4px 1px rgba(158,158,158,1);
 }
 
 .profile-pic-container {
@@ -54,22 +210,6 @@ box-shadow: 1px 1px 4px 1px rgba(158,158,158,1);
 justify-self: flex-start
 }
 
-img {
-  height: 100%;
-  width: auto;
-  border-radius: 50%;
-    margin: auto;
-    margin-right: 20px;
-}
-
-img.contact {
-  position: relative;
-  bottom: -8px;
-  height: 28px;
-  width: auto;
-  left: 6px;
-}
-
 .trip-interests {
   list-style: none;
   display: inline;
@@ -83,80 +223,6 @@ img.contact {
   color: white;
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
-}
-.gender {
-  background: rgb(139, 252, 116);
-}
-.language {
-  background: rgb(252, 116, 161);
-}
-
-
-.countries {
-  background: cyan;
-}
-
-.share {
-  background: rgb(169, 179, 31);
-}
-
-nav {
-  background-color: #B5F3F3;
-}
-nav .brand-logo {
-  color: black;
-  font-family: 'Montserrat Alternates', sans-serif;
-  font-weight: 800;
-  margin-left: 20px;
-}
-
-@media only screen and (min-width: 993px) {
-  nav a.sidenav-trigger {
-    display: none;
-  }
-}
-
-.homepage-h1 {
-  text-align: center;
-  font-family: 'Montserrat Alternates', sans-serif;
-  font-weight: 800;
-  font-size: 11.5vw;
-  margin: 50px auto 20px auto;
-  color: #FE8622;
-}
-h4, h5 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: lighter;
-}
-
-h3 {
-  font-family: 'Montserrat Alternates', sans-serif;
-  font-weight: 800;
-  color: #FE8622;
-}
-
-p {
-  font-family: 'Roboto', sans-serif;
-}
-input.big-search {
-  background: rgba(255, 255, 255, .7);
-  text-align: center;
-  color: #666;
-}
-input.big-search::placeholder {
-  color: #666;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-size: 1.25em;
-}
-
-input.form-control::placeholder {
-  color: #fff;
-  font-family: 'Roboto', sans-serif;
-}
-
-.input-group-btn {
-  margin: auto 10px;
 }
 
 .interests {
@@ -183,6 +249,40 @@ input.form-control::placeholder {
   border-radius: 4px;
 }
 
+
+/* FORM ELEMENTS */
+
+.gender {
+  background: rgb(139, 252, 116);
+}
+.language {
+  background: rgb(252, 116, 161);
+}
+
+.countries {
+  background: cyan;
+}
+
+.share {
+  background: rgb(169, 179, 31);
+}
+
+.list-group-item {
+  line-height: .5;
+}
+.centered-headline {
+  text-align: center;
+}
+
+input.form-control::placeholder {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+.input-group-btn {
+  margin: auto 10px;
+}
+
 /* .contact {
   position: relative;
   bottom: 0px;
@@ -196,23 +296,6 @@ input.form-control::placeholder {
   padding: 20px;
 }
 
-.contain-center-align {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.homepage-content-div {
-  /* height: 200px; */
-  padding: 50px;
-  background-color: rgba(255, 255, 255, .9)
-}
-
-.homepage-row {
-  padding: 50px;
-  margin-bottom: 0px;
-  background: #B5F3F3;
-}
 
 .row .col {
   padding: 26px;
@@ -232,49 +315,8 @@ input.form-control::placeholder {
   position: relative;
   display: inline-block;
 }
-.parallax1 { 
-  /* The image used */
-  background-image: url("/imgs/lance-anderson-636845-unsplash.jpg");
 
-  /* Set a specific height */
-  height: 400px; 
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.parallax2 { 
-  /* The image used */
-  background-image: url("/imgs/paul-rysz-225870-unsplash.jpg");
-
-  /* Set a specific height */
-  height: 400px; 
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#navbar {
-  position: fixed; /* Make it stick/fixed */
-  top: -70px; /* Hide the navbar 50 px outside of the top view */
-  width: 100%; /* Full width */
-  transition: top 0.3s; /* Transition effect when sliding down (and up) */
-  z-index: 1000;
-}
-
-.sidenav {
-  background-color: rgba(255, 255, 255, .9);
-}
-
-.sidenav li {
-  margin: 20px;
-}
+/* !!!!!! MATERIALIZE FIXES !!!!!! */
 
 .card .card-content {
   background-color: #FFEEBE;
@@ -289,4 +331,32 @@ input.form-control::placeholder {
 
 #info-cards {
   background-color: rgba(20, 153, 153, .5);
+}
+
+
+.collection .collection-item.avatar {
+  padding-left: 10px;
+}
+
+.collection .collection-item.avatar .title {
+  font-size: 16px;
+  text-align: left;
+  position: relative;
+  left: 105px;
+  top: -10px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 800;
+}
+
+.collection .collection-item.avatar:not(.circle-clipper) > .circle, .collection .collection-item.avatar :not(.circle-clipper) > .circle {
+  width: 80px;
+  height: 80px;
+}
+
+.collection .collection-item.avatar p {
+  margin: 0;
+  text-align: left;
+  position: relative;
+  left: 105px;
+  top: -14px;
 }
