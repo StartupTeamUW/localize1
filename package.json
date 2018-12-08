@@ -1,7 +1,7 @@
 {
   "name": "localize1",
   "version": "1.0.0",
-  "description": "Localize-The best website",
+  "description": "Localize-Meeting the locals makes easy",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
