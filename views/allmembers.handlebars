@@ -10,10 +10,9 @@
     </p>
   </div>
 
-
-  <div class="col s6">Click to view their profile and dont forget to send them an email
+  {{!-- <div class="col s6">Click to view their profile and dont forget to send them an email
     <div class="row">
-  
+
       <ul id="user-list">
         {{#each users}}
         <li data-id="{{this.id}}" class="list-group-item">
@@ -21,7 +20,7 @@
             <div class="trip-summary-container">
               <div class="profile-pic-container">
                 <div class="profile-pic">
-                  <img src="{{this.profile_pic_url}}" style="float: left;" />
+                  <img src="{{user.profile_pic_url}}" style="float: left;" />
                 </div>
               </div>
               <div class="profile-data">
@@ -29,7 +28,7 @@
                 <h5 class="user-card-city">{{this.hometown}}</h5> <span class="guide-badge blue">Guide</span> <a href="#"><img
                     class="contact" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0isRu8iqDzjlJJ2SYvDFcF2dReTmEKnP8mqSyAYv8vE98nYuK"
                     alt=""></a>
-                <p>{{this.bio}}</p>
+                <p>{{this.one_Athing}}</p>
               </div>
             </div>
             <br>
@@ -38,12 +37,11 @@
         {{/each}}
       </ul>
       <a href="/"><i class="material-icons medium">
-home
-</i>
+          home
+        </i>
       </a>
-
     </div>
-  </div>
+  </div> --}}
 
 
   <div class="col s6">Click to view their profile and dont forget to send them an email
@@ -63,7 +61,38 @@ home
               <h5 class="user-card-city">{{this.hometown}}</h5> <span class="guide-badge blue">Guide</span> <a href="#"><img
                   class="contact" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0isRu8iqDzjlJJ2SYvDFcF2dReTmEKnP8mqSyAYv8vE98nYuK"
                   alt=""></a>
-              <p class="lead">{{this.bio}}</p>
+              <p class="lead">{{this.one_Athing}}</p>
+            </div>
+          </div>
+
+          <br>
+          <br>
+      </li>
+      {{/each}}
+    </ul>
+    <a href="/">← Back To Home</a>
+  </div>
+
+
+
+  <div class="col s6">Click to view their profile and dont forget to send them an email
+    <ul id="user-list">
+      {{#each users}}
+      <li data-id="{{this.id}}" class="list-group-item">
+        <a href="user/{{this.id}}">
+
+          <div class="trip-summary-container">
+            <div class="profile-pic-container">
+              <div class="profile-pic">
+                <img src="{{this.profile_pic_url}}" style="float: left;" />
+              </div>
+            </div>
+            <div class="profile-data">
+              <h2 class="display-4 profile-name">{{this.user_name}}</h2>
+              <h5 class="user-card-city">{{this.hometown}}</h5> <span class="guide-badge blue">Guide</span> <a href="#"><img
+                  class="contact" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0isRu8iqDzjlJJ2SYvDFcF2dReTmEKnP8mqSyAYv8vE98nYuK"
+                  alt=""></a>
+              <p class="lead">{{this.one_Athing}}</p>
             </div>
           </div>
 

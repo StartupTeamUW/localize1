@@ -15,10 +15,10 @@ exports.dashboard = function(req, res) {
     console.log(req.user)
 }
 
-exports.members = function(req, res) {
-    res.render('allmembers', {msg:"Hello", users: req.user });
-    console.log(req.user)
-}
+// exports.members = function(req, res) {
+//     res.render('allmembers', {msg:"Hello", users: req.user });
+//     console.log(req.user)
+// }
 
 exports.logout = function(req, res) {
     req.session.destroy(function(err) {
