@@ -1,5 +1,7 @@
 # LOCALIZE
 
+Have you ever wished for a local guide who enjoys doing the same things as you do? Well, Localize is a fun app that can help you find a perfect host when you are traveling to an unfamiliar city. Localize lets our traveling users find local-host users in the city where they are traveling to, based on the common interests the two parties share. With Localize, with a few simple clicks, you will be able to enjoy a quality trip!
+
 ## [Link to Localize](https://www.createjs.com/soundjs)
 :
 
