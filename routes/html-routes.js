@@ -70,6 +70,7 @@ module.exports = function (app) {
         trip: dbTrip
       });
     });
+
   });
   
 //using past.handlebars for single trip(temp)

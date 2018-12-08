@@ -1,8 +1,7 @@
 # LOCALIZE
 
 ## [Link to Localize](https://www.createjs.com/soundjs)
-
-## Part 1- our MVP:
+:
 
 #### Idea: To build an app that matches newcomers in Seattle with the locals: places to see and what to do
 
@@ -25,17 +24,14 @@
   
  ## Part 1- Getting started:
    1. NPM install all dependencies
-   2. 
+   2. Create a user profile
+   3. view all memmbers and connect with the locals
 
 
  ### Highlights of our page features
+   * Encrypted authentication
+  * Good data flow & transition
 
-#### Instructions:
-  * Log in
-  * Press keys to move characters according to our instructions per player
-  * Hit opponents to lower their HP
-  * Tap music icons to listen to our theme song
-  * Tap chatbox to start a conversation.
   
   
 ### Libraries
@@ -48,6 +44,7 @@
   * [Googlemaps Autofill](https://firebase.google.com)
   * [Express JS](https://firebase.google.com)
   * [Passport JS](https://firebase.google.com)
+  * [ngrok](https://firebase.google.com)
  
 ### Copyrights and Acknowledgements
   * [Privacy](https://termsfeed.com/privacy-policy/6cf81f38974eab1bf5dc46b1e06725e6)
