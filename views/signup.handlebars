@@ -1,8 +1,8 @@
-{{!-- <div id="navbar">
+<div id="navbar">
     {{> nav/navbar-signin}}
-</div> --}}
+</div>
 
-{{> nav/navbar-signin}}
+{{!-- {{> nav/navbar-signin}} --}}
 
 <style>
     h4 {color: darkgoldenrod;}
@@ -47,28 +47,28 @@
         <input type="text" name="hometown">
 
         <label for="bio">About Me</label>
-        <textarea class="materialize-textarea" name="bio"></textarea>
-        <label for="languages">What languages do you speak?</label>
+        <input class="materialize-textarea" name="bio">
 
         {{!-- for future improvement, add option list --}}
-        <textarea id="languages" class="materialize-textarea" name="languages"></textarea>
+        <label for="languages">What languages do you speak?</label>
+        <input id="languages" class="materialize-textarea" name="languages">
 
         <label for="whyOn">Why I am on Localize</label>
-        <textarea class="materialize-textarea" name="whyOn"></textarea>
+        <input class="materialize-textarea" name="whyOn">
 
         <label for="one_Athing">One Amazing Thing I've Done</label>
-        <textarea class="materialize-textarea" name="one_Athing"></textarea>
+        <input class="materialize-textarea" name="one_Athing">
 
         {{!-- i think we should skip this, very similar to personal interest --}}
         <label for="hobby">Favourite Music, Movies, and Books</label>
-        <textarea class="materialize-textarea" name="hobby"></textarea>
+        <input class="materialize-textarea" name="hobby">
 
         {{!-- skip countries, too many question for now and we can get country from hometown when there's location option implemented --}}
         <label for="countries">Countries I’ve Lived In</label>
-        <textarea class="materialize-textarea" name="countries"></textarea>
+        <input class="materialize-textarea" name="countries">
 
         <label for="what_I_share">What can you share with other Localizers</label>
-        <textarea class="materialize-textarea" name="what_I_share"></textarea>
+        <input class="materialize-textarea" name="what_I_share">
 
 
 {{!-- KEVIN'S CHECK BOX INTERESTS --}}
