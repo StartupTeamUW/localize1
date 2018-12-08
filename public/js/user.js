@@ -16,7 +16,7 @@ var $oneAThing = $("#one-A-thing");
 var $hobby = $("#hobby");
 var $countries = $("#countries-lived");
 var $whatIShare = $("#what-I-share");
-var $interests = $("#user-interests");
+// var $interests = $("#user-interests");
 // var $guideStatus = $("#guideStatus");
 var $submitBtnU = $("#submitU");
 var $userList = $("#user-list");
@@ -63,7 +63,7 @@ var refreshUsers = function () {
 
       var $li = $("<li>")
         .attr({
-          class: "list-group-item",
+          class: "card-header",
           "data-id": user.id
         })
         .append($a);

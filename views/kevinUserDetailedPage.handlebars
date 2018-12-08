@@ -1,108 +1,6 @@
-{{!-- this will replace userCard.handlebars
 
-<style>
-  body {}
-
-  .trip-summary-container {
-    background: rgb(99, 194, 231);
-    color: aliceblue;
-    padding: 20px;
-    height: 100%;
-  }
-
-    {
-      {
-       !-- .profile-pic {
-        float: left;
-      }
-
-      --
-    }
-  }
-
-  .profile-pic {
-    float: left;
-    width: 200px;
-    height: 200px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 50%;
-    object-fit: contain;
-    display: flex;
-    justify-content: center;
-  }
-
-  img {
-    height: 100%;
-    width: auto;
-  }
-
-  .profile-name {
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-weight: 800;
-  }
-
-  img {
-    border-radius: 50%;
-    margin: auto;
-    margin-right: 20px;
-  }
-
-  .trip-interests {
-    list-style: none;
-    display: inline;
-  }
-
-  .pill {
-    background: rgb(116, 218, 252);
-    border-radius: 10px;
-    margin: 0 16px 0 0;
-    padding: 4px 16px;
-    display: inline;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 600;
-  }
-
-  .gender {
-    background: rgb(139, 252, 116);
-  }
-
-  .language {
-    background: rgb(252, 116, 161);
-  }
-
-  .countries {
-    background: cyan;
-  }
-
-  .share {
-    background: rgb(169, 179, 31);
-  }
-
-  nav .brand-logo {
-    color: black;
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-weight: 800;
-    margin-left: 20px;
-  }
-
-  h4 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: lighter;
-  }
-
-  p {
-    font-family: 'Roboto', sans-serif;
-  }
-</style> --}}
 
 {{> nav/navbar}}
-
-{{!-- BEGIN USER SUMMARY VIEW --}}
-
-{{!-- {{> userInfo/profile}} --}}
-
 
 <div class="container">
   <div class="trip-summary-container s12 l10">
@@ -110,10 +8,8 @@
       <img src="{{user.profile_pic_url}}" style="float: left;" />
     </div>
     <div class="profile-data">
-      
-      {{!-- testing purpose --}}
       <h1>{{msg}}</h1>
-
+      <p></p>
       <h2 class="display-4 profile-name">{{user.user_name}}</h2>
       <h5>{{user.hometown}}</h5>
       <p class="lead">{{user.bio}}</p>

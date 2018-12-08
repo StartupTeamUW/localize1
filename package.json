@@ -17,6 +17,7 @@
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
     "express-session": "^1.15.6",
+    "font-awesome": "^4.7.0",
     "install": "^0.12.2",
     "materialize-css": "^1.0.0-rc.2",
     "mysql2": "^1.5.3",

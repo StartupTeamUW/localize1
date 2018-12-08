@@ -53,7 +53,15 @@ module.exports = function (app) {
   //     });
   //   });
   // });
-
+  // app.get("/user/:id", function (req, res) {
+  //   db.User.findOne({ where: { id: req.params.id } }).then(function (dbUser) {
+  //     res.render("KevinUserDetailedPage", {
+  //       msg: "Users Card",
+  //       user: dbUser,
+  //       // interests: dbUser.interests
+  //     });
+  //   });
+  // });
 
     // ============================
 // ============TRIP PAGES=================
