@@ -50,7 +50,7 @@ var models = require("./models");
 //Routes
 var authRoute = require('./routes/auth.js')(app,passport);
 
-require("./archieve/html-routes")(app);
+require("./routes/html-routes")(app);
 require("./routes/trip-api-routes")(app);
 require("./routes/user-api-routes")(app);
 
