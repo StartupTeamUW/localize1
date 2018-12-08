@@ -1,5 +1,10 @@
 /* UNIVERSAL ELEMENTS */
-
+html,body {
+  position:relative; 
+  margin:0;
+  padding:0;
+  overflow:auto; 
+}
 
 img {
   height: 100%;
@@ -296,7 +301,6 @@ input.form-control::placeholder {
   padding: 20px;
 }
 
-
 .row .col {
   padding: 26px;
 }
@@ -315,6 +319,51 @@ input.form-control::placeholder {
   position: relative;
   display: inline-block;
 }
+
+
+/* FOOTER  */
+.footer {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  bottom: 0px;
+  width:100%;
+  height:auto;   /* Height of the footer */
+  background:#149999;
+}
+
+.footer ul {
+  list-style-type: none;
+  float;left;
+  width: 66%;
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden; */
+}
+
+.footer li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.footer li a:hover {
+  background-color: rgba(102, 102, 102, 0.26);
+}
+
+.copyright {
+  display: inline;
+  float: right;
+
+}
+
+
 
 /* !!!!!! MATERIALIZE FIXES !!!!!! */
 
