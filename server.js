@@ -67,7 +67,7 @@ var syncOptions = { force: false };
 
 
 if (process.env.NODE_ENV === "test") {
-  syncOptions.force = true;
+  syncOptions.force = false;
 }
 
 // Starting cthe server, syncing our models ------------------------------------/

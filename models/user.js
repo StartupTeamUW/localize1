@@ -75,9 +75,9 @@ module.exports = function (sequelize, DataTypes) {
     what_I_share:{
       type: DataTypes.STRING
     },
-    // interests:{
-    //   type: DataTypes.STRING
-    // },
+    interests:{
+      type: DataTypes.STRING
+    },
     guide_status: {
       type: DataTypes.BOOLEAN,
       defaultValue: false

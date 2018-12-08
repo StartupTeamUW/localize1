@@ -6,15 +6,15 @@ module.exports = function (app) {
    // ============================
 // ============USER PAGES=================
 //    // ============================
-   app.get("/register", function (req, res) {
-    db.User.findAll({}).then(function (dbUsers) {
-      // console.log(res.body);
-      res.render("user_form", {
-        msg: "Create a User Profile",
-        users: dbUsers
-      });
-    });
-  });
+  //  app.get("/register", function (req, res) {
+  //   db.User.findAll({}).then(function (dbUsers) {
+  //     // console.log(res.body);
+  //     res.render("user_form", {
+  //       msg: "Create a User Profile",
+  //       users: dbUsers
+  //     });
+  //   });
+  // });
 
   app.get("/users", function (req, res) {
     db.User.findAll({}).then(function (dbUsers) {
