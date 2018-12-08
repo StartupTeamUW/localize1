@@ -1,5 +1,5 @@
 <div id="navbar">
-{{> nav/navbar}}
+  {{> nav/navbar}}
 </div>
 
 
@@ -21,7 +21,7 @@
         <h5>About me:</h5>
         {{!-- testing purpose --}}
         <h5>email:</h5>
-        <p>{{user.email}}</p> 
+        <p>{{user.email}}</p>
         <div class="pill gender">{{user.gender}}</div>
         <div class="pill language">{{user.languages}}</div>
         <h5>Why I’m on Localize</h5>
@@ -41,47 +41,28 @@
         <div>{{user.interests}}</div>
         <br><br>
         <h4 class="center-align">Most Recent Trips:</h4>
-        <div class="row">
-          <div class="card col s4">
-            <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="https://picsum.photos/100/100">
-            </div>
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">San Francisco<i class="material-icons right">more_vert</i></span>
-              <p><a href="#">Saw the sights!</a></p>
-            </div>
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">San Francisco<i class="material-icons right">close</i></span>
-              <p>Here is some more information about this product that is only revealed once clicked on.</p>
-            </div>
-          </div>
-          <div class="card col s4">
-            <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="https://picsum.photos/100/100">
-            </div>
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">Chicago<i class="material-icons right">more_vert</i></span>
-              <p><a href="#">Ate myself silly!</a></p>
-            </div>
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">Chicago<i class="material-icons right">close</i></span>
-              <p>Here is some more information about this product that is only revealed once clicked on.</p>
-            </div>
-          </div>
-          <div class="card col s4">
-            <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="https://picsum.photos/100/100">
-            </div>
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">Nashville<i class="material-icons right">more_vert</i></span>
-              <p><a href="#">All about that twang</a></p>
-            </div>
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">Nashville<i class="material-icons right">close</i></span>
-              <p>Here is some more information about this product that is only revealed once clicked on.</p>
-            </div>
-          </div>
-        </div>
+
+        {{#each trips}}
+
+        {{> trips/trip-small}}
+
+
+        {{/each}}
+
+        <ul class="collection">
+          <li class="collection-item avatar">
+            <a href="/new_trip" class="collection-item avatar list-group-item">
+              <img src="https://picsum.photos/640/360" alt="" class="circle">
+              <span class="title"><h5>No Trips Yet</h5></span>
+              <p>
+                Click to plan a new trip.
+              </p>
+              {{!-- <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a> --}}
+            </a>
+          </li>
+        </ul>
+
+
       </div>
     </li>
   </ul>
