@@ -1,9 +1,9 @@
 module.exports = {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "localize_db",
-    "host": "127.0.0.1",
+    "username": process.env.MYSQL_USER,
+    "password": process.env.MYSQL_KEY,
+    "database": process.env.MYSQL_DBNAME,
+    "host": process.env.MYSQL_HOST,
     "dialect": "mysql"
   },
   "test": {
@@ -14,10 +14,7 @@ module.exports = {
     "dialect": "mysql"
   },
   "production": {
-    "username": "uqhk1tq7qnr0ngh0",
-    "password": "lb4jmte9854iz8us",
-    "database": "kz7wbftgh63cmdmj",
-    "host": "o3iyl77734b9n3tg.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql"
   }
 }
