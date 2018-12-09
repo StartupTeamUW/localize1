@@ -1,5 +1,5 @@
 {
-  "name": "localize1",
+  "name": "localize",
   "version": "1.0.0",
   "description": "Localize-Meeting the locals makes easy",
   "main": "server.js",
@@ -38,5 +38,17 @@
   "engines": {
     "node": "v10.4.0",
     "npm": "6.4.1"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StartupTeamUW/localize1.git"
+  },
+  "author": "kimmy kablitz",
+  "bugs": {
+    "url": "https://github.com/StartupTeamUW/localize1/issues"
+  },
+  "homepage": "https://github.com/StartupTeamUW/localize1#readme"
 }
