@@ -11,16 +11,16 @@ var app = express();
 var PORT = process.env.PORT || 3000;
 
 
-if (process.env.JAWSDB_URL) {
-  connection = mysql.createConnection(process.env.JAWSDB_URL);
-} else {
-  connection = mysql.createConnection({
-    host: "o3iyl77734b9n3tg.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-    user: "uqhk1tq7qnr0ngh0",
-    password: "w99qogm8hq5t1m2h",
-    database: "kz7wbftgh63cmdmj"
-  });
-}
+// if (process.env.JAWSDB_URL) {
+//   connection = mysql.createConnection(process.env.JAWSDB_URL);
+// } else {
+//   connection = mysql.createConnection({
+//     host: "o3iyl77734b9n3tg.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+//     user: "uqhk1tq7qnr0ngh0",
+//     password: "w99qogm8hq5t1m2h",
+//     database: "kz7wbftgh63cmdmj"
+//   });
+// }
 
 // Middleware
 app.use(express.urlencoded({ extended: false }));
