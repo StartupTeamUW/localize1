@@ -4,6 +4,7 @@
   "description": "Localize-Meeting the locals makes easy",
   "main": "server.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "license": "ISC",
@@ -31,8 +32,6 @@
   "devDependencies": {
     "chai": "^4.1.2",
     "chai-http": "^4.0.0",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-prettier": "^2.6.2",
     "mocha": "^5.2.0",
     "prettier": "^1.13.7"
   },
@@ -51,5 +50,5 @@
   "bugs": {
     "url": "https://github.com/StartupTeamUW/localize1/issues"
   },
-  "homepage": "https://github.com/StartupTeamUW/localize1#readme"
+  "homepage": "https://e-localize.herokuapp.com"
 }
