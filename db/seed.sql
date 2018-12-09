@@ -5,11 +5,6 @@ USE localize_db;
 -- add users
 INSERT INTO Users (user_name, email, password, phonenumber, profile_pic_url, first_name, last_name, hometown, guide_status, interests, createdAt, updatedAt) -- you can add more fields, see ./models/user.js
 VALUES
-<<<<<<< HEAD
- ('jiafang', 'jfang@gmail.com', 'asdsds', 'https://pbs.twimg.com/profile_images/738250910305034246/TfX_kbqi_400x400.jpg', 'first', 'last', 'Seattle', DEFAULT, '', Now(), Now()), -- in test expects as traveler
-('chikim', 'chikm@gmail.com', 'asdsds', 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Kim_Woo-bin_at_%22Uncontrollably_Fond%22_press_conference%2C_4_July_2016_02.jpg/220px-Kim_Woo-bin_at_%22Uncontrollably_Fond%22_press_conference%2C_4_July_2016_02.jpg', 'first', 'last', 'LA', true, 'Landmarks, Food', Now(), Now()), -- test output: ckim should be showing as jfang's 1st matched local guide 
-('Kimmy', 'kim.tran549@gmail.com','localize','12064724573','http://www.memorialhermann.org/PhysicianPhoto/078134.jpg', 'Kim', 'Kablitz', 'Auburn,WA USA', true, 'Nature, Music,Food', Now(), Now()); --  test output: ktran should be showing as jfang's 2nd closed matched local guide 
-=======
 ('jiafang', 'jfang@gmail.com', 'asdsds', 'https://pbs.twimg.com/profile_images/738250910305034246/TfX_kbqi_400x400.jpg', 'Jia', 'Well', 'Seattle, Washington, United States of America', true, 'landmark,concert,food', Now(), Now()), -- in test expects as traveler
 ('chikim', 'chikm@gmail.com', 'asdsds', 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Kim_Woo-bin_at_%22Uncontrollably_Fond%22_press_conference%2C_4_July_2016_02.jpg/220px-Kim_Woo-bin_at_%22Uncontrollably_Fond%22_press_conference%2C_4_July_2016_02.jpg', 'Chi', 'Boy', 'Seattle, Washington, United States of America', true, 'landmark,food', Now(), Now()), -- test output: ckim should be showing as jfang's 1st matched local guide 
 ('kimtran', 'ktran@gmail.com', 'asdsds', 'http://www.memorialhermann.org/PhysicianPhoto/078134.jpg', 'Kimmy', 'Green', 'Seattle, Washington, United States of America', true, 'landmark,hiking', Now(), Now()), --  test output: ktran should be showing as jfang's 2nd closed matched local guide 
@@ -19,7 +14,6 @@ VALUES
 ('AndyPerson', 'AndytheTA@gmail.com', 'asdsds', 'http://cdn.akc.org/content/article-body-image/housetrain_adult_dog_hero.jpg', 'Andy', 'Chill', 'New York, United States of America', true, 'clubbing,hiking', Now(), Now()), -- in test expects as traveler
 ('TraeTrae', 'Traetrea@gmail.com', 'asdsds', 'https://www.what-dog.net/Images/faces2/scroll0015.jpg', 'Trae', 'Buddy', 'New York, United States of America', false, 'landmark,food', Now(), Now()), -- test output: ckim should be showing as jfang's 1st matched local guide 
 ('KyleHey', 'kylehey@gmail.com', 'asdsds', 'http://www.memorialhermann.org/PhysicianPhoto/078134.jpg', 'Kyle', 'Person', 'New York, United States of America', false, 'landmark,concert', Now(), Now()); --  test output: ktran should be showing as jfang's 2nd closed matched local guide 
->>>>>>> 853ab03d5ad3ba033e5653581c5d227928743660
 
 -- *TBD* add Interests (execute after existing user created)
 INSERT INTO Interests (interests, createdAt, updatedAt, UserId)
