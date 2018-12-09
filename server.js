@@ -1,7 +1,7 @@
 require("dotenv").config();
 var express = require("express");
-var passport   = require('passport')
-var session    = require('express-session')
+var passport = require('passport')
+var session = require('express-session')
 var bodyParser = require('body-parser')
 var env = require('dotenv').load()
 var exphbs = require("express-handlebars");
@@ -9,6 +9,18 @@ var exphbs = require("express-handlebars");
 
 var app = express();
 var PORT = process.env.PORT || 3000;
+
+
+if (process.env.JAWSDB_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+  connection = mysql.createConnection({
+    host: "o3iyl77734b9n3tg.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    user: "uqhk1tq7qnr0ngh0",
+    password: "w99qogm8hq5t1m2h",
+    database: "kz7wbftgh63cmdmj"
+  });
+}
 
 // Middleware
 app.use(express.urlencoded({ extended: false }));
@@ -21,7 +33,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // For Passport 
-app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true})); // session secret
+app.use(session({ secret: 'keyboard cat', resave: true, saveUninitialized: true })); // session secret
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 
@@ -48,7 +60,7 @@ var models = require("./models");
 
 
 //Routes
-var authRoute = require('./routes/auth.js')(app,passport);
+var authRoute = require('./routes/auth.js')(app, passport);
 
 require("./routes/html-routes")(app);
 require("./routes/trip-api-routes")(app);
@@ -71,8 +83,8 @@ if (process.env.NODE_ENV === "test") {
 }
 
 // Starting cthe server, syncing our models ------------------------------------/
-models.sequelize.sync(syncOptions).then(function() {
-  app.listen(PORT, function() {
+models.sequelize.sync(syncOptions).then(function () {
+  app.listen(PORT, function () {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
       PORT,
