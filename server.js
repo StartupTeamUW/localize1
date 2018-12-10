@@ -75,7 +75,7 @@ require('./config/passport/passport.js')(passport, models.User);
 //Sync Database
 
 // If running a test, set syncOptions.force to true
-var syncOptions = { force: true };
+var syncOptions = { force: false };
 
 
 if (process.env.NODE_ENV === "test") {
