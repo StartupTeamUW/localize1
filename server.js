@@ -57,7 +57,7 @@ require('./routes/auth.js')(app, passport);
 require('./auth/config/passport.js')(passport, models.User);
 
 
-// require("./routes/trip-api-routes")(app);
+require("./routes/trip-api-routes")(app);
 require("./routes/user-api-routes")(app);
 require("./routes/html-routes")(app);
 
