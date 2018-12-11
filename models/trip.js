@@ -1,5 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
     var Trip = sequelize.define("Trip", {
+      
       destination: DataTypes.STRING,
       // notes from the user (requester)
       remark: DataTypes.TEXT,
