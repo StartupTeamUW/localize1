@@ -1,34 +1,16 @@
 require("dotenv").config();
 var express = require("express");
-var passport = require('passport')
-var session = require('express-session')
-var bodyParser = require('body-parser')
-var env = require('dotenv').load()
 var exphbs = require("express-handlebars");
 
+var db = require("./models");
 
 var app = express();
 var PORT = process.env.PORT || 3000;
-
-
-
 
 // Middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
-
-
-//For BodyParser
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-
-// For Passport 
-app.use(session({ secret: 'keyboard cat', resave: true, saveUninitialized: true })); // session secret
-app.use(passport.initialize());
-app.use(passport.session()); // persistent login sessions
-
-
 
 // Handlebars
 app.engine(
@@ -40,18 +22,34 @@ app.engine(
 app.set("view engine", "handlebars");
 
 
+// var env = require('dotenv').load()
+
+//For BodyParser
+var bodyParser = require('body-parser');
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+// For Passport 
+var passport = require('passport');
+var session = require('express-session');
+
+app.use(session({ secret: 'keyboard cat', resave: true, saveUninitialized: true })); // session secret
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
+
+
 //Homepage
 app.get("/", function (req, res) {
   res.render("homepage");
 });
 
 
-//Models
-var db = require("./models");
+//load passport file
+require('./routes/auth.js')(app, passport);
 
 
-//Routes
-var authRoute = require('./routes/auth.js')(app, passport);
+// var authRoute = require('./routes/auth.js')(app, passport);
 
 require("./routes/trip-api-routes")(app);
 require("./routes/user-api-routes")(app);
