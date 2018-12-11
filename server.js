@@ -11,16 +11,7 @@ var app = express();
 var PORT = process.env.PORT || 3000;
 
 
-// if (process.env.JAWSDB_URL) {
-//   connection = mysql.createConnection(process.env.JAWSDB_URL);
-// } else {
-//   connection = mysql.createConnection({
-//     host: "localhost",
-//     user: "root",
-//     password: null,
-//     database: "localize_db"
-//   });
-// }
+
 
 // Middleware
 app.use(express.urlencoded({ extended: false }));
@@ -56,20 +47,21 @@ app.get("/", function (req, res) {
 
 
 //Models
-var models = require("./models");
+var db = require("./models");
 
 
 //Routes
 var authRoute = require('./routes/auth.js')(app, passport);
 
-require("./routes/html-routes")(app);
 require("./routes/trip-api-routes")(app);
 require("./routes/user-api-routes")(app);
+require("./routes/html-routes")(app);
+
 
 
 
 //load passport strategies
-require('./config/passport/passport.js')(passport, models.User);
+require('./config/passport/passport.js')(passport, db.User);
 
 
 //Sync Database
@@ -83,7 +75,7 @@ if (process.env.NODE_ENV === "test") {
 }
 
 // Starting cthe server, syncing our models ------------------------------------/
-models.sequelize.sync(syncOptions).then(function () {
+db.sequelize.sync(syncOptions).then(function () {
   app.listen(PORT, function () {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
