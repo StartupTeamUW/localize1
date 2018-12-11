@@ -6,21 +6,21 @@ var db = require('../models')
 
 
 //CAN We call below from other files?
-var mysql = require('mysql')
-var connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'localize_db'
-});
+// var mysql = require('mysql')
+// var connection = mysql.createConnection({
+//     host: 'localhost',
+//     user: 'root',
+//     password: '',
+//     database: 'localize_db'
+// });
 
-connection.connect(function(error) {
-    if (!!error) {
-        console.log("Error");
-    } else {
-        console.log("connected")
-    }
-});
+// connection.connect(function(error) {
+//     if (!!error) {
+//         console.log("Error");
+//     } else {
+//         console.log("connected")
+//     }
+// });
 //CAN We call above from other files?
 
 function arrayContains(needle, arrhaystack)
